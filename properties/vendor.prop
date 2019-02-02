@@ -234,6 +234,9 @@ ro.vendor.mediatek.platform=MT6886
 persist.system.powerhal.applist_enable=1
 
 # Radio
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 persist.radio.multisim.config=dsds
 persist.vendor.anr.enhancement=0
 persist.vendor.ims_support=1
