@@ -124,4 +124,7 @@
     <!-- Whether to show a confirmation dialog to the user if a third party app targeting below SDK
          level Q tries to enable Wi-Fi -->
     <bool name="config_showConfirmationDialogForThirdPartyAppsEnablingWifi" translatable="false">true</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade -->
+    <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
 </resources>
