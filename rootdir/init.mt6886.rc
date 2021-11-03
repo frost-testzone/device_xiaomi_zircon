@@ -730,8 +730,6 @@ on post-fs-data
 on zygote-start
 
 on early-boot
-    verity_update_state
-
     chown root log /proc/ccci_sib
     chown root system /proc/ccci_dump
     chown root system /proc/ccci_lp_mem
