@@ -94,6 +94,7 @@ TARGET_KERNEL_DTB := \
 
 BOARD_KERNEL_CMDLINE := \
     bootopt=64S3,32N2,64N2 \
+    cgroup_disable=memory \
     log_buf_len=1024K \
     rcu_nocbs=all \
     rcutree.enable_rcu_lazy=1
