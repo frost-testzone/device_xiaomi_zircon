@@ -217,6 +217,7 @@ ro.vendor.mtk_mvpu_security_support=0
 ro.vendor.mtk_sec_video_path_support=1
 vendor.mtk.vdec.decode.error.handle.mode=3
 vendor.mtk.vdec.waitkeyframeforplay=9
+vendor.media.omx=0
 
 # Netflix
 ro.netflix.bsp_rev=MTK6886-36560-1
