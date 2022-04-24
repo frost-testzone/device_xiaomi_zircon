@@ -154,9 +154,6 @@ BOARD_USES_METADATA_PARTITION := true
 BOARD_HAS_MTK_HARDWARE := true
 TARGET_BOARD_PLATFORM := mt6886
 
-# Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
-
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
