@@ -301,6 +301,14 @@
         "0,1,2,3,4,5,6,7"
       ],
       "Type": "Property"
+    },
+    {
+      "Name": "DoubleTapToWakeEnable",
+      "Path": "/sys/devices/virtual/touch/touch_dev/double_tap",
+      "Values": [
+        "1",
+        "0"
+      ]
     }
   ],
   "Actions": [
@@ -399,6 +407,12 @@
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
       "Value": "51"
+    },
+    {
+      "PowerHint": "DOUBLE_TAP_TO_WAKE",
+      "Node": "DoubleTapToWakeEnable",
+      "Duration": 0,
+      "Value": "1"
     }
   ]
 }
