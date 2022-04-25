@@ -106,6 +106,7 @@ debug.sf.enable_transaction_tracing=false
 debug.sf.hwc.min.duration=2000000
 debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
+debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
 persist.vendor.sys.pq.disp.ccorr.silky.brightness=0
 persist.vendor.sys.pq.disp.gamma.silky.brightness=0
