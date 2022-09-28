@@ -88,7 +88,7 @@ static disp_event_resp* parseDispEvent(int fd) {
 
 }  // anonymous namespace
 
-class ZirconUdfpsHander : public UdfpsHandler {
+class ZirconUdfpsHandler : public UdfpsHandler {
   public:
     void init(fingerprint_device_t* device) {
         mDevice = device;
@@ -221,7 +221,7 @@ class ZirconUdfpsHander : public UdfpsHandler {
 };
 
 static UdfpsHandler* create() {
-    return new ZirconUdfpsHander();
+    return new ZirconUdfpsHandler();
 }
 
 static void destroy(UdfpsHandler* handler) {
