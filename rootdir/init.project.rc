@@ -156,6 +156,9 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0664 /dev/xiaomi-touch
 
+    # Set thermal mode to mgame
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 20
+
 service vendor_tcpdump /vendor/bin/tcpdump-vendor -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
        class main
        user root
