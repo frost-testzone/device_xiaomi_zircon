@@ -67,7 +67,8 @@ BOARD_KERNEL_CMDLINE := \
     cgroup_disable=memory \
     log_buf_len=1024K \
     rcu_nocbs=all \
-    rcutree.enable_rcu_lazy=1
+    rcutree.enable_rcu_lazy=1 \
+    sysctl.kernel.sched_pelt_multiplier=4
 
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \

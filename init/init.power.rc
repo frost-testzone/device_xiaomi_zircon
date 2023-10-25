@@ -7,6 +7,8 @@ on early-init
 
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 4266000000
 
+    write /proc/sys/kernel/sched_pelt_multiplier 1
+
 on init
     # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
