@@ -380,12 +380,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6886 \
-    init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
     init.fingerprint.rc \
     init.modem.rc \
     init.mt6886.rc \
+    init.power.rc \
     init.project.rc \
     ueventd.mtk.rc
 
