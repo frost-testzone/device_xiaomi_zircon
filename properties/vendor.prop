@@ -19,6 +19,9 @@ audio.offload.video=true
 persist.vendor.audio.auto.scenario=true
 persist.vendor.audio.misound.disable=true
 persist.vendor.audio.misoundasc=true
+persist.vendor.audiohal.aurisys.pcm_dump_on=0
+persist.vendor.audiohal.p2w_dump_on=0
+persist.vendor.audiohal.pcm_mixer_dump_on=0
 ro.audio.monitorRotation=true
 ro.vendor.audio.gain.support=true
 ro.vendor.audio.ktv.support=true
@@ -31,6 +34,11 @@ vendor.audio.spkcal.copy.inhal=true
 vendor.audio.usb.iems.period_us=5000
 vendor.audio.usb.super_hifi=true
 vendor.audiohal.telephonytx.type=2
+vendor.streamin.pcm.dump=0
+vendor.streamout.pcm.dump=0
+vendor.usbsph.dl.pcm.dump=0
+vendor.usbsph.srcaws.pcm.dump=0
+vendor.usbsph.ul.pcm.dump=0
 
 # Audio (Dolby)
 ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
