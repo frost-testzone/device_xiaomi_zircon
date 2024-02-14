@@ -1370,6 +1370,10 @@ vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
+vendor/bin/mi_thermald
+vendor/etc/init/hw/init.mi_thermald.rc
+
+# Thermal configs
 odm/etc/thermal-4k.conf
 odm/etc/thermal-camera.conf
 odm/etc/thermal-cclassvideo.conf
@@ -1391,10 +1395,6 @@ odm/etc/thermal-phone.conf
 odm/etc/thermal-tgame.conf
 odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
-vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
-vendor/bin/mi_thermald
-vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
-vendor/etc/init/hw/init.mi_thermald.rc
 vendor/etc/thermal-map.conf
 vendor/etc/thermal/disable_skin_control.conf
 vendor/etc/thermal/disable_thermal.conf
@@ -1409,8 +1409,6 @@ vendor/etc/thermal/thermal_policy_03.conf
 vendor/etc/thermal/thermal_policy_08.conf
 vendor/etc/thermalbreakboostconfig.xml
 vendor/etc/thermald-devices.conf
-vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
-vendor/lib64/hw/thermal_hal.so
 
 # Touchscreen (firmware)
 vendor/firmware/goodix_cfg_group_n16u_CSOT.bin
