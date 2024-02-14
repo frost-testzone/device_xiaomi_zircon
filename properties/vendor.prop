@@ -288,6 +288,9 @@ ro.vendor.sensors.xiaomi.udfps=true
 # USB
 ro.vendor.usb.kpoc_adb=0
 
+# UVC
+ro.usb.uvc.enabled=true
+
 # WLAN
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
