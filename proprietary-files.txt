@@ -1627,7 +1627,7 @@ system_ext/priv-app/ImsService/ImsService.apk
 
 # Radio (IMS - VT - System) - from rothko
 system_ext/bin/vtservice|4a8759f67cc4f238983c57193d88d1cc13956e06
-system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
+system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc|d1bad63ed1e5dc8cbf02c5ec37022a7753330729
 system_ext/lib64/libcomutils.so|05cdfb5eb128b670ec182235e75efeec2dd21773
 system_ext/lib64/libimsma.so|ef84a4ebd120834a1514197af96101e81839cd12|1b581eee25e72f399b7d6ebb11595f7cee03a8f8
 system_ext/lib64/libimsma_adapt.so|de3b5546ff7a5dc9f7ba3db3f06b53498600490d
