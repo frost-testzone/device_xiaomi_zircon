@@ -65,6 +65,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.serialconsole=0 \
     bootopt=64S3,32N2,64N2 \
     cgroup_disable=memory \
+    kasan=off \
     log_buf_len=1024K \
     rcu_nocbs=all \
     rcutree.enable_rcu_lazy \
