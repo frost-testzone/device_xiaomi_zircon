@@ -207,7 +207,6 @@ class ZirconUdfpsHandler : public UdfpsHandler {
 
     void cancel() {
         LOG(INFO) << __func__;
-        setFingerDown(false);
     }
 
   private:
