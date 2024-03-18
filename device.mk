@@ -122,7 +122,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    com.android.hardware.drm.clearkey
 
 # Fastboot
 PRODUCT_PACKAGES += \
