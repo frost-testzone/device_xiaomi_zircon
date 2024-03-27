@@ -323,6 +323,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayZircon \
     FrameworkOverlayZircon \
     LineagePowerOffAlarmOverlayZircon \
+    LineageSettingsOverlayZircon \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
     SystemUIOverlayZircon \
