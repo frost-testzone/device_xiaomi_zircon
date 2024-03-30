@@ -69,7 +69,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
-        .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00'),
+        .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00')
+        .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
     ('vendor/lib64/hw/hwcomposer.mtk_common.so', 'vendor/lib64/libmialgoengine.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so',
     'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
