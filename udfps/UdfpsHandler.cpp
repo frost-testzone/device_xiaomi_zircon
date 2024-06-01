@@ -28,9 +28,6 @@
 #define PARAM_FOD_PRESSED 1
 #define PARAM_FOD_RELEASED 0
 
-#define FOD_STATUS_OFF 0
-#define FOD_STATUS_ON 1
-
 #define TOUCH_DEV_PATH "/dev/xiaomi-touch"
 #define DISP_FEATURE_PATH "/dev/mi_display/disp_feature"
 
@@ -181,43 +178,29 @@ class ZirconUdfpsHandler : public UdfpsHandler {
 
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
         LOG(DEBUG) << __func__;
-        // Ensure touchscreen is aware of the press state, ideally this is not needed
+        // Notify touchscreen about press status
         setFingerDown(true);
     }
 
     void onFingerUp() {
         LOG(DEBUG) << __func__;
-        // Ensure touchscreen is aware of the press state, ideally this is not needed
+        // Notify touchscreen about press status
         setFingerDown(false);
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
         LOG(DEBUG) << __func__ << " result: " << result << " vendorCode: " << vendorCode;
         if (static_cast<AcquiredInfo>(result) == AcquiredInfo::GOOD) {
-            // Set finger as up to disable HBM already, even if the finger is still pressed
             setFingerDown(false);
-        } else if (vendorCode == 21 || vendorCode == 23) {
-            /*
-             * vendorCode = 21 waiting for fingerprint authentication
-             * vendorCode = 23 waiting for fingerprint enroll
-             */
-            setFodStatus(FOD_STATUS_ON);
         }
     }
 
-    void cancel() {
-        LOG(DEBUG) << __func__;
-    }
+    void cancel() { LOG(DEBUG) << __func__; }
 
   private:
     fingerprint_device_t* mDevice;
     android::base::unique_fd touch_fd_;
     android::base::unique_fd disp_fd_;
-
-    void setFodStatus(int value) {
-        int buf[MAX_BUF_SIZE] = {MI_DISP_PRIMARY, Touch_Fod_Enable, value};
-        ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
-    }
 
     void setFingerDown(bool pressed) {
         int buf[MAX_BUF_SIZE] = {MI_DISP_PRIMARY, Touch_Fod_Enable, pressed ? 1 : 0};
