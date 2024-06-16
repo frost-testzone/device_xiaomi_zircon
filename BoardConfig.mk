@@ -47,6 +47,7 @@ TARGET_SCREEN_DENSITY := 480
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
 
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
