@@ -34,7 +34,6 @@ on charger
 
 
 on post-fs-data
-    write /proc/sys/kernel/sched_pelt_multiplier 1
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
 on property:sys.boot_completed=1
