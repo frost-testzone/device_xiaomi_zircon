@@ -93,7 +93,9 @@ TARGET_KERNEL_DTB := \
     mediatek/mt6886.dtb
 
 BOARD_KERNEL_CMDLINE := \
-    bootopt=64S3,32N2,64N2
+    bootopt=64S3,32N2,64N2 \
+    rcu_nocbs=all \
+    rcutree.enable_rcu_lazy=1
 
 # Kernel Modules
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/xiaomi/mt6886-modules
