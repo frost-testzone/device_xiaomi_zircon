@@ -251,7 +251,6 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureOverlayZircon \
-    CarrierConfigOverlayZircon \
     FrameworkOverlayZircon \
     VoltagePowerOffAlarmOverlayZircon \
     VoltageSettingsOverlayZircon \
