@@ -9,6 +9,7 @@ allow mtk_hal_camera camera_persist_file:dir search;
 allow mtk_hal_camera camera_persist_file:dir { open read };
 allow mtk_hal_camera camera_persist_file:file { getattr open read };
 
-r_dir_file(mtk_hal_camera, persist_data_file)
+rw_dir_file(mtk_hal_camera, persist_data_file)
+rw_dir_file(mtk_hal_camera, sysfs_therm)
 
 set_prop(mtk_hal_camera, vendor_camera_skynet_prop)
