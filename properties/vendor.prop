@@ -31,6 +31,7 @@ vendor.audio.usb.super_hifi=true
 vendor.audiohal.telephonytx.type=2
 
 # Bluetooth
+bluetooth.device.default_name=Redmi Note 13 Pro+ 5G
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
