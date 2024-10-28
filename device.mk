@@ -229,9 +229,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk.vendor \
-    android.hardware.light-V2-ndk.vendor \
-    android.hardware.light@2.0.vendor
+    android.hardware.light-service.xiaomi
 
 # Keymint
 PRODUCT_PACKAGES += \
