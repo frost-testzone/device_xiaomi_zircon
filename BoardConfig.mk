@@ -43,6 +43,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
+# Audio
+$(call soong_config_set, android_hardware_audio, run_64bit, true)
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := zircon
 TARGET_NO_BOOTLOADER := true

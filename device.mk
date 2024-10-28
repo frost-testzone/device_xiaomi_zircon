@@ -51,26 +51,26 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio@7.1-impl \
-    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio@7.1-impl:64 \
+    android.hardware.soundtrigger@2.3-impl:64 \
     android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.common-V1-ndk.vendor \
-    android.media.audio.common.types-V1-cpp.vendor
+    android.hardware.audio.common-V1-ndk.vendor:64 \
+    android.media.audio.common.types-V1-cpp.vendor:64
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    audio.primary.default \
-    audio.r_submix.default \
-    audio.usb.default
+    audio.bluetooth.default:64 \
+    audio.primary.default:64 \
+    audio.r_submix.default:64 \
+    audio.usb.default:64
 
 PRODUCT_PACKAGES += \
-    libaudiofoundation.vendor \
-    libaudiopreprocessing \
-    libnbaio_mono \
-    libtinycompress
+    libaudiofoundation.vendor:64 \
+    libaudiopreprocessing:64 \
+    libnbaio_mono:64 \
+    libtinycompress:64
 
 PRODUCT_PACKAGES += \
     MtkInCallService
@@ -100,8 +100,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth.audio-impl:64 \
+    android.hardware.bluetooth@1.1.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -109,15 +109,15 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
-    android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider-V1-ndk.vendor \
-    android.hardware.camera.provider@2.6.vendor
+    android.frameworks.displayservice@1.0.vendor:64 \
+    android.frameworks.sensorservice@1.0.vendor:64 \
+    android.hardware.camera.common@1.0.vendor:64 \
+    android.hardware.camera.device@3.6.vendor:64 \
+    android.hardware.camera.provider-V1-ndk.vendor:64 \
+    android.hardware.camera.provider@2.6.vendor:64
 
 PRODUCT_PACKAGES += \
-    libcamera2ndk_vendor
+    libcamera2ndk_vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -151,7 +151,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libdrm.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    libprotobuf-cpp-lite-3.9.1-vendorcompat:64
 
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
@@ -163,40 +163,40 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
-    libudfpshandler
+    libudfpshandler:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss-V2-ndk.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss-V2-ndk.vendor:64 \
+    android.hardware.gnss.measurement_corrections@1.1.vendor:64 \
+    android.hardware.gnss.visibility_control@1.0.vendor:64 \
+    android.hardware.gnss@2.1.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor \
-    android.hidl.memory.block@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
+    android.hidl.allocator@1.0.vendor:64 \
+    android.hidl.memory.block@1.0.vendor:64 \
+    libhidltransport:64 \
+    libhidltransport.vendor:64 \
+    libhwbinder:64 \
+    libhwbinder.vendor:64
 
 PRODUCT_PACKAGES += \
-    libcurl.vendor \
-    libjsoncpp.vendor \
-    libsqlite.vendor \
-    libunwindstack.vendor
+    libcurl.vendor:64 \
+    libjsoncpp.vendor:64 \
+    libsqlite.vendor:64 \
+    libunwindstack.vendor:64
 
 # Health
 PRODUCT_PACKAGES += \
@@ -214,8 +214,8 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-common
 
 PRODUCT_PACKAGES += \
-    libui_shim \
-    libshim_sink
+    libui_shim:64 \
+    libshim_sink:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
@@ -233,20 +233,20 @@ PRODUCT_PACKAGES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor \
-    android.hardware.security.keymint-V1-ndk.vendor \
-    android.hardware.security.keymint-V2-ndk.vendor \
-    android.hardware.security.rkp-V3-ndk.vendor
+    android.hardware.keymaster@4.0.vendor:64 \
+    android.hardware.security.keymint-V1-ndk.vendor:64 \
+    android.hardware.security.keymint-V2-ndk.vendor:64 \
+    android.hardware.security.rkp-V3-ndk.vendor:64
 
 PRODUCT_PACKAGES += \
-    lib_android_keymaster_keymint_utils.vendor \
-    libkeymaster4support.vendor \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor \
-    libkeymint.vendor \
-    libkeymint_support.vendor \
-    libpuresoftkeymasterdevice.vendor \
-    libsoft_attestation_cert.vendor
+    lib_android_keymaster_keymint_utils.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libkeymint.vendor:64 \
+    libkeymint_support.vendor:64 \
+    libpuresoftkeymasterdevice.vendor:64 \
+    libsoft_attestation_cert.vendor:64
 
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
@@ -272,21 +272,21 @@ PRODUCT_PACKAGES += \
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-V1-ndk.vendor
+    android.hardware.memtrack-V1-ndk.vendor:64
 
 # Neural Networks
 PRODUCT_PACKAGES += \
-    libruy.vendor \
+    libruy.vendor:64 \
     libtextclassifier_hash.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-V1-ndk.vendor \
-    android.hardware.nfc@1.2.vendor \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.nfc-V1-ndk.vendor:64 \
+    android.hardware.nfc@1.2.vendor:64 \
+    android.hardware.secure_element@1.2.vendor:64
 
 PRODUCT_PACKAGES += \
-    libchrome.vendor
+    libchrome.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.ese.xml \
@@ -334,17 +334,17 @@ include $(LOCAL_PATH)/properties/vendor_logtag.mk
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio-V1-ndk.vendor \
-    android.hardware.radio.config-V1-ndk.vendor \
-    android.hardware.radio.data-V1-ndk.vendor \
-    android.hardware.radio.messaging-V1-ndk.vendor \
-    android.hardware.radio.modem-V1-ndk.vendor \
-    android.hardware.radio.network-V1-ndk.vendor \
-    android.hardware.radio.sim-V1-ndk.vendor \
-    android.hardware.radio.voice-V1-ndk.vendor \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor
+    android.hardware.radio-V1-ndk.vendor:64 \
+    android.hardware.radio.config-V1-ndk.vendor:64 \
+    android.hardware.radio.data-V1-ndk.vendor:64 \
+    android.hardware.radio.messaging-V1-ndk.vendor:64 \
+    android.hardware.radio.modem-V1-ndk.vendor:64 \
+    android.hardware.radio.network-V1-ndk.vendor:64 \
+    android.hardware.radio.sim-V1-ndk.vendor:64 \
+    android.hardware.radio.voice-V1-ndk.vendor:64 \
+    android.hardware.radio@1.2.vendor:64 \
+    android.hardware.tetheroffload.config@1.0.vendor:64 \
+    android.hardware.tetheroffload.control@1.1.vendor:64
 
 PRODUCT_PACKAGES += \
     mdota_symlink
@@ -371,14 +371,14 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
+    android.frameworks.sensorservice@1.0.vendor:64 \
     android.hardware.sensors-service.xiaomi-multihal
 
 PRODUCT_PACKAGES += \
-    libsensorndkbridge
+    libsensorndkbridge:64
 
 PRODUCT_PACKAGES += \
-    libui_shim.vendor
+    libui_shim.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -409,7 +409,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@2.0.vendor:64
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
@@ -420,8 +420,8 @@ PRODUCT_COPY_FILES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-V1-ndk.vendor \
-    android.hardware.usb.gadget@1.1.vendor
+    android.hardware.usb-V1-ndk.vendor:64 \
+    android.hardware.usb.gadget@1.1.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
@@ -441,13 +441,13 @@ PRODUCT_PACKAGES += \
     vibratorfeature-wrapper
 
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk.vendor
+    android.hardware.vibrator-V1-ndk.vendor:64
 
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy \
     hostapd \
-    libwifi-hal-wrapper \
+    libwifi-hal-wrapper:64 \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
