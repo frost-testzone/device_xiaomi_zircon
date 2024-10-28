@@ -1628,20 +1628,6 @@ vendor/firmware/goodix_cfg_group_n16u_CSOT.bin
 vendor/firmware/goodix_firmware_n16u_CSOT.bin
 vendor/firmware/goodix_test_limits_255_CSOT.csv
 
-# Touchfeature
-odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
-odm/bin/toucheventcheck
-odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
-odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
-odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
-odm/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
-vendor/bin/touch_boost
-vendor/etc/init/touch_boost.rc
-vendor/lib/sensors.touch.detect.so
-vendor/lib/vendor.xiaomi.hw.touchfeature@1.0.so
-vendor/lib64/sensors.touch.detect.so
-vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
-
 # Trusted Execution Environment (TEE)
 vendor/bin/miteelog
 vendor/bin/tee-supplicant

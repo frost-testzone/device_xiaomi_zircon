@@ -152,6 +152,10 @@ on boot
     chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/trigger_interval
     chmod 664 /sys/devices/platform/soc/1d84000.ufshc/ufscld/trigger
 
+    # xiaomi-touch
+    chown system system /dev/xiaomi-touch
+    chmod 0664 /dev/xiaomi-touch
+
 service vendor_tcpdump /vendor/bin/tcpdump-vendor -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
        class main
        user root
