@@ -98,13 +98,12 @@ BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
 TARGET_PREBUILT_KERNEL := $(PREBUILT_PATH)/images/kernel
 
 # Kernel modules
-DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
-RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_boot
+MODULES_PATH := $(PREBUILT_PATH)/modules
 
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(MODULES_PATH)/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(MODULES_PATH)/%,$(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.load))
 
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(MODULES_PATH)/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(MODULES_PATH)/%,$(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(MODULES_PATH)/%,$(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load.recovery))
 
