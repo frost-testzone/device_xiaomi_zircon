@@ -64,8 +64,7 @@ mmqos-mt6886.ko
 iommu_debug.ko
 iommu_secure.ko
 mtk_iommu.ko
-dynamic_page_pool.ko
-system_heap_sum.ko
+system_heap.ko
 mtk_et.ko
 mtk-cmdq-drv-ext.ko
 cmdq-platform-mt6886.ko
@@ -191,6 +190,3 @@ mtk-mmdvfs-v3-start.ko
 uload_ind.ko
 load_track.ko
 hwid.ko
-simtray.ko
-mi-memory.ko
-perf_helper.ko

@@ -61,8 +61,7 @@ mmqos-mt6886.ko
 iommu_debug.ko
 iommu_secure.ko
 mtk_iommu.ko
-dynamic_page_pool.ko
-system_heap_sum.ko
+system_heap.ko
 mtk-cmdq-drv-ext.ko
 cmdq-platform-mt6886.ko
 cmdq_helper_inf.ko
@@ -176,5 +175,3 @@ cache-parity.ko
 cfg80211.ko
 mac80211.ko
 hwid.ko
-mi-memory.ko
-perf_helper.ko
