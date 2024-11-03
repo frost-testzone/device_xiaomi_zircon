@@ -288,6 +288,7 @@ telephony.lteOnCdmaDevice=1
 ro.vendor.init.sensor.rc=init.sensor_2_0.rc
 ro.vendor.mtk.sensor.support=yes
 ro.vendor.rc=/vendor/etc/init/hw/
+ro.vendor.sensors.xiaomi.udfps=true
 
 # USB
 ro.vendor.usb.kpoc_adb=0
