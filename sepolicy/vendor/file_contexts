@@ -8,3 +8,42 @@
 /dev/ufs-bsg0 u:object_r:mitee_client_device:s0
 /mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
 
+# Thermal
+/(vendor|system/vendor)/bin/mi_thermald u:object_r:mi_thermald_exec:s0
+/sys/class/thermal/thermal_message/market_download_limit u:object_r:sys_thermal_market_download_limit:s0
+/sys/devices/virtual/thermal/thermal_message/market_download_limit u:object_r:sys_thermal_market_download_limit:s0
+
+# batterysecret
+/(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
+
+# Fingerprint
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+
+# Sensors
+/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
+
+# Vibrator
+/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service u:object_r:hal_vibrator_default_exec:s0
+/(odm|system/odm|vendor|system/vendor)/bin/hw/vibratorfeature-wrapper u:object_r:hal_vibrator_default_exec:s0
+
+# Battery
+/sys/devices/platform/11d06000.i2c/i2c-9/9-0055/power_supply/bms(/.*)? u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/11e01000.i2c/i2c-5/5-0034/11e01000.i2c:mt6375@34:mtk_gauge/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:chg/power_supply/11280000.i2c:mt6375@34:chg u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:mtk_gauge/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/11f05000.i2c/i2c-13/13-0055/power_supply/bms(/.*)? u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/11015000.i2c0/i2c-0/0-0035/power_supply/Charger_Identify(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/11e00000.i2c/i2c-0/0-0035/power_supply/xmusb350(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/11e00000.i2c/i2c-0/0-0035/switching_charger/xmusb350(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/charger/power_supply/usb(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/mt_charger/power_supply/ac(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/mt_charger/power_supply/charger(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/mt_charger/power_supply/main(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/soc/11d04000.i2c/i2c-7/7-0055/power_supply/bms(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/soc/11e81000.i2c/i2c-7/7-0055/power_supply/bms(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/soc/11f02000.i2c/i2c-10/10-0055/power_supply/bms(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter(/.*)? u:object_r:sysfs_usbpd_device:s0
+
