@@ -1,0 +1,10 @@
+# Keymint
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.identity-service\.mitee@4\.0 u:object_r:hal_identity_default_exec:s0
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.security\.keymint@2\.0-service\.mitee u:object_r:hal_keymint_default_exec:s0
+/(vendor|system\/vendor)/bin/miteelog u:object_r:tee_exec:s0
+/data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
+/dev/tee0 u:object_r:mitee_client_device:s0
+/dev/teepriv0 u:object_r:mitee_client_device:s0
+/dev/ufs-bsg0 u:object_r:mitee_client_device:s0
+/mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
+
