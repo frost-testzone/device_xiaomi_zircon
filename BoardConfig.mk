@@ -100,12 +100,13 @@ TARGET_PREBUILT_KERNEL := $(PREBUILT_PATH)/images/kernel
 # Kernel modules
 MODULES_PATH := $(PREBUILT_PATH)/modules
 
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(MODULES_PATH)/*.ko)
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(MODULES_PATH)/%,$(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.load))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.load))
+BOARD_VENDOR_KERNEL_MODULES_EXTRA := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.extra))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load.recovery))
 
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(MODULES_PATH)/*.ko)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(MODULES_PATH)/%,$(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(MODULES_PATH)/%,$(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load.recovery))
+BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(MODULES_PATH)/,$(sort $(BOARD_VENDOR_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_KERNEL_MODULES_EXTRA)))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(MODULES_PATH)/,$(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)))
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
