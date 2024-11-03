@@ -50,7 +50,6 @@
 
 /data/aee_exp/perfetto_configs u:object_r:trace_data_file:s0
 /data/aee_exp/traces u:object_r:trace_data_file:s0
-/data/log_wifi_temp(/.*)? u:object_r:logtemp_data_file:s0
 /(vendor|system\/vendor)/bin/tee-supplicant u:object_r:tee_exec:s0
 /cache/mqsas(/.*)? u:object_r:mqsas_data_file:s0
 /(vendor|system/vendor|odm)/bin/hw/mfp-daemon u:object_r:hal_fingerprint_default_exec:s0
