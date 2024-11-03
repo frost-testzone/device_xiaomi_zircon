@@ -87,8 +87,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6886
 TARGET_KERNEL_CONFIG := gki_defconfig
 
 BOARD_KERNEL_CMDLINE := \
-    bootopt=64S3,32N2,64N2 \
-    androidboot.selinux=permissive
+    bootopt=64S3,32N2,64N2
 
 # Kernel (prebuilt)
 TARGET_FORCE_PREBUILT_KERNEL := true
