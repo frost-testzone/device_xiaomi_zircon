@@ -303,7 +303,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayZircon \
     FrameworkOverlayZircon \
-    LineageSettingsOverlayZircon \
     LineagePowerOffAlarmOverlayZircon \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
