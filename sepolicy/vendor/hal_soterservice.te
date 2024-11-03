@@ -1,0 +1,30 @@
+type hal_soterservice_default, domain;
+type hal_soterservice_default_exec, exec_type, file_type, vendor_file_type;
+type hal_soterservice_hwservice, hwservice_manager_type;
+
+hal_attribute(soterservice)
+
+allow hal_soterservice_client hal_soterservice_server:binder { call transfer };
+allow hal_soterservice_client hal_soterservice_server:binder transfer;
+allow hal_soterservice_client hal_soterservice_server:fd *;
+allow hal_soterservice_server hal_soterservice_client:binder transfer;
+allow hal_soterservice_server hal_soterservice_client:binder { call transfer };
+allow hal_soterservice_server hal_soterservice_client:fd *;
+allow hal_soterservice_server hal_soterservice_hwservice:hwservice_manager { add find };
+allow hal_soterservice_server hidl_base_hwservice:hwservice_manager add;
+allow hal_soterservice_default hal_soterservice_hwservice:hwservice_manager find;
+allow hal_soterservice_default tee_device:chr_file rw_file_perms;
+allow hal_soterservice_default ion_device:chr_file rw_file_perms;
+allow hal_soterservice_default init:unix_stream_socket connectto;
+allow hal_soterservice_default teei_client_device:chr_file rw_file_perms;
+allow hal_soterservice_default mitee_client_device:chr_file rw_file_perms;
+allow hal_soterservice_default persist_data_file:dir { create_dir_perms relabelto };
+allow hal_soterservice_default persist_data_file:file { create_file_perms relabelto };
+allow hal_soterservice_default mitee_sfs_file:dir { create_dir_perms relabelto };
+allow hal_soterservice_default mitee_sfs_file:file { create_file_perms relabelto };
+allow hal_soterservice_default mnt_vendor_file:dir { create_dir_perms relabelfrom };
+allow hal_soterservice_default system_app:binder transfer;
+init_daemon_domain(hal_soterservice_default)
+get_prop(hal_soterservice_default, vendor_fp_prop)
+hwbinder_use(hal_soterservice_default)
+hal_server_domain(hal_soterservice_default, hal_soterservice)

@@ -1,0 +1,1 @@
+type mtk_hal_aov_service, protected_service, service_manager_type;

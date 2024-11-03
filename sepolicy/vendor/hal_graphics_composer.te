@@ -1,0 +1,9 @@
+get_prop(hal_graphics_composer_default, vendor_displayfeature_prop)
+
+hal_client_domain(hal_graphics_composer_default, hal_mtk_mmlpq)
+allow hal_graphics_composer vendor_hal_citsensorservice_xiaomi_hwservice:hwservice_manager find;
+
+allow hal_graphics_composer_default sysfs_leds:file rw_file_perms;
+allow hal_graphics_composer_default sysfs_leds:dir search;
+allow hal_graphics_composer_default sysfs_leds:dir r_dir_perms;
+
