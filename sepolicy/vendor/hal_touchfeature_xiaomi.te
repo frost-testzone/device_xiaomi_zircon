@@ -1,0 +1,26 @@
+type hal_touchfeature_xiaomi_default, domain;
+type hal_touchfeature_xiaomi_default_exec, exec_type, file_type, vendor_file_type;
+type hal_touchfeature_xiaomi_hwservice, hwservice_manager_type;
+
+attribute hal_touchfeature_xiaomi;
+attribute hal_touchfeature_xiaomi_client;
+attribute hal_touchfeature_xiaomi_server;
+
+allow hal_touchfeature_xiaomi_default sysfs:file { getattr open read write };
+allow hal_touchfeature_xiaomi_default system_server:binder call;
+allow hal_touchfeature_xiaomi_default vendor_touchfeature_prop:file { getattr open read };
+allow hal_touchfeature_xiaomi_default surfaceflinger:binder transfer;
+allow hal_touchfeature_xiaomi_default hal_fingerprint_default:binder transfer;
+allow hal_touchfeature_xiaomi_default vendor_mfp-daemon:binder transfer;
+allow hal_touchfeature_xiaomi touchfeature_device:chr_file rw_file_perms;
+allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:binder { call transfer };
+allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:fd *;
+allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+allow hal_touchfeature_xiaomi_server hal_touchfeature_xiaomi_client:binder transfer;
+allow hal_touchfeature_xiaomi_server hal_touchfeature_xiaomi_hwservice:hwservice_manager { add find };
+allow hal_touchfeature_xiaomi_server hidl_base_hwservice:hwservice_manager add;
+init_daemon_domain(hal_touchfeature_xiaomi_default)
+unix_socket_connect(hal_touchfeature_xiaomi_default, property, touchreport)
+set_prop(hal_touchfeature_xiaomi_default, vendor_touchfeature_prop)
+vndbinder_use(hal_touchfeature_xiaomi)
+hal_server_domain(hal_touchfeature_xiaomi_default, hal_touchfeature_xiaomi)

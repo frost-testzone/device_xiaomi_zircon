@@ -1,0 +1,41 @@
+type hal_miperf_default, domain;
+type hal_miperf_default_exec, exec_type, file_type, vendor_file_type;
+type hal_miperf_hwservice, hwservice_manager_type;
+
+attribute hal_miperf;
+attribute hal_miperf_client;
+attribute hal_miperf_server;
+
+allow hal_miperf_client hal_miperf_server:binder { call transfer };
+allow hal_miperf_client hal_miperf_server:binder transfer;
+allow hal_miperf_client hal_miperf_server:fd *;
+allow hal_miperf_server hal_miperf_client:binder transfer;
+allow hal_miperf_server hal_miperf_client:binder { call transfer };
+allow hal_miperf_server hal_miperf_client:fd *;
+allow hal_miperf_server hal_miperf_hwservice:hwservice_manager { add find };
+allow hal_miperf_server hidl_base_hwservice:hwservice_manager add;
+allow hal_miperf_default mnt_vendor_file:dir { getattr open read search };
+allow hal_miperf_default mnt_vendor_file:dir write;
+allow hal_miperf_default mnt_vendor_file:dir { add_name remove_name rmdir };
+allow hal_miperf_default mnt_vendor_file:file { getattr open read };
+allow hal_miperf_default mnt_vendor_file:file write;
+allow hal_miperf_default mnt_vendor_file:file { create unlink };
+allow hal_miperf_default proc:file { getattr open read setattr write };
+allow hal_miperf_default cgroup:file rw_file_perms;
+allow hal_miperf_default sysfs:file rw_file_perms;
+allow hal_miperf_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_miperf_default hal_power_hwservice:hwservice_manager find;
+allow hal_miperf_default mtk_hal_power:binder call;
+allow hal_miperf_default miperf_data_file:dir { add_name read remove_name search watch write };
+allow hal_miperf_default miperf_data_file:file { create getattr open read rename setattr unlink write };
+allow hal_miperf_default sysfs_mtk_fpsgo:dir r_dir_perms;
+allow hal_miperf_default sysfs_mtk_fpsgo:file rw_file_perms;
+allow hal_miperf_default sysfs_mtk_fpsgo:lnk_file rw_file_perms;
+allow hal_miperf_default proc_perfmgr:dir search;
+allow hal_miperf_default proc_perfmgr:file { getattr ioctl open read };
+allow hal_miperf_default mtk_audiohal_data_file:dir create_dir_perms;
+allow hal_miperf_default mtk_audiohal_data_file:file create_file_perms;
+init_daemon_domain(hal_miperf_default)
+hwbinder_use(hal_miperf_default)
+hal_server_domain(hal_miperf_default, hal_miperf)
+hal_client_domain(hal_miperf_default, hal_power)

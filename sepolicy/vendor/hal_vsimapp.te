@@ -1,0 +1,27 @@
+type hal_vsimapp_default, domain;
+type hal_vsimapp_default_exec, exec_type, file_type, vendor_file_type;
+type hal_vsimapp_hwservice, hwservice_manager_type;
+
+attribute hal_vsimapp;
+attribute hal_vsimapp_client;
+attribute hal_vsimapp_server;
+
+allow hal_vsimapp_client hal_vsimapp_server:binder { call transfer };
+allow hal_vsimapp_client hal_vsimapp_server:binder transfer;
+allow hal_vsimapp_client hal_vsimapp_server:fd *;
+allow hal_vsimapp_server hal_vsimapp_client:binder transfer;
+allow hal_vsimapp_server hal_vsimapp_client:binder { call transfer };
+allow hal_vsimapp_server hal_vsimapp_client:fd *;
+allow hal_vsimapp_server hal_vsimapp_hwservice:hwservice_manager { add find };
+allow hal_vsimapp_server hidl_base_hwservice:hwservice_manager add;
+allow hal_vsimapp_default hal_vsimapp_hwservice:hwservice_manager add;
+allow hal_vsimapp_default tee_device:chr_file rw_file_perms;
+allow hal_vsimapp_default ion_device:chr_file rw_file_perms;
+allow hal_vsimapp_default init:unix_stream_socket connectto;
+allow hal_vsimapp_default platform_app:binder transfer;
+allow hal_vsimapp_default system_app:binder transfer;
+allow hal_vsimapp_default radio:binder transfer;
+allow hal_vsimapp_default mitee_client_device:chr_file rw_file_perms;
+init_daemon_domain(hal_vsimapp_default)
+hwbinder_use(hal_vsimapp_default)
+hal_server_domain(hal_vsimapp_default, hal_vsimapp)

@@ -1,0 +1,14 @@
+type emdloggerv, domain, mlstrustedsubject;
+type emdloggerv_exec, exec_type, file_type, vendor_file_type;
+
+allow emdloggerv ccci_mdl_device:chr_file rw_file_perms;
+allow emdloggerv ccci_ccb_device:chr_file rw_file_perms;
+allow emdloggerv ccci_device:chr_file rw_file_perms;
+allow emdloggerv ttyGS_device:chr_file rw_file_perms;
+allow emdloggerv mdlog_data_vendor_file:dir { create_dir_perms relabelto };
+allow emdloggerv mdlog_data_vendor_file:fifo_file create_file_perms;
+allow emdloggerv mdlog_data_vendor_file:file create_file_perms;
+allow emdloggerv block_device:dir search;
+allow emdloggerv md_block_device:blk_file r_file_perms;
+allow emdloggerv sysfs_boot_info:file r_file_perms;
+init_daemon_domain(emdloggerv)

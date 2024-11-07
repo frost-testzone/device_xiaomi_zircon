@@ -1,1 +1,15 @@
+type iris_config, domain;
 type iris_config_exec, exec_type, file_type, vendor_file_type;
+
+allow iris_config hal_display_iris_service:service_manager find;
+allow iris_config hal_display_iris_hwservice:hwservice_manager find;
+allow iris_config hal_feature_irisfeature_service:service_manager find;
+allow iris_config adbd:process sigchld;
+allow iris_config adbd:fd *;
+allow iris_config adbd:unix_stream_socket { getattr read write };
+allow iris_config shell:fd *;
+allow iris_config devpts:chr_file { getattr ioctl read write };
+init_daemon_domain(iris_config)
+binder_use(iris_config)
+hal_client_domain(iris_config, hal_display_iris)
+hal_client_domain(iris_config, hal_feature_irisfeature)

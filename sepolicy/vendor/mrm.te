@@ -1,0 +1,4 @@
+type mrm, coredomain, domain, mlstrustedsubject;
+
+binder_use(mrm)
+hal_client_domain(mrm, hal_mrm)

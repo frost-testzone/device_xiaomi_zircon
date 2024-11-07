@@ -44,6 +44,10 @@ allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer_default:b
 allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_sensorcommunicate_default:binder call;
 allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_sensorcommunicate_default:binder transfer;
 
+allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:dir { open read search };
+allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:chr_file { ioctl open read write };
+get_prop(vendor_hal_citsensorservice_xiaomi_default, vendor_displayfeature_prop)
+
 init_daemon_domain(vendor_hal_citsensorservice_xiaomi_default)
 r_dir_file(vendor_hal_citsensorservice_xiaomi_default, mnt_vendor_file)
 set_prop(vendor_hal_citsensorservice_xiaomi_default, vendor_goodix_cct_prop)

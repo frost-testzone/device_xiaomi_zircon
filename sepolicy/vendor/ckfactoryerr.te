@@ -1,0 +1,5 @@
+type vendor_ckfactoryerr, domain;
+type vendor_ckfactoryerr_exec, exec_type, file_type, vendor_file_type;
+
+allow vendor_ckfactoryerr self:capability { net_raw setgid setuid };
+init_daemon_domain(vendor_ckfactoryerr)

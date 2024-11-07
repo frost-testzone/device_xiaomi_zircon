@@ -1,0 +1,24 @@
+type hal_cit_wifi_default, domain;
+type hal_cit_wifi_default_exec, exec_type, file_type, vendor_file_type;
+type hal_cit_wifi_hwservice, hwservice_manager_type;
+
+attribute hal_cit_wifi;
+attribute hal_cit_wifi_client;
+attribute hal_cit_wifi_server;
+
+allow hal_cit_wifi_client hal_cit_wifi_server:binder { call transfer };
+allow hal_cit_wifi_client hal_cit_wifi_server:binder transfer;
+allow hal_cit_wifi_client hal_cit_wifi_server:fd *;
+allow hal_cit_wifi_server hal_cit_wifi_client:binder transfer;
+allow hal_cit_wifi_server hal_cit_wifi_client:binder { call transfer };
+allow hal_cit_wifi_server hal_cit_wifi_client:fd *;
+allow hal_cit_wifi_server hal_cit_wifi_hwservice:hwservice_manager { add find };
+allow hal_cit_wifi_server hidl_base_hwservice:hwservice_manager add;
+allow hal_cit_wifi_default sysfs:file { open read write };
+domain_auto_trans(hal_cit_wifi_default, vendor_shell_exec, hal_cit_wifi_sub)
+init_daemon_domain(hal_cit_wifi_default)
+get_prop(hal_cit_wifi_default, vendor_cit_wifi_prop)
+get_prop(hal_cit_wifi_default, vendor_wlan_chip_prop)
+hwbinder_use(hal_cit_wifi_default)
+hal_server_domain(hal_cit_wifi_default, hal_cit_wifi)
+

@@ -31,3 +31,7 @@ genfscon sysfs /devices/platform/soc/soc:xiaomi_fingerprint/actpower u:object_r:
 
 genfscon proc /tp_hal_version u:object_r:proc_tp_file:s0
 genfscon proc /tp_lockdown_info u:object_r:proc_tp_lockdown:s0
+genfscon proc /stpbt u:object_r:proc_stpbt:s0
+genfscon proc /mimdlog u:object_r:vendor_proc_mimdlog:s0
+genfscon proc /perfmgr/global_reclaim u:object_r:vendor_proc_perfmgr_global_reclaim:s0
+genfscon proc /mtk_aov_debug/kernel u:object_r:proc_aov_kernel:s0

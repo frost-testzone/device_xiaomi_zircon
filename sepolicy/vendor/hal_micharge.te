@@ -1,0 +1,29 @@
+type hal_micharge_default, domain;
+type hal_micharge_default_exec, exec_type, file_type, vendor_file_type;
+type hal_micharge_hwservice, hwservice_manager_type;
+
+attribute hal_micharge;
+attribute hal_micharge_client;
+attribute hal_micharge_server;
+
+allow hal_micharge_client hal_micharge_server:binder { call transfer };
+allow hal_micharge_client hal_micharge_server:binder transfer;
+allow hal_micharge_client hal_micharge_server:fd *;
+allow hal_micharge_client hal_micharge_hwservice:hwservice_manager find;
+allow hal_micharge_server hal_micharge_client:binder transfer;
+allow hal_micharge_server hal_micharge_client:binder { call transfer };
+allow hal_micharge_server hal_micharge_client:fd *;
+allow hal_micharge_server hal_micharge_hwservice:hwservice_manager { add find };
+allow hal_micharge_server hidl_base_hwservice:hwservice_manager add;
+allow hal_micharge_default system_server:binder call;
+allow hal_micharge_default sysfs:dir { getattr open read search };
+allow hal_micharge_default sysfs:file rw_file_perms;
+allow hal_micharge_default sysfs_battery_supply:file rw_file_perms;
+allow hal_micharge_default sysfs_usb_supply:file rw_file_perms;
+allow hal_micharge_default sysfs_batteryinfo:file rw_file_perms;
+init_daemon_domain(hal_micharge_default)
+r_dir_file(hal_micharge_default, sysfs_battery_supply)
+r_dir_file(hal_micharge_default, sysfs_usb_supply)
+r_dir_file(hal_micharge_default, sysfs_batteryinfo)
+hwbinder_use(hal_micharge_default)
+hal_server_domain(hal_micharge_default, hal_micharge)

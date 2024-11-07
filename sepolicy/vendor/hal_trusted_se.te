@@ -1,0 +1,28 @@
+type hal_trusted_se_default, domain;
+type hal_trusted_se_default_exec, exec_type, file_type, vendor_file_type;
+type hal_trusted_se_hwservice, hwservice_manager_type;
+
+attribute hal_trusted_se;
+attribute hal_trusted_se_client;
+attribute hal_trusted_se_server;
+
+allow hal_trusted_se_client hal_trusted_se_server:binder { call transfer };
+allow hal_trusted_se_client hal_trusted_se_server:binder transfer;
+allow hal_trusted_se_client hal_trusted_se_server:fd *;
+allow hal_trusted_se_server hal_trusted_se_client:binder transfer;
+allow hal_trusted_se_server hal_trusted_se_client:binder { call transfer };
+allow hal_trusted_se_server hal_trusted_se_client:fd *;
+allow hal_trusted_se vendor_data_file:dir { add_name read remove_name search write };
+allow hal_trusted_se vendor_data_file:file { append create getattr open read unlink write };
+allow hal_trusted_se_default secure_element_device:chr_file rw_file_perms;
+allow hal_trusted_se_default hal_trusted_se_hwservice:hwservice_manager add;
+allow hal_trusted_se_default hal_secure_element_hwservice:hwservice_manager add;
+allow hal_trusted_se_default tmsnfc_hwservice:hwservice_manager { add find };
+allow hal_trusted_se_default tmsese_hwservice:hwservice_manager { add find };
+allow hal_trusted_se_default hal_nfc_default:binder call;
+allow hal_trusted_se_default nfc_vendor_data_file:dir { add_name read remove_name search write };
+allow hal_trusted_se_default nfc_vendor_data_file:file { append create getattr open read unlink write };
+init_daemon_domain(hal_trusted_se_default)
+get_prop(hal_trusted_se, vendor_trusted_se_prop)
+hal_server_domain(hal_trusted_se_default, hal_secure_element)
+hal_server_domain(hal_trusted_se_default, hal_trusted_se)
