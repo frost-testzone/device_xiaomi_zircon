@@ -24,8 +24,6 @@ allow vendor_hal_citsensorservice_xiaomi_default nvcfg_file:dir create_dir_perms
 allow vendor_hal_citsensorservice_xiaomi_default hal_sensors_default:binder { call transfer };
 allow vendor_hal_citsensorservice_xiaomi_default sysfs_leds:dir { open search };
 allow vendor_hal_citsensorservice_xiaomi_default sysfs_leds:file { open read write };
-allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:dir { open read search };
-allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:chr_file { ioctl open read write };
 allow vendor_hal_citsensorservice_xiaomi_default dri_device:dir { open read search };
 allow vendor_hal_citsensorservice_xiaomi_default dri_device:chr_file { ioctl open read write };
 allow vendor_hal_citsensorservice_xiaomi_default gpu_device:dir { open read search };
@@ -37,11 +35,7 @@ allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_mapper_hwservice:h
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_allocator_hwservice:hwservice_manager find;
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_allocator_default:binder call;
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer_default:binder transfer;
-allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_sensorcommunicate_default:binder call;
-allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_sensorcommunicate_default:binder transfer;
 
-allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:dir { open read search };
-allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:chr_file { ioctl open read write };
 get_prop(vendor_hal_citsensorservice_xiaomi_default, vendor_displayfeature_prop)
 
 init_daemon_domain(vendor_hal_citsensorservice_xiaomi_default)
@@ -50,9 +44,6 @@ set_prop(vendor_hal_citsensorservice_xiaomi_default, vendor_goodix_cct_prop)
 hal_server_domain(vendor_hal_citsensorservice_xiaomi_default, vendor_hal_citsensorservice_xiaomi)
 hal_client_domain(vendor_hal_citsensorservice_xiaomi_default, hal_graphics_allocator)
 hal_client_domain(vendor_hal_citsensorservice_xiaomi_default, hal_graphics_composer)
-
-allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:dir r_dir_perms;
-allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:file rw_file_perms;
 
 allow vendor_hal_citsensorservice_xiaomi_default dmabuf_system_secure_heap_device:chr_file { getattr ioctl lock open read watch watch_reads };
 allow vendor_hal_citsensorservice_xiaomi_default dmabuf_system_heap_device:chr_file rw_file_perms;

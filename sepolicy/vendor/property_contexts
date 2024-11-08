@@ -5,20 +5,15 @@ vendor.teefs_state u:object_r:vendor_mtk_mitee_prop:s0
 # Thermal
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0
 
-vendor.ffu.is.start u:object_r:vendor_ffu_prop:s0
-vendor.ffu.is.valid u:object_r:vendor_ffu_prop:s0
-
 vendor.sla.enabled u:object_r:vendor_slad_prop:s0
 vendor.sla.uidwhitelist u:object_r:vendor_slad_prop:s0
 vendor.sla.wlan.interface u:object_r:vendor_slad_prop:s0
 vendor.sla.wwan.interface u:object_r:vendor_slad_prop:s0
-vendor.mi_ic.is.valid u:object_r:vendor_mi_ic_prop:s0
 
 persist.vendor.fpc. u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp. u:object_r:vendor_fp_prop:s0
 ro.hardware.fp. u:object_r:vendor_fp_prop:s0
-vendor.dtool. u:object_r:vendor_fp_prop:s0
 vendor.fps_hal. u:object_r:vendor_fp_prop:s0
 vendor.panel.display. u:object_r:vendor_fp_prop:s0
 vendor.panel.touch_vendor u:object_r:vendor_fp_prop:s0
@@ -44,9 +39,6 @@ persist.vendor.sys.rkp.status u:object_r:vendor_payment_security_prop:s0
 vendor.sys.feature_state u:object_r:vendor_payment_security_prop:s0
 vendor.sys.rpmb_state u:object_r:vendor_payment_security_prop:s0
 ro.vendor.mtk_flp_support u:object_r:vendor_mtk_flp_prop:s0
-vendor.miwild.enabled u:object_r:vendor_miwild_prop:s0
-vendor.minetd.enabled u:object_r:vendor_minetd_prop:s0
-vendor.mi_ric.is.valid u:object_r:vendor_mi_ric_prop:s0
 
 init.svc.vendor.displayfeature-hal-1-0 u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.dc_backlight.enable u:object_r:vendor_displayfeature_prop:s0
@@ -169,13 +161,6 @@ ro.vendor.oem.imei u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.meid u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.serialno u:object_r:vendor_deviceid_prop:s0
 ro.hardware.wlan. u:object_r:vendor_wlan_chip_prop:s0
-ctl.start$vendor.sniffer u:object_r:vendor_cit_wifi_sub_prop:s0
-ctl.start$vendor.tcpdump u:object_r:vendor_cit_wifi_sub_prop:s0
-ctl.stop$vendor.sniffer u:object_r:vendor_cit_wifi_sub_prop:s0
-ctl.stop$vendor.tcpdump u:object_r:vendor_cit_wifi_sub_prop:s0
-vendor.hardware.wlan.runsniffer u:object_r:vendor_cit_wifi_sub_prop:s0
-vendor.hardware.wlan.runsniffer.circular u:object_r:vendor_cit_wifi_sub_prop:s0
-vendor.hardware.wlan.runtcpdump u:object_r:vendor_cit_wifi_sub_prop:s0
 ro.vendor.mtk_aov_app_support u:object_r:vendor_mtk_aov_app_support_prop:s0
 ro.vendor.mtkcam. u:object_r:vendor_mtkcam_prop:s0
 vendor.camera. u:object_r:vendor_mtkcam_prop:s0
@@ -193,7 +178,6 @@ persist.vendor.bluetooth.supportopphdt u:object_r:vendor_mtk_default_prop:s0
 persist.vendor.camera.madridMode u:object_r:vendor_camera_madrid_prop:s0
 persist.vendor.connsysfw.enable u:object_r:vendor_wlan_logs_prop:s0
 persist.vendor.debug.gpud. u:object_r:vendor_mtk_gpu_prop:s0
-persist.vendor.hostprocess.waterproof u:object_r:vendor_touch_hostprocess_prop:s0
 persist.vendor.mtk.5gvowifi.force.enable u:object_r:vendor_mtk_vonr_force_prop:s0
 persist.vendor.mtk.vodata.enable u:object_r:vendor_mtk_wfc_prop:s0
 persist.vendor.mtk_sim_switch_policy u:object_r:vendor_mtk_default_prop:s0
@@ -204,7 +188,6 @@ persist.vendor.sss. u:object_r:vendor_mtk_smartpower_prop:s0
 persist.vendor.sys.fp.info u:object_r:vendor_fp_info_prop:s0
 persist.vendor.sys.fp.uid u:object_r:vendor_fp_info_prop:s0
 persist.vendor.tcpdump.enable u:object_r:vendor_wlan_logs_prop:s0
-persist.vendor.touchfeature. u:object_r:vendor_touchfeature_prop:s0
 persist.vendor.watermark_scale_factor u:object_r:vendor_wmark_prop:s0 exact int
 persist.vendor.wifienhancelog u:object_r:vendor_wifienhancelog_prop:s0
 persist.vendor.wlan.disable.chinasar u:object_r:vendor_wlan_china_sar_prop:s0
@@ -222,7 +205,6 @@ ro.vendor.net.enable_passpoint_r1 u:object_r:vendor_passpoint_prop:s0
 ro.vendor.nfc. u:object_r:vendor_nfc_mi_prop:s0
 ro.vendor.radio. u:object_r:vendor_mtk_radio_prop:s0
 ro.vendor.se. u:object_r:vendor_nfc_mi_prop:s0
-ro.vendor.touchfeature.type u:object_r:vendor_touchfeature_prop:s0
 ro.vendor.usb. u:object_r:vendor_mtk_usb_prop:s0
 ro.vendor.videoainr.enable u:object_r:vendor_mtk_camera_prop:s0
 vendor.applist. u:object_r:vendor_mtk_applist_prop:s0
@@ -237,5 +219,4 @@ vendor.mtk.hwc. u:object_r:vendor_mtk_hwc_prop:s0
 vendor.nfc. u:object_r:vendor_nfc_mi_prop:s0
 vendor.service.wifi_nvram u:object_r:vendor_mtk_service_wifi_nvram_prop:s0
 vendor.tms.nfc. u:object_r:vendor_tms_nfc_prop:s0
-vendor.touchfeature. u:object_r:vendor_touchfeature_prop:s0
 

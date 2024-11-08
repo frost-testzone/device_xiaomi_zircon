@@ -19,9 +19,6 @@ allow hal_mtdservice_default mnt_vendor_file:dir { create_dir_perms relabelfrom 
 allow hal_mtdservice_default mediadrm_vendor_data_file:dir { create_file_perms relabelto };
 allow hal_mtdservice_default mediadrm_vendor_data_file:file { create_file_perms relabelto };
 allow hal_mtdservice_default widevine_drv_device:chr_file { getattr ioctl open read write };
-allow hal_mtdservice_default hal_mfidoca_hwservice:hwservice_manager find;
-allow hal_mtdservice_default hal_mfidoca_default:binder { call transfer };
-allow hal_mtdservice_default hal_mfidoca_default:fd *;
 allow hal_mtdservice_default hal_mlipay_hwservice:hwservice_manager find;
 allow hal_mtdservice_default hal_mlipay_default:binder { call transfer };
 allow hal_mtdservice_default hal_mlipay_default:fd *;
@@ -29,7 +26,6 @@ allow hal_mtdservice_default mitee_client_device:chr_file rw_file_perms;
 allow hal_mtdservice_default mitee_sfs_file:dir { create_dir_perms relabelto };
 allow hal_mtdservice_default mitee_sfs_file:file { create_file_perms relabelto };
 allow hal_mtdservice_default servicemanager:binder call;
-allow hal_mtdservice_default hal_tidaservice_default:binder transfer;
 allow hal_mtdservice_client hal_mtdservice_server:binder { call transfer };
 allow hal_mtdservice_client hal_mtdservice_server:binder transfer;
 allow hal_mtdservice_client hal_mtdservice_server:fd *;

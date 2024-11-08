@@ -2,97 +2,25 @@ attribute hal_mtk_mmlpq;
 attribute hal_mtk_mmlpq_client;
 attribute hal_mtk_mmlpq_server;
 
-attribute vendor_hal_displayfeature_xiaomi;
-attribute vendor_hal_displayfeature_xiaomi_client;
-attribute vendor_hal_displayfeature_xiaomi_server;
-
-attribute hal_cit_wifi;
-attribute hal_cit_wifi_client;
-attribute hal_cit_wifi_server;
-
 attribute vendor_hal_citsensorservice_xiaomi;
 attribute vendor_hal_citsensorservice_xiaomi_client;
 attribute vendor_hal_citsensorservice_xiaomi_server;
-
-
-attribute hal_touchfeature_xiaomi;
-attribute hal_touchfeature_xiaomi_client;
-attribute hal_touchfeature_xiaomi_server;
-
-
-attribute hal_trusted_se;
-attribute hal_trusted_se_client;
-attribute hal_trusted_se_server;
-
 
 attribute hal_videoservice;
 attribute hal_videoservice_client;
 attribute hal_videoservice_server;
 
-attribute hal_vsimapp;
-attribute hal_vsimapp_client;
-attribute hal_vsimapp_server;
-
-
-attribute hal_wired_se;
-attribute hal_wired_se_client;
-attribute hal_wired_se_server;
-
-
 attribute hal_mtk_batching;
 attribute hal_mtk_batching_client;
 attribute hal_mtk_batching_server;
-
-
-attribute hal_miperf;
-attribute hal_miperf_client;
-attribute hal_miperf_server;
-
-attribute hal_minet;
-attribute hal_minet_client;
-attribute hal_minet_server;
-
-attribute hal_misys;
-attribute hal_misys_client;
-attribute hal_misys_server;
-
-
-attribute hal_mimd;
-attribute hal_mimd_client;
-attribute hal_mimd_server;
-
-attribute hal_micharge;
-attribute hal_micharge_client;
-attribute hal_micharge_server;
-
-
-attribute hal_mfidoca;
-attribute hal_mfidoca_client;
-attribute hal_mfidoca_server;
 
 attribute hal_feature_irisfeature;
 attribute hal_feature_irisfeature_client;
 attribute hal_feature_irisfeature_server;
 
-
-attribute hal_fbo;
-attribute hal_fbo_client;
-attribute hal_fbo_server;
-
-
-attribute hal_dms;
-attribute hal_dms_client;
-attribute hal_dms_server;
-
-
 attribute hal_display_iris;
 attribute hal_display_iris_client;
 attribute hal_display_iris_server;
-
-
-attribute hal_miwill;
-attribute hal_miwill_client;
-attribute hal_miwill_server;
 
 attribute hal_mlipay;
 attribute hal_mlipay_client;
@@ -119,22 +47,6 @@ attribute hal_mtk_mali_platform_default;
 attribute hal_mtk_mali_platform_default_server;
 attribute hal_mtk_mali_platform_default_client;
 
-
-attribute hal_otrpagent;
-attribute hal_otrpagent_client;
-attribute hal_otrpagent_server;
-
-
-attribute vendor_hal_sensorcommunicate;
-attribute vendor_hal_sensorcommunicate_client;
-attribute vendor_hal_sensorcommunicate_server;
-
-
 attribute hal_slaservice;
 attribute hal_slaservice_client;
 attribute hal_slaservice_server;
-
-
-attribute hal_tidaservice;
-attribute hal_tidaservice_server;
-attribute hal_tidaservice_client;
