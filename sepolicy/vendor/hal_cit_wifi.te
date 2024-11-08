@@ -2,10 +2,6 @@ type hal_cit_wifi_default, domain;
 type hal_cit_wifi_default_exec, exec_type, file_type, vendor_file_type;
 type hal_cit_wifi_hwservice, hwservice_manager_type;
 
-attribute hal_cit_wifi;
-attribute hal_cit_wifi_client;
-attribute hal_cit_wifi_server;
-
 allow hal_cit_wifi_client hal_cit_wifi_server:binder { call transfer };
 allow hal_cit_wifi_client hal_cit_wifi_server:binder transfer;
 allow hal_cit_wifi_client hal_cit_wifi_server:fd *;

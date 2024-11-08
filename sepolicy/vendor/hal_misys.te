@@ -2,10 +2,6 @@ type hal_misys_default, domain;
 type hal_misys_default_exec, exec_type, file_type, vendor_file_type;
 type hal_misys_hwservice, hwservice_manager_type;
 
-attribute hal_misys;
-attribute hal_misys_client;
-attribute hal_misys_server;
-
 allow hal_misys_default vendor_mi_ic_prop:property_service set;
 allow hal_misys_default mi_ic_data_file:dir search;
 allow hal_misys_default mi_ic_data_file:file { getattr open read };

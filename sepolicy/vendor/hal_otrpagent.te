@@ -2,10 +2,6 @@ type hal_otrpagent_default, domain;
 type hal_otrpagent_default_exec, exec_type, file_type, vendor_file_type;
 type hal_otrpagent_hwservice, hwservice_manager_type;
 
-attribute hal_otrpagent;
-attribute hal_otrpagent_client;
-attribute hal_otrpagent_server;
-
 allow hal_otrpagent_client hal_otrpagent_server:binder { call transfer };
 allow hal_otrpagent_client hal_otrpagent_server:binder transfer;
 allow hal_otrpagent_client hal_otrpagent_server:fd *;

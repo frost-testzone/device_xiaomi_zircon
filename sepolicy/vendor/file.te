@@ -56,3 +56,5 @@ type vendor_sysfs_fp, fs_type, sysfs_type;
 type vendor_camera_update_db_file, file_type, vendor_file_type;
 type frs_socket, file_type;
 type audio_socket, file_type;
+type sysfs_re25_calib, fs_type, sysfs_type;
+type sysfs_chip_name, fs_type, sysfs_type;

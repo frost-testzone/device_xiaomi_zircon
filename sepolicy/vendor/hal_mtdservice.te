@@ -2,10 +2,6 @@ type hal_mtdservice_default, domain;
 type hal_mtdservice_default_exec, exec_type, file_type, vendor_file_type;
 type hal_mtdservice_hwservice, hwservice_manager_type;
 
-attribute hal_mtdservice;
-attribute hal_mtdservice_client;
-attribute hal_mtdservice_server;
-
 allow hal_mtdservice_default hal_secure_element_default:binder transfer;
 allow hal_mtdservice_default hal_mtdservice_hwservice:hwservice_manager add;
 allow hal_mtdservice_default tee_device:chr_file rw_file_perms;

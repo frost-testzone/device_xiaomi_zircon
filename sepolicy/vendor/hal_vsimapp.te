@@ -2,9 +2,6 @@ type hal_vsimapp_default, domain;
 type hal_vsimapp_default_exec, exec_type, file_type, vendor_file_type;
 type hal_vsimapp_hwservice, hwservice_manager_type;
 
-attribute hal_vsimapp;
-attribute hal_vsimapp_client;
-attribute hal_vsimapp_server;
 
 allow hal_vsimapp_client hal_vsimapp_server:binder { call transfer };
 allow hal_vsimapp_client hal_vsimapp_server:binder transfer;

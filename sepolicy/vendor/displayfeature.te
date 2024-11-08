@@ -1,11 +1,6 @@
 type vendor_displayfeature, domain;
 type vendor_displayfeature_exec, exec_type, file_type, vendor_file_type;
 
-attribute vendor_hal_displayfeature_xiaomi;
-attribute vendor_hal_displayfeature_xiaomi_client;
-attribute vendor_hal_displayfeature_xiaomi_server;
-
-
 allow vendor_displayfeature system_server:binder transfer;
 allow vendor_displayfeature system_server:binder { call transfer };
 allow vendor_displayfeature system_server:fd *;

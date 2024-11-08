@@ -2,10 +2,6 @@ type hal_minet_default, domain;
 type hal_minet_default_exec, exec_type, file_type, vendor_file_type;
 type hal_minet_hwservice, hwservice_manager_type;
 
-attribute hal_minet;
-attribute hal_minet_client;
-attribute hal_minet_server;
-
 allow hal_minet_default vendor_minetd_prop:file read;
 allow hal_minet_default minetd_socket:sock_file { getattr read unlink write };
 allow hal_minet_default socket_device:sock_file write;

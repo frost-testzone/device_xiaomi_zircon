@@ -2,10 +2,6 @@ type hal_fbo_default, domain;
 type hal_fbo_default_exec, exec_type, file_type, vendor_file_type;
 type hal_fbo_hwservice, hwservice_manager_type;
 
-attribute hal_fbo;
-attribute hal_fbo_client;
-attribute hal_fbo_server;
-
 allow hal_fbo_client hal_fbo_server:binder { call transfer };
 allow hal_fbo_client hal_fbo_server:binder transfer;
 allow hal_fbo_client hal_fbo_server:fd *;

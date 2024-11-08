@@ -177,3 +177,11 @@ vendor.hardware.wlan.runsniffer u:object_r:vendor_cit_wifi_sub_prop:s0
 vendor.hardware.wlan.runsniffer.circular u:object_r:vendor_cit_wifi_sub_prop:s0
 vendor.hardware.wlan.runtcpdump u:object_r:vendor_cit_wifi_sub_prop:s0
 ro.vendor.mtk_aov_app_support u:object_r:vendor_mtk_aov_app_support_prop:s0
+ro.vendor.mtkcam. u:object_r:vendor_mtkcam_prop:s0
+vendor.camera. u:object_r:vendor_mtkcam_prop:s0
+vendor.debug. u:object_r:vendor_mtkcam_prop:s0
+vendor.mtkcam. u:object_r:vendor_mtkcam_prop:s0
+persist.vendor.camera. u:object_r:vendor_mtkcam_prop:s0
+
+ro.vendor.oem.psno u:object_r:vendor_sno_prop:s0
+ro.vendor.oem.sno u:object_r:vendor_sno_prop:s0

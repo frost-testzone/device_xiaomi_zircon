@@ -2,10 +2,6 @@ type hal_mfidoca_default, domain;
 type hal_mfidoca_default_exec, exec_type, file_type, vendor_file_type;
 type hal_mfidoca_hwservice, hwservice_manager_type;
 
-attribute hal_mfidoca;
-attribute hal_mfidoca_client;
-attribute hal_mfidoca_server;
-
 allow hal_mfidoca_default hal_mtdservice_default:binder transfer;
 allow hal_mfidoca_default hal_mfidoca_hwservice:hwservice_manager add;
 allow hal_mfidoca_default tee_device:chr_file rw_file_perms;

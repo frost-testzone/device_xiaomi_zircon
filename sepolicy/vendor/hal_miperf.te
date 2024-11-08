@@ -2,10 +2,6 @@ type hal_miperf_default, domain;
 type hal_miperf_default_exec, exec_type, file_type, vendor_file_type;
 type hal_miperf_hwservice, hwservice_manager_type;
 
-attribute hal_miperf;
-attribute hal_miperf_client;
-attribute hal_miperf_server;
-
 allow hal_miperf_client hal_miperf_server:binder { call transfer };
 allow hal_miperf_client hal_miperf_server:binder transfer;
 allow hal_miperf_client hal_miperf_server:fd *;

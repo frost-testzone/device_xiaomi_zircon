@@ -23,3 +23,6 @@ r_dir_file(mi_thermald, sysfs_thermal)
 r_dir_file(mi_thermald, sysfs)
 r_dir_file(mi_thermald, sysfs_leds)
 set_prop(mi_thermald, vendor_thermal_normal_prop)
+
+allow mi_thermald vendor_sysfs_displayfeature:dir r_dir_perms;
+allow mi_thermald vendor_sysfs_displayfeature:file rw_file_perms;

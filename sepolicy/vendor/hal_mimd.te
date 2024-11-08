@@ -2,10 +2,6 @@ type hal_mimd_default, domain, mlstrustedsubject;
 type hal_mimd_default_exec, exec_type, file_type, vendor_file_type;
 type hal_mimd_hwservice, hwservice_manager_type;
 
-attribute hal_mimd;
-attribute hal_mimd_client;
-attribute hal_mimd_server;
-
 allow hal_mimd_client hal_mimd_server:binder { call transfer };
 allow hal_mimd_client hal_mimd_server:binder transfer;
 allow hal_mimd_client hal_mimd_server:fd *;

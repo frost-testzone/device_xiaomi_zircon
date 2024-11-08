@@ -2,10 +2,6 @@ type hal_wired_se_default, domain;
 type hal_wired_se_default_exec, exec_type, file_type, vendor_file_type;
 type hal_wired_se_hwservice, hwservice_manager_type;
 
-attribute hal_wired_se;
-attribute hal_wired_se_client;
-attribute hal_wired_se_server;
-
 allow hal_wired_se_client hal_wired_se_server:binder { call transfer };
 allow hal_wired_se_client hal_wired_se_server:binder transfer;
 allow hal_wired_se_client hal_wired_se_server:fd *;

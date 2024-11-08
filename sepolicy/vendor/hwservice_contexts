@@ -34,3 +34,5 @@ vendor.tms.tmsnfc::ITmsNfc                                  u:object_r:tmsnfc_hw
 vendor.tms.tmsese::ITmsEse                                  u:object_r:tmsese_hwservice:s0
 vendor.xiaomi.hw.touchfeature::ITouchFeature           u:object_r:hal_touchfeature_xiaomi_hwservice:s0
 vendor.tms.wiredse::ITmsWiredSe                             u:object_r:hal_wired_se_hwservice:s0
+vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
+vendor.xiaomi.hardware.bgservice::IBGService   u:object_r:mtk_hal_bgs_hwservice:s0

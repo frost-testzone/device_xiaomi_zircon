@@ -2,10 +2,6 @@ type hal_videoservice_default, domain, mlstrustedsubject;
 type hal_videoservice_default_exec, exec_type, file_type, vendor_file_type;
 type hal_videoservice_hwservice, hwservice_manager_type;
 
-attribute hal_videoservice;
-attribute hal_videoservice_client;
-attribute hal_videoservice_server;
-
 allow hal_videoservice_client hal_videoservice_server:binder { call transfer };
 allow hal_videoservice_client hal_videoservice_server:binder transfer;
 allow hal_videoservice_client hal_videoservice_server:fd *;

@@ -1,9 +1,6 @@
 type hal_feature_irisfeature_default, domain;
 type hal_feature_irisfeature_default_exec, exec_type, file_type, vendor_file_type;
 
-attribute hal_feature_irisfeature;
-attribute hal_feature_irisfeature_client;
-attribute hal_feature_irisfeature_server;
 
 allow hal_feature_irisfeature_client hal_feature_irisfeature_server:binder { call transfer };
 allow hal_feature_irisfeature_client hal_feature_irisfeature_server:fd *;

@@ -1,9 +1,5 @@
 type hal_display_iris_hwservice, hwservice_manager_type;
 
-attribute hal_display_iris;
-attribute hal_display_iris_client;
-attribute hal_display_iris_server;
-
 allow hal_display_iris_client hal_display_iris_server:binder { call transfer };
 allow hal_display_iris_client hal_display_iris_server:binder transfer;
 allow hal_display_iris_client hal_display_iris_server:fd *;

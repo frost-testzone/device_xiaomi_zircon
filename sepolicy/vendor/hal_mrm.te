@@ -1,9 +1,6 @@
 type hal_mrm_default, domain;
 type hal_mrm_default_exec, exec_type, file_type, vendor_file_type;
 
-attribute hal_mrm;
-attribute hal_mrm_client;
-attribute hal_mrm_server;
 
 allow hal_mrm_server dumpstate:fifo_file write;
 allow hal_mrm_server dumpstate:fd *;

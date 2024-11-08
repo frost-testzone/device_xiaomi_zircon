@@ -2,10 +2,6 @@ type hal_miwill_default, domain;
 type hal_miwill_default_exec, exec_type, file_type, vendor_file_type;
 type hal_miwill_hwservice, hwservice_manager_type;
 
-attribute hal_miwill;
-attribute hal_miwill_client;
-attribute hal_miwill_server;
-
 allow hal_miwill_default vendor_miwild_prop:file read;
 allow hal_miwill_default miwild_socket:sock_file { getattr read unlink write };
 allow hal_miwill_default socket_device:sock_file write;
