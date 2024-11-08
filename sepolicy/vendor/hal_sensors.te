@@ -1,0 +1,2 @@
+allow hal_sensors_default system_server:binder { call transfer };
+hal_client_domain(hal_sensors_default, hal_audio)

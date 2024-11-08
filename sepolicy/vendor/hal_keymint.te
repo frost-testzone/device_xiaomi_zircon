@@ -1,0 +1,5 @@
+allow hal_keymint_default mitee_sfs_file:dir { create_dir_perms relabelto };
+allow hal_keymint_default mitee_sfs_file:file { create_file_perms relabelto };
+allow hal_keymint_default mitee_client_device:chr_file { ioctl open read write };
+set_prop(hal_keymint_default, vendor_mtk_mitee_prop)
+allow hal_keymint_default kmsg_device:chr_file rw_file_perms;

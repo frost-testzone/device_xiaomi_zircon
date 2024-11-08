@@ -1,0 +1,36 @@
+attribute hal_mtk_mmlpq;
+attribute hal_mtk_mmlpq_client;
+attribute hal_mtk_mmlpq_server;
+
+attribute vendor_hal_citsensorservice_xiaomi;
+attribute vendor_hal_citsensorservice_xiaomi_client;
+attribute vendor_hal_citsensorservice_xiaomi_server;
+
+attribute hal_mtk_batching;
+attribute hal_mtk_batching_client;
+attribute hal_mtk_batching_server;
+
+attribute hal_mlipay;
+attribute hal_mlipay_client;
+attribute hal_mlipay_server;
+
+attribute hal_mrm;
+attribute hal_mrm_client;
+attribute hal_mrm_server;
+
+attribute hal_mtk_aov;
+attribute hal_mtk_aov_client;
+attribute hal_mtk_aov_server;
+
+
+attribute hal_mtdservice;
+attribute hal_mtdservice_client;
+attribute hal_mtdservice_server;
+
+attribute hal_mtk_applist;
+attribute hal_mtk_applist_server;
+attribute hal_mtk_applist_client;
+
+attribute hal_mtk_mali_platform_default;
+attribute hal_mtk_mali_platform_default_server;
+attribute hal_mtk_mali_platform_default_client;

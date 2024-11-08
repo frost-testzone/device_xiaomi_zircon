@@ -1,0 +1,14 @@
+allow mtk_hal_camera vendor_mtkcam_prop:file { getattr open read };
+allow mtk_hal_camera vendor_mtkcam_prop:file map;
+allow mtk_hal_camera vendor_mtkcam_prop:property_service set;
+r_dir_file(mtk_hal_camera, persist_data_file)
+
+allow mtk_hal_camera vendor_data_file:dir { read write };
+allow mtk_hal_camera vendor_data_file:dir add_name;
+allow mtk_hal_camera vendor_data_file:dir { create open };
+allow mtk_hal_camera vendor_data_file:file { append create getattr open read write };
+
+allow mtk_hal_camera camera_persist_file:dir search;
+allow mtk_hal_camera camera_persist_file:dir { open read };
+allow mtk_hal_camera camera_persist_file:file { getattr open read };
+set_prop(mtk_hal_camera, vendor_camera_skynet_prop)

@@ -1,0 +1,5 @@
+allow hal_secure_element_default mitee_client_device:chr_file rw_file_perms;
+allow hal_secure_element_default mitee_sfs_file:dir { create_dir_perms relabelto };
+allow hal_secure_element_default mitee_sfs_file:file { create_file_perms relabelto };
+allow hal_secure_element_default nfc_device:chr_file { ioctl open read write };
+allow hal_secure_element_default sysfs_chip_name:file { getattr open read };
