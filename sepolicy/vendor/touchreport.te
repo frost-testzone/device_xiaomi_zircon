@@ -7,7 +7,6 @@ allow touchreport sysfs_touch_suspend:file { open read write };
 allow touchreport sysfs_touch_suspend:file rw_file_perms;
 allow touchreport input_device:chr_file rw_file_perms;
 allow touchreport input_device:dir r_dir_perms;
-allow touchreport proc_tp_file:file { open read write };
 allow touchreport proc_tp_lockdown:file { open read write };
 allow touchreport touchreport_data_file:file { open read };
 allow touchreport touchreport_data_file:dir rw_dir_perms;
