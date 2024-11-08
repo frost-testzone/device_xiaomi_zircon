@@ -7,8 +7,6 @@ type sysfs_usb_supply, fs_type, sysfs_type;
 type sysfs_usbpd_device, fs_type, sysfs_type;
 type sys_thermal_market_download_limit, fs_type, sysfs_type;
 type procfs_memory, fs_type, proc_type;
-type slad_socket, file_type;
-type sla_data_file, data_file_type, file_type;
 type vendor_data_touchreport_file, data_file_type, file_type;
 type minidump_data_file, data_file_type, file_type;
 type sysfs_bootinfo, fs_type, sysfs_type;

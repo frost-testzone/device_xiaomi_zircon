@@ -15,7 +15,6 @@ vendor.pixelworks.hardware.display::IIris           u:object_r:hal_display_iris_
 vendor.pixelworks.hardware.feature::IIrisFeature    u:object_r:hal_display_iris_hwservice:s0
 
 vendor.xiaomi.hardware.mtdservice::IMTService       u:object_r:hal_mtdservice_hwservice:s0
-vendor.qti.sla.service::ISlaService                          u:object_r:hal_slaservice_hwservice:s0
 vendor.xiaomi.hardware.videoservice::IVideoService   u:object_r:hal_videoservice_hwservice:s0
 vendor.tms.tmsnfc::ITmsNfc                                  u:object_r:tmsnfc_hwservice:s0
 vendor.tms.tmsese::ITmsEse                                  u:object_r:tmsese_hwservice:s0

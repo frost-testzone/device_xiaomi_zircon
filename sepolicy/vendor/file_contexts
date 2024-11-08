@@ -54,8 +54,6 @@
 /cache/mqsas(/.*)? u:object_r:mqsas_data_file:s0
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.mitee u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/volte_rcs_ua64 u:object_r:volte_rcs_ua_exec:s0
-/(vendor|system/vendor)/bin/slad u:object_r:slad_exec:s0
-/dev/socket/slad u:object_r:slad_socket:s0
 /(vendor|system/vendor)/bin/rcs_volte_stack64 u:object_r:rcs_volte_stack_exec:s0
 /(vendor|system/vendor)/bin/minidump64 u:object_r:minidump64_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.0-service u:object_r:hal_nfc_default_exec:s0
@@ -90,7 +88,6 @@
 /(odm|vendor/odm|vendor|system/vendor)/bin/touch_report u:object_r:touchreport_exec:s0
 /(odm|vendor/odm|vendor|system/vendor)/bin/touchsensor u:object_r:touchreport_exec:s0
 /(system\/vendor|vendor)/bin/hw/vendor\.microtrust\.hardware\.se@1\.0-service u:object_r:hal_secure_element_default_exec:s0
-/data/vendor/sla(/.*)? u:object_r:sla_data_file:s0
 /data/vendor/touch(/.*)? u:object_r:vendor_data_touchreport_file:s0
 /data/vendor/diag(/.*)? u:object_r:minidump_data_file:s0
 /dev/block/by-name/crash_history u:object_r:minidump_partition:s0
@@ -321,7 +318,6 @@
 /data/vendor/cit(/.*)? u:object_r:vendor_audio_data_file:s0
 /data/vendor/audio(/.*)? u:object_r:mtk_audiohal_data_file:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.videoservice@1\.0-service u:object_r:hal_videoservice_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.sla\.service\@1\.0-service u:object_r:hal_slaservice_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-tms u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/bp_id_attestation u:object_r:bp_id_attestation_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mrmd_mitee u:object_r:hal_mrm_default_exec:s0

@@ -5,11 +5,6 @@ vendor.teefs_state u:object_r:vendor_mtk_mitee_prop:s0
 # Thermal
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0
 
-vendor.sla.enabled u:object_r:vendor_slad_prop:s0
-vendor.sla.uidwhitelist u:object_r:vendor_slad_prop:s0
-vendor.sla.wlan.interface u:object_r:vendor_slad_prop:s0
-vendor.sla.wwan.interface u:object_r:vendor_slad_prop:s0
-
 persist.vendor.fpc. u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp. u:object_r:vendor_fp_prop:s0

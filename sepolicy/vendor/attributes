@@ -46,7 +46,3 @@ attribute hal_mtk_applist_client;
 attribute hal_mtk_mali_platform_default;
 attribute hal_mtk_mali_platform_default_server;
 attribute hal_mtk_mali_platform_default_client;
-
-attribute hal_slaservice;
-attribute hal_slaservice_client;
-attribute hal_slaservice_server;
