@@ -61,7 +61,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mmlpq@V1-service u:object_r:mtk_hal_mmlpq_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.7-service u:object_r:mtk_hal_mms_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.gnss\.batching-service u:object_r:mtk_hal_batching_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek u:object_r:mtkpower_applist_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-mediatek u:object_r:mtk_hal_secure_element_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service-tms u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks-shim-service-mtk-lazy u:object_r:mtk_hal_neuralnetworks_exec:s0
