@@ -49,7 +49,6 @@ persist.vendor.dfps.level u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.disable_idle_fps u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.disable_idle_fps.threshold u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.displayfeature.video.pq.type u:object_r:vendor_displayfeature_prop:s0
-persist.vendor.dolbyvision.flat_on u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.fod.modified.dc_status u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.max.brightness u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.mi_sf. u:object_r:vendor_displayfeature_prop:s0
@@ -73,7 +72,6 @@ ro.vendor.display.benchmark_app u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.clstc_3dlut.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.default_fps u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.dither u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.display.dolbyvision.support u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.dual_builtin_disp u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.expert_calib.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.fod_monitor_default_fps u:object_r:vendor_displayfeature_prop:s0
