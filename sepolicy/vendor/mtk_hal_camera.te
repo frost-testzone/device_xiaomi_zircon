@@ -11,3 +11,4 @@ allow mtk_hal_camera vendor_data_file:file { append create getattr open read wri
 allow mtk_hal_camera camera_persist_file:dir search;
 allow mtk_hal_camera camera_persist_file:dir { open read };
 allow mtk_hal_camera camera_persist_file:file { getattr open read };
+set_prop(mtk_hal_camera, vendor_camera_skynet_prop)
