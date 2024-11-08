@@ -90,10 +90,6 @@
 /(odm|vendor/odm|vendor|system/vendor)/bin/touch_report u:object_r:touchreport_exec:s0
 /(odm|vendor/odm|vendor|system/vendor)/bin/touchsensor u:object_r:touchreport_exec:s0
 /(system\/vendor|vendor)/bin/hw/vendor\.microtrust\.hardware\.se@1\.0-service u:object_r:hal_secure_element_default_exec:s0
-/(vendor|odm|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display-service u:object_r:hal_graphics_composer_default_exec:s0
-/(vendor|odm|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service u:object_r:hal_graphics_composer_default_exec:s0
-/(vendor|odm|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service u:object_r:hal_graphics_composer_default_exec:s0
-/(vendor|odm|system/vendor)/bin/irisConfig u:object_r:iris_config_exec:s0
 /data/vendor/sla(/.*)? u:object_r:sla_data_file:s0
 /data/vendor/touch(/.*)? u:object_r:vendor_data_touchreport_file:s0
 /data/vendor/diag(/.*)? u:object_r:minidump_data_file:s0
@@ -275,7 +271,6 @@
 /mnt/rescue(/.*)? u:object_r:cache_file:s0
 /mnt/rescue/mqsas(/.*)? u:object_r:mqsas_data_file:s0
 /mnt/rescue/update_engine_log(/.*)? u:object_r:update_engine_log_data_file:s0
-/mnt/vendor/iris(/.*)? u:object_r:mnt_vendor_iris_file:s0
 /dev/xiaomi-fp u:object_r:fingerprint_device:s0
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /dev/xlog u:object_r:sound_device:s0
@@ -329,7 +324,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.sla\.service\@1\.0-service u:object_r:hal_slaservice_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-tms u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/bp_id_attestation u:object_r:bp_id_attestation_exec:s0
-/(vendor|odm|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.feature-service u:object_r:hal_feature_irisfeature_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mrmd_mitee u:object_r:hal_mrm_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mtd_mitee u:object_r:hal_mtdservice_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mtd_mitee@1.1 u:object_r:hal_mtdservice_default_exec:s0
