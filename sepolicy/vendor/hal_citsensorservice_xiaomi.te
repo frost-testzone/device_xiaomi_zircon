@@ -53,3 +53,7 @@ hal_client_domain(vendor_hal_citsensorservice_xiaomi_default, hal_graphics_compo
 
 allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:dir r_dir_perms;
 allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:file rw_file_perms;
+
+allow vendor_hal_citsensorservice_xiaomi_default dmabuf_system_secure_heap_device:chr_file { getattr ioctl lock open read watch watch_reads };
+allow vendor_hal_citsensorservice_xiaomi_default dmabuf_system_heap_device:chr_file rw_file_perms;
+set_prop(vendor_hal_citsensorservice_xiaomi_default,vendor_default_prop)
