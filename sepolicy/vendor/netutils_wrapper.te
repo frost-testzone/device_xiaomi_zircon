@@ -1,3 +1,1 @@
-allow netutils_wrapper nvdata_file:lnk_file create_file_perms;
-allow netutils_wrapper nvdata_file:file create_file_perms;
-allow netutils_wrapper nvdata_file:dir create_dir_perms;
+allow netutils_wrapper nvdata_file:file read;

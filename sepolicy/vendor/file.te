@@ -28,7 +28,6 @@ type vendor_proc_perfmgr_global_reclaim, fs_type, proc_type;
 type camera_persist_file, file_type;
 type nfc_vendor_data_file, data_file_type, file_type;
 type proc_aov_kernel, fs_type, proc_type;
-type mnt_vendor_iris_file, file_type;
 type mdlog_data_vendor_file, data_file_type, file_type;
 type otrp_data_file, data_file_type, file_type;
 type vendor_ins_vendor_data_file, data_file_type, file_type;

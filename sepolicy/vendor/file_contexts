@@ -55,7 +55,6 @@
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.mitee u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/volte_rcs_ua64 u:object_r:volte_rcs_ua_exec:s0
 /(vendor|system/vendor)/bin/rcs_volte_stack64 u:object_r:rcs_volte_stack_exec:s0
-/(vendor|system/vendor)/bin/minidump64 u:object_r:minidump64_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.0-service u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.1-service u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.2-service u:object_r:hal_nfc_default_exec:s0
@@ -69,7 +68,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.1-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.automotive\.vehicle@V1-(default|emulator)-service u:object_r:hal_vehicle_default_exec:s0
 /(vendor|system/vendor)/bin/gps_dump u:object_r:gps_dump_exec:s0
-/(vendor|system/vendor)/bin/general_service64 u:object_r:minidump64_exec:s0
 /(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
 /data/vendor/charge_logger(/.*)? u:object_r:charge_log_file:s0
 /(odm|vendor)/etc/init.panel_info.sh u:object_r:vendor_touch_init_shell_exec:s0
@@ -236,11 +234,7 @@
 /vendor/lib(64)?/arm\.graphics-V[0-9]+-ndk_platform\.so u:object_r:same_process_hal_file:s0
 /vendor/etc/gralloc(/.*)? u:object_r:same_process_hal_file:s0
 /vendor/etc/mali_platform.config u:object_r:same_process_hal_file:s0
-/vendor/bin/tcpdump-vendor u:object_r:vendor_tcpdump_exec:s0
-/vendor/bin/hw/arm\.mali\.platform-service\.mediatek u:object_r:mtk_hal_mali_platform_default_exec:s0
-/vendor/bin/hw/mt[0-9]+[a-z]*/arm\.mali\.platform-service\.mediatek\.mt[0-9]+[a-z]* u:object_r:mtk_hal_mali_platform_default_exec:s0
 /vendor/bin/hw/android\.hardware\.drm-service(-lazy)?\.widevine u:object_r:hal_drm_widevine_exec:s0
-/vendor/bin/emdloggerv u:object_r:emdloggerv_exec:s0
 /sys/devices/virtual/touch/tp_dev/fod_status u:object_r:sysfs_tp_fodstatus:s0
 /sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
 /sys/devices/virtual/touch/touch_dev/ear_sensor_data u:object_r:sysfs_tp_virtual_prox:s0
@@ -294,8 +288,6 @@
 /dev/block/by-name/rescue u:object_r:rescue_block_device:s0
 /dev/block/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
 /dev/block/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
-/dev/block/by-name/oops u:object_r:oops_block_device:s0
-/dev/block/by-name/logdump u:object_r:vendor_logdump_partition:s0
 /dev/block/by-name/init_boot(_[ab])? u:object_r:init_boot_block_device:s0
 /dev/block/by-name/gsort u:object_r:gsort_block_device:s0
 /dev/block/by-name/cust u:object_r:cust_block_device:s0
@@ -317,7 +309,6 @@
 /data/vendor/display(/.*)? u:object_r:vendor_display_vendor_data_file:s0
 /data/vendor/cit(/.*)? u:object_r:vendor_audio_data_file:s0
 /data/vendor/audio(/.*)? u:object_r:mtk_audiohal_data_file:s0
-/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.videoservice@1\.0-service u:object_r:hal_videoservice_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-tms u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/bp_id_attestation u:object_r:bp_id_attestation_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mrmd_mitee u:object_r:hal_mrm_default_exec:s0

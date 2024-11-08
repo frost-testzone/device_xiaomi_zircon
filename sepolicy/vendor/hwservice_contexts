@@ -11,11 +11,8 @@ com.fingerprints.extension::IFingerprintCalibration                             
 com.fingerprints.extension::IFingerprintOptical                                      u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 com.fingerprints.extension::IFingerprintSenseTouch                                   u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:hal_mlipay_hwservice:s0
-vendor.pixelworks.hardware.display::IIris           u:object_r:hal_display_iris_hwservice:s0
-vendor.pixelworks.hardware.feature::IIrisFeature    u:object_r:hal_display_iris_hwservice:s0
 
 vendor.xiaomi.hardware.mtdservice::IMTService       u:object_r:hal_mtdservice_hwservice:s0
-vendor.xiaomi.hardware.videoservice::IVideoService   u:object_r:hal_videoservice_hwservice:s0
 vendor.tms.tmsnfc::ITmsNfc                                  u:object_r:tmsnfc_hwservice:s0
 vendor.tms.tmsese::ITmsEse                                  u:object_r:tmsese_hwservice:s0
 vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
