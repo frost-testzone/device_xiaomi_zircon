@@ -1,0 +1,9 @@
+type mtkpower_applist, domain;
+type mtkpower_applist_exec, exec_type, file_type, vendor_file_type;
+
+allow mtkpower_applist proc_perfmgr:dir r_dir_perms;
+allow mtkpower_applist proc_perfmgr:file rw_file_perms;
+allow mtkpower_applist proc_perfmgr:file { ioctl };
+init_daemon_domain(mtkpower_applist)
+hal_server_domain(mtkpower_applist, hal_mtk_applist)
+hal_client_domain(mtkpower_applist, hal_power)

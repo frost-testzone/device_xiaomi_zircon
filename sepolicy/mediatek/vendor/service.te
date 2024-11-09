@@ -1,0 +1,11 @@
+# Applist
+type mtk_hal_applist_service, protected_service, service_manager_type;
+
+# GPS Batching
+type mtk_hal_aov_service, protected_service, service_manager_type;
+
+# MMLPQ
+type mtk_hal_mmlpq_service, protected_service, service_manager_type;
+
+# PQ
+type mtk_hal_pq_service, protected_service, service_manager_type;

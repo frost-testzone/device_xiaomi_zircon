@@ -1,0 +1,6 @@
+allow hal_mtk_mali_platform_default_server hal_mtk_mali_platform_default_client:binder transfer;
+allow hal_mtk_mali_platform_default_server hal_mtk_mali_platform_default_client:binder { call transfer };
+allow hal_mtk_mali_platform_default_server hal_mtk_mali_platform_default_client:fd *;
+allow hal_mtk_mali_platform_default_client hal_mtk_mali_platform_default_server:binder { call transfer };
+allow hal_mtk_mali_platform_default_client hal_mtk_mali_platform_default_server:binder transfer;
+allow hal_mtk_mali_platform_default_client hal_mtk_mali_platform_default_server:fd *;
