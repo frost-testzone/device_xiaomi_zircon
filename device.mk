@@ -203,6 +203,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.example \
     android.hardware.health-service.example_recovery
 
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0.vendor:64
+
 # IFAA manager
 PRODUCT_PACKAGES += \
     IFAAService
