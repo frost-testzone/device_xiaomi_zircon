@@ -53,8 +53,6 @@
 /(vendor|system\/vendor)/bin/tee-supplicant u:object_r:tee_exec:s0
 /cache/mqsas(/.*)? u:object_r:mqsas_data_file:s0
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.mitee u:object_r:hal_gatekeeper_default_exec:s0
-/(vendor|system/vendor)/bin/volte_rcs_ua64 u:object_r:volte_rcs_ua_exec:s0
-/(vendor|system/vendor)/bin/rcs_volte_stack64 u:object_r:rcs_volte_stack_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.0-service u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.1-service u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.2-service u:object_r:hal_nfc_default_exec:s0
@@ -68,8 +66,6 @@
 /(vendor|system/vendor)/bin/gps_dump u:object_r:gps_dump_exec:s0
 /(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
 /data/vendor/charge_logger(/.*)? u:object_r:charge_log_file:s0
-/(odm|vendor)/etc/init.panel_info.sh u:object_r:vendor_touch_init_shell_exec:s0
-/(odm|vendor)/etc/tp_kmsg_init_corot.sh u:object_r:vendor_touch_init_shell_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mlipayd_isee u:object_r:hal_mlipay_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mlipayd_isee@1.1 u:object_r:hal_mlipay_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mlipayd_mitee u:object_r:hal_mlipay_default_exec:s0
