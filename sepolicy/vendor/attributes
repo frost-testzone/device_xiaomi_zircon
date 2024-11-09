@@ -2,10 +2,6 @@ attribute vendor_hal_citsensorservice_xiaomi;
 attribute vendor_hal_citsensorservice_xiaomi_client;
 attribute vendor_hal_citsensorservice_xiaomi_server;
 
-attribute hal_mtk_batching;
-attribute hal_mtk_batching_client;
-attribute hal_mtk_batching_server;
-
 attribute hal_mlipay;
 attribute hal_mlipay_client;
 attribute hal_mlipay_server;

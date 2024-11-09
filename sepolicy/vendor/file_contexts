@@ -57,10 +57,8 @@
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.1-service u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@1\.2-service u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.7-service u:object_r:mtk_hal_mms_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.gnss\.batching-service u:object_r:mtk_hal_batching_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-mediatek u:object_r:mtk_hal_secure_element_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service-tms u:object_r:hal_nfc_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks-shim-service-mtk-lazy u:object_r:mtk_hal_neuralnetworks_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.1-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.automotive\.vehicle@V1-(default|emulator)-service u:object_r:hal_vehicle_default_exec:s0
 /(vendor|system/vendor)/bin/gps_dump u:object_r:gps_dump_exec:s0
@@ -101,14 +99,8 @@
 /sys/devices/platform/[0-9]+.dispsys_config/drm/card[0-3]+/card[0-3]+-DSI-1/panel_info u:object_r:vendor_sysfs_graphics:s0
 
 /sys/devices/virtual/touch/touch_dev/suspend_state u:object_r:sysfs_touch_suspend:s0
-/dev/aol_flp u:object_r:aol_flp_device:s0
 /vendor/lib(64)?/vendor.mediatek.hardware.apuware.apusys@1.0\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor.mediatek.hardware.apuware.utils@1.0\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor.mediatek.hardware.apuware.xrp@1.0\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.mediatek\.hardware\.pq@[0-9]+\.[0-9]+\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/liblibarm_mali_config_sysprops\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/libarm_egl_properties_sysprop\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/libarm_gralloc_properties_sysprop\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.mali\.platform-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libwa_depth\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libwa_dof\.so u:object_r:same_process_hal_file:s0
@@ -118,8 +110,6 @@
 /vendor/lib(64)?/mt6985/libneuron_adapter_mgvi\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/mt6985/libneuron_runtime\.6\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/mt6985/libnir_neon_driver\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.graphics-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.graphics-V[0-9]+-ndk_platform\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libui\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsdk_sr\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libpqhdrmetaparser\.so u:object_r:same_process_hal_file:s0
@@ -274,15 +264,12 @@
 /dev/coredump_wifi(/.*)? u:object_r:coredump_wifi_device:s0
 /dev/conn_dbg_dev(/.*)? u:object_r:conn_dbg_dev_device:s0
 /dev/camlog u:object_r:camlog_device:s0
-/dev/block/platform/bootdevice/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
-/dev/block/platform/bootdevice/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
+
 /dev/block/by-name/rescue u:object_r:rescue_block_device:s0
-/dev/block/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
-/dev/block/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
+
 /dev/block/by-name/gsort u:object_r:gsort_block_device:s0
 /dev/block/by-name/cust u:object_r:cust_block_device:s0
 /dev/block/by-name/countrycode u:object_r:userdata_block_device:s0
-/dev/aol_geofence u:object_r:aol_geofence_device:s0
 /dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
 /data/vendor/wlan_logs(/.*)? u:object_r:vendor_wifi_vendor_data_file:s0
 /data/vendor/secure_element(/.*)? u:object_r:nfc_vendor_data_file:s0
