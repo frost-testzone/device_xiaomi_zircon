@@ -1,166 +1,74 @@
-# Keymint
-/(vendor|system\/vendor)/bin/hw/android\.hardware\.identity-service\.mitee@4\.0 u:object_r:hal_identity_default_exec:s0
-/(vendor|system\/vendor)/bin/hw/android\.hardware\.security\.keymint@2\.0-service\.mitee u:object_r:hal_keymint_default_exec:s0
-/(vendor|system\/vendor)/bin/miteelog u:object_r:tee_exec:s0
-/data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
-/dev/tee0 u:object_r:mitee_client_device:s0
-/dev/teepriv0 u:object_r:mitee_client_device:s0
-/dev/ufs-bsg0 u:object_r:mitee_client_device:s0
-/mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
-
-# Thermal
-/(vendor|system/vendor)/bin/mi_thermald u:object_r:mi_thermald_exec:s0
-/sys/class/thermal/thermal_message/market_download_limit u:object_r:sys_thermal_market_download_limit:s0
-/sys/devices/virtual/thermal/thermal_message/market_download_limit u:object_r:sys_thermal_market_download_limit:s0
-
-# Audio
-/dev/socket/audio_hw_socket u:object_r:audio_socket:s0
-/data/vendor/cit(/.*)? u:object_r:vendor_audio_data_file:s0
-
-# Camera
-/odm/bin/crossbuild/DataSet/SQLiteModule/db(/.*)? u:object_r:vendor_camera_update_db_file:s0
-/mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
-/dev/camlog u:object_r:camlog_device:s0
-
-# DRM
-/vendor/bin/hw/android\.hardware\.drm-service(-lazy)?\.widevine u:object_r:hal_drm_widevine_exec:s0
-/mnt/vendor/persist/fdsd(/.*)? u:object_r:vendor_persist_drm_file:s0
-
-# Display
-/mnt/vendor/persist/display(/.*)? u:object_r:vendor_persist_display_file:s0
-
-# batterysecret
-/(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
-
-# Light
-/vendor/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
-
-# Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
-/data/vendor/fpdump(/.*)? u:object_r:vendor_fingerprint_data_file_fpdump:s0
-/mnt/vendor/persist/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-
-# Touch
-/dev/xiaomi-touch u:object_r:touchfeature_device:s0
-
-# Sensors
-/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
-/dev/elliptic0 u:object_r:sensors_device:s0
-/dev/elliptic1 u:object_r:sensors_device:s0
-
-# Vibrator
-/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service u:object_r:hal_vibrator_default_exec:s0
-/(odm|system/odm|vendor|system/vendor)/bin/hw/vibratorfeature-wrapper u:object_r:hal_vibrator_default_exec:s0
-/sys/bus/i2c/drivers/awinic_haptic/[0-9]+-00+[a-z0-9]+[a-z0-9]/f0_value u:object_r:sysfs_f0_value:s0
-
-# Battery
-/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:chg/power_supply/11280000.i2c:mt6375@34:chg u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:mtk_gauge/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/charger/power_supply/usb(/.*)? u:object_r:sysfs_usb_supply:s0
-/sys/devices/platform/soc/11e81000.i2c/i2c-7/7-0055/power_supply/bms(/.*)? u:object_r:sysfs_usb_supply:s0
-/sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter(/.*)? u:object_r:sysfs_usbpd_device:s0
-
-# IR
-/dev/ir_spi u:object_r:ir_spi_device:s0
-
-# Mlipay
-/(odm|vendor/odm|system/vendor)/bin/mlipayd_mitee@1.1 u:object_r:hal_mlipay_default_exec:s0
-
-# Sorter
-/(odm|vendor/odm|system/vendor)/bin/soterd u:object_r:hal_soterservice_default_exec:s0
-
-# TEE
-/(vendor|system\/vendor)/bin/tee-supplicant u:object_r:tee_exec:s0
-/dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
-
-# RCS
-/(vendor|system/vendor)/bin/volte_rcs_ua64 u:object_r:volte_rcs_ua_exec:s0
-/(vendor|system/vendor)/bin/rcs_volte_stack64 u:object_r:rcs_volte_stack_exec:s0
-
-# Secure Element
-/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-mediatek u:object_r:mtk_hal_secure_element_exec:s0
-/data/vendor/secure_element(/.*)? u:object_r:nfc_vendor_data_file:s0
-
-# GPS
-/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.gnss\.batching-service u:object_r:mtk_hal_batching_exec:s0
-/(vendor|system/vendor)/bin/gps_dump u:object_r:gps_dump_exec:s0
-/dev/aol_flp u:object_r:aol_flp_device:s0
-/dev/mtk_aov(/.*)? u:object_r:mtk_aov_device:s0
-/dev/aol_geofence u:object_r:aol_geofence_device:s0
-/data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
-
-# Charger
-/(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
-/data/vendor/charge_logger(/.*)? u:object_r:charge_log_file:s0
-
-# NFC
-/(odm|vendor/odm|vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service-tms u:object_r:hal_nfc_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@2\.0-service u:object_r:hal_nfc_default_exec:s0
-/dev/p73 u:object_r:nfc_device:s0
-/dev/nq-nci u:object_r:nfc_device:s0
-
-# PQ
-/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.pq_aidl-service u:object_r:mtk_hal_pq_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mmlpq@V1-service u:object_r:mtk_hal_mmlpq_exec:s0
-/vendor/lib(64)?/libmmlpqImpl\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.mediatek\.hardware\.mmlpq@V[0-9]\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.mediatek\.hardware\.pq@[0-9]+\.[0-9]+\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.mediatek\.hardware\.pq_aidl-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.mali\.platform-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.graphics-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.graphics-V[0-9]+-ndk_platform\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libpqhdrmetaparser\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libpqsharememory\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libpqtuning\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/hw/mt[0-9]+[a-z]*/vulkan\.mali\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/hw/mt[0-9]+[a-z]*/android\.hardware\.graphics\.allocator@4\.0-impl-mediatek\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/arm\.mali\.platform-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/android\.hardware\.graphics\.common-V3-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/hw/android\.hardware\.graphics\.allocator@4\.0-impl-mediatek\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/android.hidl.allocator@1.0\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/arm\.graphics-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
-/vendor/etc/mali_platform.config u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor.mediatek.hardware.apuware.apusys@1.0\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor.mediatek.hardware.apuware.utils@1.0\.so u:object_r:same_process_hal_file:s0
-
-# MMS
-/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.7-service u:object_r:mtk_hal_mms_exec:s0
-
 # Applist
 /(vendor|system/vendor)/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek u:object_r:mtkpower_applist_exec:s0
 
-# Neural
-/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks-shim-service-mtk-lazy u:object_r:mtk_hal_neuralnetworks_exec:s0
+# Audio
+/data/vendor/cit(/.*)? u:object_r:vendor_audio_data_file:s0
+/dev/socket/audio_hw_socket u:object_r:audio_socket:s0
 
-# bluetooth
+# Battery
+/(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
+/sys/devices/platform/charger/power_supply/usb(/.*)? u:object_r:sysfs_usb_supply:s0
+/sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter(/.*)? u:object_r:sysfs_usbpd_device:s0
+/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:chg/power_supply/11280000.i2c:mt6375@34:chg u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:mtk_gauge/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/11e81000.i2c/i2c-7/7-0055/power_supply/bms(/.*)? u:object_r:sysfs_usb_supply:s0
+
+# Bluetooth
 /(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.1-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
 
 # Block
-/dev/block/platform/bootdevice/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
-/dev/block/platform/bootdevice/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
-/dev/block/by-name/rescue u:object_r:rescue_block_device:s0
-/dev/block/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
-/dev/block/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
-/dev/block/by-name/init_boot(_[ab])? u:object_r:init_boot_block_device:s0
-/dev/block/by-name/gsort u:object_r:gsort_block_device:s0
-/dev/block/by-name/cust u:object_r:cust_block_device:s0
+/dev/block/by-name/blackbox u:object_r:blackbox_block_device:s0
 /dev/block/by-name/connsys_bt(_[ab])? u:object_r:connsys_bt_block_device:s0
 /dev/block/by-name/connsys_gnss(_[ab])? u:object_r:connsys_gnss_block_device:s0
 /dev/block/by-name/connsys_wifi(_[ab])? u:object_r:connsys_wifi_block_device:s0
 /dev/block/by-name/countrycode u:object_r:userdata_block_device:s0
 /dev/block/by-name/crash_history u:object_r:minidump_partition:s0
+/dev/block/by-name/cust u:object_r:cust_block_device:s0
+/dev/block/by-name/gsort u:object_r:gsort_block_device:s0
+/dev/block/by-name/init_boot(_[ab])? u:object_r:init_boot_block_device:s0
 /dev/block/by-name/minidump u:object_r:minidump_partition:s0
+/dev/block/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
+/dev/block/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
 /dev/block/by-name/rawdump u:object_r:minidump_partition:s0
-/dev/block/by-name/blackbox u:object_r:blackbox_block_device:s0
+/dev/block/by-name/rescue u:object_r:rescue_block_device:s0
+/dev/block/platform/bootdevice/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
+/dev/block/platform/bootdevice/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
+
+# Camera
+/dev/camlog u:object_r:camlog_device:s0
+/mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
+/odm/bin/crossbuild/DataSet/SQLiteModule/db(/.*)? u:object_r:vendor_camera_update_db_file:s0
 
 # Camera (libs)
-/vendor/lib(64)?/librelight_only\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libneuron_runtime\.6\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libneuron_runtime\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.capbokeh\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.depurple\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.hdr\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.ldc\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.memcpy\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.mibokeh\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.rawsuperlight\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.skinbeautifier\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.swflip\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libaedv\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalCFR\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalhLDC\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapu_mdw\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapu_mdw_batch\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_beautyshot\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_hdr_detection\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_low_light_hdr\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting_c\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_super_night_raw\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarmnn\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libc\+\+_shared\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcmdl\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcom.xiaomi.pluginutils\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_utils\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgoengine\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmpbase\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmvpu_cic_ci_compiler\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmvpu_clc_mvpu_debuginfo\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmvpu_clc_mvpu_elf\.so u:object_r:same_process_hal_file:s0
@@ -177,45 +85,133 @@
 /vendor/lib(64)?/libmvpu_runtime_pub\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmvpuop_mtk_cv\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmvpuop_mtk_nn\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmpbase\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgo_utils\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgoengine\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libcom.xiaomi.pluginutils\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libc\+\+_shared\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libcmdl\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libalCFR\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libalhLDC\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libapu_mdw\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libapu_mdw_batch\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_beautyshot\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_dualcam_refocus\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_hdr_detection\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_low_light_hdr\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_portrait_lighting\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_portrait_lighting_c\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_super_night_raw\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarmnn\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libaedv\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.capbokeh\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.depurple\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.hdr\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.ldc\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.memcpy\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.mibokeh\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.rawsuperlight\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.skinbeautifier\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.swflip\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libneuron_runtime\.6\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libneuron_runtime\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/librelight_only\.so u:object_r:same_process_hal_file:s0
 
-# WLAN
-/dev/coredump_wifi(/.*)? u:object_r:coredump_wifi_device:s0
+# Charger
+/(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
+/data/vendor/charge_logger(/.*)? u:object_r:charge_log_file:s0
 
 # Connectivity
 /dev/conn_dbg_dev(/.*)? u:object_r:conn_dbg_dev_device:s0
 
+# DRM
+/mnt/vendor/persist/fdsd(/.*)? u:object_r:vendor_persist_drm_file:s0
+/vendor/bin/hw/android\.hardware\.drm-service(-lazy)?\.widevine u:object_r:hal_drm_widevine_exec:s0
+
+# Display
+/mnt/vendor/persist/display(/.*)? u:object_r:vendor_persist_display_file:s0
+
+# Fingerprint
+/data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)? u:object_r:vendor_fingerprint_data_file_fpdump:s0
+/data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+
+# GPS
+/(vendor|system/vendor)/bin/gps_dump u:object_r:gps_dump_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.gnss\.batching-service u:object_r:mtk_hal_batching_exec:s0
+/data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
+/dev/aol_flp u:object_r:aol_flp_device:s0
+/dev/aol_geofence u:object_r:aol_geofence_device:s0
+/dev/mtk_aov(/.*)? u:object_r:mtk_aov_device:s0
+
+# IR
+/dev/ir_spi u:object_r:ir_spi_device:s0
+
+# Keymint
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.identity-service\.mitee@4\.0 u:object_r:hal_identity_default_exec:s0
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.security\.keymint@2\.0-service\.mitee u:object_r:hal_keymint_default_exec:s0
+/(vendor|system\/vendor)/bin/miteelog u:object_r:tee_exec:s0
+/data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
+/dev/tee0 u:object_r:mitee_client_device:s0
+/dev/teepriv0 u:object_r:mitee_client_device:s0
+/dev/ufs-bsg0 u:object_r:mitee_client_device:s0
+/mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
+
+# MMS
+/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.7-service u:object_r:mtk_hal_mms_exec:s0
+
+# Mlipay
+/(odm|vendor/odm|system/vendor)/bin/mlipayd_mitee@1.1 u:object_r:hal_mlipay_default_exec:s0
+
+# NFC
+/(odm|vendor/odm|vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service-tms u:object_r:hal_nfc_default_exec:s0
+/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@2\.0-service u:object_r:hal_nfc_default_exec:s0
+/dev/nq-nci u:object_r:nfc_device:s0
+/dev/p73 u:object_r:nfc_device:s0
+
+# Neural
+/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks-shim-service-mtk-lazy u:object_r:mtk_hal_neuralnetworks_exec:s0
+
+# PQ
+/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mmlpq@V1-service u:object_r:mtk_hal_mmlpq_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.pq_aidl-service u:object_r:mtk_hal_pq_exec:s0
+/vendor/etc/mali_platform.config u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/android.hidl.allocator@1.0\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/android\.hardware\.graphics\.common-V3-ndk\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/arm\.graphics-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/arm\.mali\.platform-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/android\.hardware\.graphics\.allocator@4\.0-impl-mediatek\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/mt[0-9]+[a-z]*/android\.hardware\.graphics\.allocator@4\.0-impl-mediatek\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/mt[0-9]+[a-z]*/vulkan\.mali\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmmlpqImpl\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libpqhdrmetaparser\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libpqsharememory\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libpqtuning\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.graphics-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.graphics-V[0-9]+-ndk_platform\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/mt[0-9]+[a-z]*/arm\.mali\.platform-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.mediatek.hardware.apuware.apusys@1.0\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.mediatek.hardware.apuware.utils@1.0\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.mmlpq@V[0-9]\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.pq@[0-9]+\.[0-9]+\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.pq_aidl-V[0-9]+-ndk\.so u:object_r:same_process_hal_file:s0
+
+# RCS
+/(vendor|system/vendor)/bin/rcs_volte_stack64 u:object_r:rcs_volte_stack_exec:s0
+/(vendor|system/vendor)/bin/volte_rcs_ua64 u:object_r:volte_rcs_ua_exec:s0
+
+# Secure Element
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-mediatek u:object_r:mtk_hal_secure_element_exec:s0
+/data/vendor/secure_element(/.*)? u:object_r:nfc_vendor_data_file:s0
+
+# Sensors
+/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
+/dev/elliptic0 u:object_r:sensors_device:s0
+/dev/elliptic1 u:object_r:sensors_device:s0
+/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
+
+# Sorter
+/(odm|vendor/odm|system/vendor)/bin/soterd u:object_r:hal_soterservice_default_exec:s0
+
+# TEE
+/(vendor|system\/vendor)/bin/tee-supplicant u:object_r:tee_exec:s0
+/dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
+
+# Thermal
+/(vendor|system/vendor)/bin/mi_thermald u:object_r:mi_thermald_exec:s0
+/sys/class/thermal/thermal_message/market_download_limit u:object_r:sys_thermal_market_download_limit:s0
+/sys/devices/virtual/thermal/thermal_message/market_download_limit u:object_r:sys_thermal_market_download_limit:s0
+
+# Touch
+/dev/xiaomi-touch u:object_r:touchfeature_device:s0
+
 # USB
-/(vendor|system/vendor)/bin/hw/android\.hardware\.usb\.gadget-service.mediatekv[0-9]+\.[0-9]+ u:object_r:mtk_hal_usb_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb-aidl-service.mediatekv[0-9]+\.[0-9]+ u:object_r:mtk_hal_usb_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb\.gadget-service.mediatekv[0-9]+\.[0-9]+ u:object_r:mtk_hal_usb_exec:s0
+
+# Vibrator
+/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service u:object_r:hal_vibrator_default_exec:s0
+/(odm|system/odm|vendor|system/vendor)/bin/hw/vibratorfeature-wrapper u:object_r:hal_vibrator_default_exec:s0
+/sys/bus/i2c/drivers/awinic_haptic/[0-9]+-00+[a-z0-9]+[a-z0-9]/f0_value u:object_r:sysfs_f0_value:s0
 
 # WLAN
 /data/vendor/wlan_logs(/.*)? u:object_r:vendor_wifi_vendor_data_file:s0
+/dev/coredump_wifi(/.*)? u:object_r:coredump_wifi_device:s0
