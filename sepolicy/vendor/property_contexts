@@ -178,7 +178,6 @@ persist.vendor.sys.fp.info u:object_r:vendor_fp_info_prop:s0
 persist.vendor.sys.fp.uid u:object_r:vendor_fp_info_prop:s0
 persist.vendor.tcpdump.enable u:object_r:vendor_wlan_logs_prop:s0
 persist.vendor.watermark_scale_factor u:object_r:vendor_wmark_prop:s0 exact int
-persist.vendor.wifienhancelog u:object_r:vendor_wifienhancelog_prop:s0
 persist.vendor.wlan.disable.chinasar u:object_r:vendor_wlan_china_sar_prop:s0
 persist.vendor.wlan.sc u:object_r:vendor_wlan_sc_prop:s0
 ro.vendor.afbc.enable u:object_r:vendor_mtk_camera_prop:s0
