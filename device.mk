@@ -281,6 +281,9 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libstagefright_softomx.vendor \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-V1-ndk.vendor:64
