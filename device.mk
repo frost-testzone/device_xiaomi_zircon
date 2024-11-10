@@ -242,6 +242,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor:64 \
