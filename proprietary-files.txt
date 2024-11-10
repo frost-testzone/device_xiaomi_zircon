@@ -1841,15 +1841,6 @@ vendor/lib64/libhfmanager.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
-# SLA
-vendor/bin/hw/vendor.qti.sla.service@1.0-service
-vendor/bin/slad
-vendor/etc/init/slad.rc
-vendor/etc/init/vendor.qti.sla.service@1.0-service.rc
-vendor/etc/sla/slad.conf
-vendor/lib64/vendor.qti.sla.service@1.0-impl.so
-vendor/lib64/vendor.qti.sla.service@1.0.so
-
 # Soter
 odm/bin/SoterProvisioningTool_mitee
 odm/bin/soterd
