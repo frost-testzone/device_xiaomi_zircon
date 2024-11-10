@@ -131,9 +131,6 @@
 /dev/elliptic1 u:object_r:sensors_device:s0
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
 
-# Sorter
-/(odm|vendor/odm|system/vendor)/bin/soterd u:object_r:hal_soterservice_default_exec:s0
-
 # TEE
 /(vendor|system\/vendor)/bin/tee-supplicant u:object_r:tee_exec:s0
 /dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
