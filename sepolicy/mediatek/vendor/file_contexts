@@ -5,7 +5,7 @@
 /dev/block/by-name/connsys_bt(_[ab])? u:object_r:connsys_bt_block_device:s0
 /dev/block/by-name/connsys_gnss(_[ab])? u:object_r:connsys_gnss_block_device:s0
 /dev/block/by-name/connsys_wifi(_[ab])? u:object_r:connsys_wifi_block_device:s0
-/dev/block/by-name/init_boot(_[ab])? u:object_r:init_boot_block_device:s0
+/dev/block/by-name/init_boot(_[ab])? u:object_r:boot_block_device:s0
 /dev/block/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
 /dev/block/by-name/preloader_raw_b u:object_r:postinstall_block_device:s0
 /dev/block/platform/bootdevice/by-name/preloader_raw_a u:object_r:postinstall_block_device:s0
