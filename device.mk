@@ -198,6 +198,10 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor:64 \
     libunwindstack.vendor:64
 
+# Hotword Enrollement
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.example \
