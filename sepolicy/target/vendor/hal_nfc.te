@@ -1,0 +1,3 @@
+set_prop(hal_nfc, vendor_nfc_mi_prop)
+
+allow hal_nfc_default tmsnfc_hwservice:hwservice_manager { add find };

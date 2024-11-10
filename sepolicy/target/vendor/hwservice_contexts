@@ -1,0 +1,18 @@
+# Camera
+vendor.xiaomi.hardware.bgservice::IBGService   u:object_r:mtk_hal_bgs_hwservice:s0
+
+# Fingerprint
+vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
+
+# NFC
+vendor.tms.tmsnfc::ITmsNfc                                  u:object_r:tmsnfc_hwservice:s0
+
+# Mlipay
+vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:hal_mlipay_hwservice:s0
+vendor.xiaomi.hardware.mtdservice::IMTService       u:object_r:hal_mtdservice_hwservice:s0
+
+# Sensor
+vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
+
+# Soter
+vendor.xiaomi.hardware.soterservice::ISoter    u:object_r:hal_soterservice_hwservice:s0

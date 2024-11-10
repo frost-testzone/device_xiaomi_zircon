@@ -1,0 +1,16 @@
+allow hal_secure_element_default mitee_client_device:chr_file rw_file_perms;
+allow hal_secure_element_default mitee_sfs_file:dir { create_dir_perms relabelto };
+allow hal_secure_element_default mitee_sfs_file:file { create_file_perms relabelto };
+allow hal_secure_element_default nfc_data_vendor_file:dir { search };
+allow hal_secure_element_default nfc_data_vendor_file:dir create_dir_perms;
+allow hal_secure_element_default nfc_data_vendor_file:dir { add_name read remove_name search write };
+allow hal_secure_element_default nfc_data_vendor_file:dir search;
+allow hal_secure_element_default nfc_device:chr_file { ioctl open read write };
+allow hal_secure_element_default nfc_vendor_data_file:dir create_dir_perms;
+allow hal_secure_element_default nfc_vendor_data_file:dir { add_name read remove_name search write };
+allow hal_secure_element_default nfc_vendor_data_file:dir search;
+allow hal_secure_element_default nfc_vendor_data_file:file create_file_perms;
+allow hal_secure_element_default nfc_vendor_data_file:file { append create getattr open read unlink write };
+allow hal_secure_element_default nfc_vendor_data_file:file { getattr open read setattr unlink write };
+allow hal_secure_element_default sysfs_chip_name:file { getattr open read };
+allow hal_secure_element_default tmsnfc_hwservice:hwservice_manager { add find };

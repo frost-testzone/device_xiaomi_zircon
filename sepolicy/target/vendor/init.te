@@ -1,0 +1,7 @@
+allow vendor_init mitee_sfs_file:dir { create_dir_perms relabelto };
+allow vendor_init mitee_sfs_file:file { create_file_perms relabelto };
+
+set_prop(vendor_init, vendor_mtk_bt_connac3_prop)
+set_prop(vendor_init, vendor_camera_skynet_prop)
+set_prop(vendor_init, vendor_mtk_mitee_prop)
+set_prop(vendor_init, vendor_sensors_prop)

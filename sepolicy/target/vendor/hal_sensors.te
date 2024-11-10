@@ -1,0 +1,18 @@
+allow hal_sensors_default sensors_device:chr_file rw_file_perms;
+allow hal_sensors_default system_server:binder { call transfer };
+
+
+allow hal_sensors_default audio_socket:sock_file rw_file_perms;
+allow hal_sensors_default sensors_device:chr_file rw_file_perms;
+allow hal_sensors_default vendor_fingerprint_sysfs:file rw_file_perms;
+allow hal_sensors_default hf_manager_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_sensors_default mnt_vendor_file:dir search;
+allow hal_sensors_default nvcfg_file:file create_file_perms;
+allow hal_sensors_default nvcfg_file:dir create_dir_perms;
+allow mtk_hal_sensors sysfs_scp:dir search;
+allow mtk_hal_sensors sysfs_scp:file rw_file_perms;
+
+hal_client_domain(hal_sensors_default, hal_audio)
+binder_call(hal_sensors_default, hal_audio_default)
+
+get_prop(hal_sensors_default, vendor_sensors_prop)

@@ -1,0 +1,9 @@
+# CIT
+attribute vendor_hal_citsensorservice_xiaomi;
+attribute vendor_hal_citsensorservice_xiaomi_client;
+attribute vendor_hal_citsensorservice_xiaomi_server;
+
+# Soter
+attribute hal_soterservice;
+attribute hal_soterservice_client;
+attribute hal_soterservice_server;

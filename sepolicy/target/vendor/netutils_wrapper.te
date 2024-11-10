@@ -1,0 +1,3 @@
+allow netutils_wrapper nvdata_file:file read;
+allow netutils_wrapper nvram_device:blk_file rw_file_perms;
+allow netutils_wrapper nvram_device:chr_file rw_file_perms;
