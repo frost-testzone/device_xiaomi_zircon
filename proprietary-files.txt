@@ -434,12 +434,6 @@ odm/lib64/libarcsoft_portrait_lighting_c.so
 odm/lib64/libmiXmlParser.so
 odm/lib64/libmialgo_utils.so
 odm/lib64/libmpbase.so
-odm/lib64/temp/libcamlog.so
-odm/lib64/temp/libcom.xiaomi.debug.so
-odm/lib64/temp/libcom.xiaomi.metadatautils.so
-odm/lib64/temp/libcom.xiaomi.mizone.postprocinterface.so
-odm/lib64/temp/libcom.xiaomi.pluginutils.so
-odm/lib64/temp/mt6886/libmtkcam_metadata.so
 vendor/bin/cameratest
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6886/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6886/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db
@@ -1021,7 +1015,6 @@ vendor/lib64/mt6886/zircons5k3p9sunny_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/zi
 vendor/lib64/mt6886/zircons5k3p9sunny_mipi_raw_tuning.so;SYMLINK=vendor/lib64/zircons5k3p9sunny_mipi_raw_tuning.so
 vendor/lib64/mt6886/zircons5khp3sunny_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/zircons5khp3sunny_mipi_raw_IdxMgr.so
 vendor/lib64/mt6886/zircons5khp3sunny_mipi_raw_tuning.so;SYMLINK=vendor/lib64/zircons5khp3sunny_mipi_raw_tuning.so
-vendor/lib64/temp/mt6886/libmtkcam_ulog.so;SYMLINK=vendor/lib64/temp/libmtkcam_ulog.so
 vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
