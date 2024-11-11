@@ -1,3 +1,22 @@
+From 1df3d6acdfc4d69824b06b53efd1889abe79384a Mon Sep 17 00:00:00 2001
+From: bengris32 <bengris32@protonmail.ch>
+Date: Mon, 11 Nov 2024 17:26:52 +0530
+Subject: [PATCH] ImsService: Export receivers that aren't exclusively
+ registered for system broadcasts
+
+Signed-off-by: bengris32 <bengris32@protonmail.ch>
+---
+ smali/com/mediatek/ims/ImsConfigManager.smali          |  6 ++++--
+ smali/com/mediatek/ims/ImsService$MyHandler.smali      |  4 +++-
+ smali/com/mediatek/ims/MtkSuppServExt.smali            |  6 ++++--
+ .../ims/config/internal/ImsConfigController.smali      |  6 ++++--
+ .../com/mediatek/ims/internal/ImsVTProviderUtil.smali  | 10 +++++++---
+ smali/com/mediatek/wfo/impl/ImsLocationHandler.smali   |  6 ++++--
+ smali/com/mediatek/wfo/impl/MwiService.smali           |  6 ++++--
+ smali/com/mediatek/wfo/impl/WfcHandler.smali           |  6 ++++--
+ smali/com/mediatek/wfo/impl/WifiPdnHandler.smali       |  6 ++++--
+ 9 files changed, 38 insertions(+), 18 deletions(-)
+
 diff --git a/smali/com/mediatek/ims/ImsConfigManager.smali b/smali/com/mediatek/ims/ImsConfigManager.smali
 index f5c9321..d1e39c0 100644
 --- a/smali/com/mediatek/ims/ImsConfigManager.smali
@@ -221,3 +240,6 @@ index e806430..ac7bbe3 100644
      .line 858
      return-void
  .end method
+-- 
+2.47.0
+
