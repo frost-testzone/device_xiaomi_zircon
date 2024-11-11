@@ -1121,7 +1121,6 @@ vendor/lib/libaal_cust.so
 vendor/lib/libaal_key.so
 vendor/lib/libaal_mtk.so
 vendor/lib/libappgamepq.so
-vendor/lib/libclient2slpi.notifier.so
 vendor/lib/libcomposer_ext.so
 vendor/lib/libdre.so
 vendor/lib/libged.so
