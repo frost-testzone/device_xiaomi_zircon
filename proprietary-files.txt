@@ -1569,7 +1569,6 @@ vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
 
 # Media (C2)
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
