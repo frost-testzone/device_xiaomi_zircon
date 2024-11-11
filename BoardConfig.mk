@@ -85,22 +85,24 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6886
-
 TARGET_KERNEL_CONFIG := gki_defconfig
 
 BOARD_KERNEL_CMDLINE := \
     bootopt=64S3,32N2,64N2
 
 # Kernel (prebuilt)
-TARGET_FORCE_PREBUILT_KERNEL := true
-PREBUILT_PATH := $(DEVICE_PATH)-prebuilt
-BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
-BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
-TARGET_PREBUILT_KERNEL := $(PREBUILT_PATH)/images/kernel
+KERNEL_PATH := $(DEVICE_PATH)-kernel
+
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/images/dtbs/
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/images/dtbo.img
+PRODUCT_COPY_FILES += \
+	$(KERNEL_PATH)/images/kernel:kernel
 
 # Kernel modules
-MODULES_PATH := $(PREBUILT_PATH)/modules
+MODULES_PATH := $(KERNEL_PATH)/modules
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.load))
 BOARD_VENDOR_KERNEL_MODULES_EXTRA := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.extra))
