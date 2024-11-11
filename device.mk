@@ -255,6 +255,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     lib_android_keymaster_keymint_utils.vendor:64 \
+    libcppbor_external.vendor:64 \
     libkeymaster4support.vendor:64 \
     libkeymaster_messages.vendor:64 \
     libkeymaster_portable.vendor:64 \
