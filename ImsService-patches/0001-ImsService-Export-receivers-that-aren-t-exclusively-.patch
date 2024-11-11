@@ -1,7 +1,7 @@
 From 1df3d6acdfc4d69824b06b53efd1889abe79384a Mon Sep 17 00:00:00 2001
 From: bengris32 <bengris32@protonmail.ch>
 Date: Mon, 11 Nov 2024 17:26:52 +0530
-Subject: [PATCH] ImsService: Export receivers that aren't exclusively
+Subject: [PATCH 1/2] ImsService: Export receivers that aren't exclusively
  registered for system broadcasts
 
 Signed-off-by: bengris32 <bengris32@protonmail.ch>
