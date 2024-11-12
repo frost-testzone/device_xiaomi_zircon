@@ -340,6 +340,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr
 
 PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    libmtkperf_client_vendor
+
+PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor:64
 
 PRODUCT_COPY_FILES += \
@@ -422,6 +426,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces \
     hardware/lineage/interfaces/power-libperfmgr \
+    hardware/mediatek/libmtkperf_client \
     hardware/mediatek \
     hardware/xiaomi
 
