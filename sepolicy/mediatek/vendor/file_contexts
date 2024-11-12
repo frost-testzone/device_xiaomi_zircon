@@ -1,6 +1,3 @@
-# Applist
-/(vendor|system/vendor)/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek u:object_r:mtkpower_applist_exec:s0
-
 # Block
 /dev/block/by-name/connsys_bt(_[ab])? u:object_r:connsys_bt_block_device:s0
 /dev/block/by-name/connsys_gnss(_[ab])? u:object_r:connsys_gnss_block_device:s0
