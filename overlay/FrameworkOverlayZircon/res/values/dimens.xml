@@ -26,6 +26,10 @@
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
     <dimen name="status_bar_height_portrait">104.0px</dimen>
+
+    <!-- for 20dp of padding at 3.5px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">50px</dimen>
+
     <item name="config_brightnessRampRateFast" type="dimen">0.41590282</item>
     <item name="config_brightnessRampRateSlow" type="dimen">0.23228346</item>
     <item name="config_screenBrightnessDimFloat" type="dimen">8.54597E-4</item>
