@@ -22,6 +22,9 @@ genfscon proc /perfmgr/global_reclaim u:object_r:vendor_proc_perfmgr_global_recl
 # TEE
 genfscon proc /mitee_log u:object_r:proc_mitee_log:s0
 
+# Touchpanel
+genfscon sysfs /devices/virtual/touch/touch_dev/        u:object_r:sysfs_touchpanel:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/10001000.consys/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup u:object_r:sysfs_wakeup:s0
