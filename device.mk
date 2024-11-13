@@ -385,6 +385,7 @@ PRODUCT_PACKAGES += \
     init.fingerprint.rc \
     init.modem.rc \
     init.mt6886.rc \
+    init.mt6886.usb.rc \
     init.power.rc \
     init.project.rc \
     ueventd.mtk.rc

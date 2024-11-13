@@ -1814,7 +1814,6 @@ vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0
 vendor/bin/hw/android.hardware.usb.gadget-service.mediatekv1.1
 vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc
 vendor/etc/init/android.hardware.usb.gadget-service.mediatek.rc
-vendor/etc/init/hw/init.mt6886.usb.rc
 vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatek.xml
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.mediatek.xml
 
