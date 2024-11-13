@@ -156,6 +156,10 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0664 /dev/xiaomi-touch
 
+    # Touchpanel
+    chown system system /sys/devices/virtual/touch/touch_dev/double_tap
+    chmod 0664 /sys/devices/virtual/touch/touch_dev/double_tap
+
 service vendor_tcpdump /vendor/bin/tcpdump-vendor -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
        class main
        user root
