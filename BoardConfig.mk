@@ -88,7 +88,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 TARGET_KERNEL_CONFIG := gki_defconfig
 
 BOARD_KERNEL_CMDLINE := \
-    bootopt=64S3,32N2,64N2
+    bootopt=64S3,32N2,64N2 \
+    androidboot.selinux=permissive
 
 # Kernel (prebuilt)
 KERNEL_PATH := $(DEVICE_PATH)-kernel
