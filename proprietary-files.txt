@@ -1607,11 +1607,6 @@ vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_system_default.xml
 
-# Memtrack
-vendor/bin/hw/android.hardware.memtrack-service.mediatek
-vendor/etc/init/memtrack-mediatek.rc
-vendor/etc/vintf/manifest/memtrack-mediatek.xml
-
 # Mlipay
 odm/bin/mlipayd_mitee@1.1
 odm/etc/init/vendor.xiaomi.hardware.mlipay@1.1-miteeservice.rc

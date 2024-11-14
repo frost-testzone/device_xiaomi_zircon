@@ -291,7 +291,7 @@ PRODUCT_COPY_FILES += \
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-V1-ndk.vendor:64
+    android.hardware.memtrack-service.mediatek-mali
 
 # Neural Networks
 PRODUCT_PACKAGES += \
