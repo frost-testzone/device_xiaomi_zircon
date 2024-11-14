@@ -1809,14 +1809,6 @@ vendor/lib64/libhfmanager.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
-# USB
-vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0
-vendor/bin/hw/android.hardware.usb.gadget-service.mediatekv1.1
-vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc
-vendor/etc/init/android.hardware.usb.gadget-service.mediatek.rc
-vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatek.xml
-vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.mediatek.xml
-
 # Vibrator
 odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service:vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
 odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc:vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
