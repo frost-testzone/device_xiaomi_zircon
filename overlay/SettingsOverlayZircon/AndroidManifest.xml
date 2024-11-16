@@ -6,5 +6,5 @@
     package="com.android.settings.overlay.zircon">
     <overlay android:targetPackage="com.android.settings"
                    android:isStatic="true"
-                   android:priority="1000" />
+                   android:priority="1000"/>
 </manifest>

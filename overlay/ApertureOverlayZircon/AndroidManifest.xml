@@ -6,5 +6,5 @@
     package="org.lineageos.aperture.zircon">
     <overlay android:targetPackage="org.lineageos.aperture"
                    android:isStatic="true"
-                   android:priority="1000" />
+                   android:priority="1000"/>
 </manifest>
