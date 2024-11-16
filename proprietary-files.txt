@@ -1623,6 +1623,7 @@ odm/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/mt6886/libmmagent.so;SYMLINK=vendor/lib64/libmmagent.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
@@ -1631,6 +1632,7 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
 vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc
 vendor/etc/vintf/manifest/manifest_mmlpq.xml
+vendor/lib/vendor.mediatek.hardware.mmlpq-V2-ndk.so
 vendor/lib64/mt6886/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
 vendor/lib64/vendor.mediatek.hardware.mmlpq-V2-ndk.so
 
