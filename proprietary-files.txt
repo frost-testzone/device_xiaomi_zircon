@@ -1250,6 +1250,7 @@ vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
 
 # Display (Pixelworks)
+odm/lib64/libmiSensorCtrl.so
 odm/lib64/libpwirisdisplayhal.so
 odm/lib64/libpwirisfeature.so
 odm/lib64/libpwirishalwrapper.so
