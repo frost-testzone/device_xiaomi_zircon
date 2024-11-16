@@ -24,6 +24,7 @@ vendor/etc/smartpa_param/AW_DSP.bin
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6886.so
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6886.so
 vendor/lib64/hw/sound_trigger.primary.default.so
+vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_misound_asc.so
 vendor/lib64/libaudio_param_parser-vnd.so
@@ -41,8 +42,10 @@ vendor/lib64/libaudioprimarydevicehalifclient.so
 vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libaurisysdemo.so
 vendor/lib64/libawinicsmartpaparse.so
+vendor/lib64/libbessound_hd_mtk_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libcvsd_mtk.so
+vendor/lib64/libdapparamstorage.so
 vendor/lib64/libmiaudio.so
 vendor/lib64/libmisound.so
 vendor/lib64/libmisoundcrossfade.so
@@ -72,6 +75,7 @@ vendor/lib64/mt6886/libeffecthal.base.so;SYMLINK=vendor/lib64/libeffecthal.base.
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
