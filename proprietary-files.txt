@@ -1278,7 +1278,6 @@ vendor/lib64/libwvaidl.so
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so
 odm/lib64/libgf_hal.so
-odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 
 # Fuelgauge
 vendor/bin/fuelgauged
@@ -1615,9 +1614,6 @@ odm/bin/mlipayd_mitee@1.1
 odm/etc/init/vendor.xiaomi.hardware.mlipay@1.1-miteeservice.rc
 odm/lib64/libmlipay_mitee.so
 odm/lib64/libmlipay_mitee@1.1.so
-odm/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-odm/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
-odm/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 
 # MMAgent
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
