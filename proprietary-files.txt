@@ -608,13 +608,13 @@ vendor/lib64/libaaa_afassist_V2.so
 vendor/lib64/libaaa_gma.so
 vendor/lib64/libaibld.nn6.so
 vendor/lib64/libaispq.so
-vendor/lib64/libalAILDC.so
+vendor/lib64/libalAILDC.so;DISABLE_CHECKELF
 vendor/lib64/libalAI_Seg.so
-vendor/lib64/libalLDC.so
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF
 vendor/lib64/libalNN.so
 vendor/lib64/libalNN_engine.so
 vendor/lib64/libalNN_gpu.so
-vendor/lib64/libalhLDC.so
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
 vendor/lib64/libapiwrapper.so
 vendor/lib64/libarcsoft_beautyshot.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libarcsoft_bokeh_high_dynamic_range.so
@@ -1002,7 +1002,7 @@ vendor/lib64/mt6886/libmtkcam_tuning_utils.so;SYMLINK=vendor/lib64/libmtkcam_tun
 vendor/lib64/mt6886/libmtkcam_ulog.so;SYMLINK=vendor/lib64/libmtkcam_ulog.so
 vendor/lib64/mt6886/libmtkcm_ipc_dummy.so;SYMLINK=vendor/lib64/libmtkcm_ipc_dummy.so
 vendor/lib64/mt6886/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
-vendor/lib64/mt6886/libneuron_runtime.6.so;SYMLINK=vendor/lib64/libneuron_runtime.6.so
+vendor/lib64/mt6886/libneuron_runtime.6.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuron_runtime.6.so
 vendor/lib64/mt6886/libneuron_wrapper.so;SYMLINK=vendor/lib64/libneuron_wrapper.so
 vendor/lib64/mt6886/libpda_usdriver.so;SYMLINK=vendor/lib64/libpda_usdriver.so
 vendor/lib64/mt6886/libstereoinfoaccessor_vsdof.so;SYMLINK=vendor/lib64/libstereoinfoaccessor_vsdof.so
@@ -1473,7 +1473,7 @@ vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libtflite_mtk.so
-vendor/lib64/mt6886/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib64/mt6886/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
@@ -1759,7 +1759,7 @@ system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telec
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar
 system_ext/lib64/libcomutils.so
-system_ext/lib64/libimsma.so
+system_ext/lib64/libimsma.so;DISABLE_CHECKELF
 system_ext/lib64/libimsma_adapt.so
 system_ext/lib64/libimsma_rtp.so
 system_ext/lib64/libimsma_socketwrapper.so
