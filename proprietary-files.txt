@@ -649,6 +649,7 @@ vendor/lib64/libcom.xiaomi.mizone.postprocinterface.so
 vendor/lib64/libcom.xiaomi.mizone.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libdeflicker.so
+vendor/lib64/libdlrmsc.so
 vendor/lib64/libellv.so
 vendor/lib64/libfeaturepolicy.so
 vendor/lib64/libheichal.so
@@ -669,6 +670,7 @@ vendor/lib64/libmiphone_capture_bokeh_mono.so
 vendor/lib64/libmiphone_preview_bokeh_mono.so
 vendor/lib64/libmivimemutils.so
 vendor/lib64/libmpbase.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libmtk-sample.so
 vendor/lib64/libmtkcam_fdWarpConvert.so
 vendor/lib64/libmtkcam_fdsan.so
 vendor/lib64/libmtkcam_fdsan_wrapper.so
