@@ -612,7 +612,7 @@ vendor/lib64/libalNN_engine.so
 vendor/lib64/libalNN_gpu.so
 vendor/lib64/libalhLDC.so
 vendor/lib64/libapiwrapper.so
-vendor/lib64/libarcsoft_beautyshot.so
+vendor/lib64/libarcsoft_beautyshot.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libarcsoft_bokeh_high_dynamic_range.so
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
 vendor/lib64/libarcsoft_dualcam_refocus_video.so
@@ -662,13 +662,13 @@ vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libmialgo_ai_vision.so
 vendor/lib64/libmialgo_aio_seg.so
 vendor/lib64/libmialgo_sd.so
-vendor/lib64/libmialgo_utils.so
+vendor/lib64/libmialgo_utils.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmicamjson.so
 vendor/lib64/libmiphone_capture_bokeh_mono.so
 vendor/lib64/libmiphone_preview_bokeh_mono.so
 vendor/lib64/libmivimemutils.so
-vendor/lib64/libmpbase.so
+vendor/lib64/libmpbase.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libmtkcam_fdWarpConvert.so
 vendor/lib64/libmtkcam_fdsan.so
 vendor/lib64/libmtkcam_fdsan_wrapper.so
@@ -1772,7 +1772,7 @@ system_ext/priv-app/ImsService/ImsService.apk
 vendor/bin/hw/vtservice_hidl
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
 # Secure Element
 odm/etc/SEC_THN31_FW_VTP.txt.bin
