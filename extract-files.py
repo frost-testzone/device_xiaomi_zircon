@@ -50,6 +50,7 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libsource.so': blob_fixup()
         .add_needed('libui_shim.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.mitee': blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V2-ndk.so', 'android.hardware.security.keymint-V3-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()
         .regex_replace('/odm/bin', '/vendor/bin'),
