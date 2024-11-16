@@ -48,7 +48,7 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libmiaudio.so
 vendor/lib64/libmisound.so
-vendor/lib64/libmisoundcrossfade.so
+vendor/lib64/libmisoundcrossfade.so;FIX_SONAME
 vendor/lib64/libmisoundkaraoke.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libmsbc_mtk.so
@@ -56,9 +56,9 @@ vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtkspparser.so
 vendor/lib64/libnlcparser.so
-vendor/lib64/libnotifyaudiohal.so
+vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 vendor/lib64/librt_extamp_intf.so
-vendor/lib64/libspeech_enh_lib.so
+vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libvow_ap_test_aa.so
 vendor/lib64/libvow_ap_test_dd.so
@@ -682,8 +682,8 @@ vendor/lib64/libmtkcam_perfctrl_wrapper.so
 vendor/lib64/libmtkisp_metadata_v2.so
 vendor/lib64/libneuron_graph_delegate.mtk.so
 vendor/lib64/libneuron_platform.so
-vendor/lib64/libneuron_runtime_vpp.6.0.3.so
-vendor/lib64/libneuron_runtime_vpp.6.so
+vendor/lib64/libneuron_runtime_vpp.6.0.3.so;FIX_SONAME
+vendor/lib64/libneuron_runtime_vpp.6.so;FIX_SONAME
 vendor/lib64/librelight_only.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
@@ -1276,7 +1276,7 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvaidl.so
 
 # Fingerprint
-odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so
+odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
 
 # Fuelgauge
@@ -1469,7 +1469,7 @@ vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
-vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libtflite_mtk.so
@@ -2018,4 +2018,4 @@ vendor/bin/wlan_assistant
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/wlan_assistant.rc
 vendor/etc/wifi/passpointProfile.conf
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
