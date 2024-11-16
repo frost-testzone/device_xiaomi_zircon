@@ -54,6 +54,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()
         .regex_replace('/odm/bin', '/vendor/bin'),
+    ('vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so', 'vendor/lib64/libcodec2_vpp_AISR_plugin.so'): blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
