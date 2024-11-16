@@ -20,8 +20,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshim_sink.so'),
     'system_ext/lib64/libsource.so': blob_fixup()
         .add_needed('libui_shim.so'),
-    'odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so': blob_fixup()
-        .add_needed('libui_shim.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.mitee': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()

@@ -10,6 +10,3 @@ vendor.tms.tmsnfc::ITmsNfc                                  u:object_r:tmsnfc_hw
 # Mlipay
 vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:hal_mlipay_hwservice:s0
 vendor.xiaomi.hardware.mtdservice::IMTService       u:object_r:hal_mtdservice_hwservice:s0
-
-# Sensor
-vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
