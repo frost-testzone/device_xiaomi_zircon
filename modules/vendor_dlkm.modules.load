@@ -189,6 +189,7 @@ load_track.ko
 nxp_i2c.ko
 p73.ko
 tms_device_modules.ko
+mi_thermal_interface.ko
 elliptic.ko
 mtk-scp-ultra.ko
 snd-soc-mtk-scp-ultra.ko
