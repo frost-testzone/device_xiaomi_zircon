@@ -254,24 +254,17 @@ persist.vendor.radio.mtk_ps3_rat=G
 persist.vendor.vilte_support=1
 persist.vendor.viwifi_support=1
 persist.vendor.volte_support=1
-ro.telephony.default_network=33,33,33,33
 ro.telephony.iwlan_operation_mode=AP-assisted
 ro.telephony.sim.count=2
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.md_log_memdump_wait=15
-ro.vendor.mtk_c2k_lte_mode=2
-ro.vendor.mtk_c2k_support=1
 ro.vendor.mtk_data_config=1
-ro.vendor.mtk_eccci_c2k=1
 ro.vendor.mtk_external_sim_only_slots=0
 ro.vendor.mtk_external_sim_support=1
 ro.vendor.mtk_fd_support=1
 ro.vendor.mtk_gwsd_capability=2
-ro.vendor.mtk_lte_support=1
 ro.vendor.mtk_mipc_support=1
 ro.vendor.mtk_mobile_management=1
-ro.vendor.mtk_protocol1_rat_config=N/C/Lf/Lt/W/G
-ro.vendor.mtk_ps1_rat=N/C/Lf/Lt/W/G
 ro.vendor.mtk_ril_mode=c6m_1rild
 ro.vendor.mtk_sim_card_onoff=3
 ro.vendor.mtk_sim_hot_swap_common_slot=1
@@ -280,6 +273,7 @@ ro.vendor.num_md_protocol=2
 ro.vendor.sim_me_lock_mode=3
 telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
+import /vendor/etc/rsc/${ro.boot.rsc}/ro.prop
 
 # Sensor
 ro.vendor.mtk.sensor.support=yes
