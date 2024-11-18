@@ -1598,12 +1598,6 @@ vendor/lib64/libdolbyplugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libmp3dec_mtk.so
 
-# Media (Configs)
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_codecs_system_default.xml
-
 # Memtrack
 vendor/bin/hw/android.hardware.memtrack-service.mediatek
 vendor/etc/init/memtrack-mediatek.rc
