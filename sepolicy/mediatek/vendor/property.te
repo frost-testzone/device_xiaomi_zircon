@@ -1,3 +1,2 @@
-vendor_internal_prop(vendor_mtk_applist_prop)
 vendor_restricted_prop(vendor_mtk_aov_app_support_prop)
 vendor_restricted_prop(vendor_mtk_flp_prop)

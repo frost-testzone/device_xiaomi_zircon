@@ -11,8 +11,3 @@ attribute hal_mtk_batching_server;
 attribute hal_mtk_aov;
 attribute hal_mtk_aov_client;
 attribute hal_mtk_aov_server;
-
-# MTK Applist
-attribute hal_mtk_applist;
-attribute hal_mtk_applist_client;
-attribute hal_mtk_applist_server;
