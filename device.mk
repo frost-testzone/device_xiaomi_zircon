@@ -57,10 +57,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.common-V1-ndk.vendor:64 \
-    android.media.audio.common.types-V1-cpp.vendor:64
-
-PRODUCT_PACKAGES += \
     audio.bluetooth.default:64 \
     audio.primary.default:64 \
     audio.r_submix.default:64 \
@@ -68,9 +64,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libaudiofoundation.vendor:64 \
-    libaudiopreprocessing:64 \
-    libnbaio_mono:64 \
-    libtinycompress:64
+    libaudiopreprocessing:64
 
 PRODUCT_PACKAGES += \
     MtkInCallService
@@ -100,22 +94,13 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl:64 \
-    android.hardware.bluetooth@1.1.vendor:64
+    android.hardware.bluetooth.audio-impl:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor:64 \
-    android.frameworks.sensorservice@1.0.vendor:64 \
-    android.hardware.camera.common@1.0.vendor:64 \
-    android.hardware.camera.device@3.6.vendor:64 \
-    android.hardware.camera.provider-V1-ndk.vendor:64 \
-    android.hardware.camera.provider@2.6.vendor:64
-
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor:64
 
@@ -127,14 +112,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
 
 # Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V3-ndk.vendor \
-    android.hardware.graphics.composer3-V1-ndk.vendor \
-    android.hardware.graphics.composer@2.2-resources.vendor
-
-PRODUCT_PACKAGES += \
-    libutilscallstack.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
@@ -148,10 +125,6 @@ PRODUCT_COPY_FILES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
-
-PRODUCT_PACKAGES += \
-    libdrm.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat:64
 
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
@@ -174,29 +147,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss-V2-ndk.vendor:64 \
-    android.hardware.gnss.measurement_corrections@1.1.vendor:64 \
-    android.hardware.gnss.visibility_control@1.0.vendor:64 \
-    android.hardware.gnss@2.1.vendor:64
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor:64 \
-    android.hidl.memory.block@1.0.vendor:64 \
-    libhidltransport:64 \
-    libhidltransport.vendor:64 \
-    libhwbinder:64 \
-    libhwbinder.vendor:64
-
-PRODUCT_PACKAGES += \
-    libcurl.vendor:64 \
-    libjsoncpp.vendor:64 \
-    libsqlite.vendor:64 \
-    libunwindstack.vendor:64
 
 # Hotword Enrollement
 PRODUCT_COPY_FILES += \
@@ -206,9 +158,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
-
-PRODUCT_PACKAGES += \
-    android.hardware.health@1.0.vendor:64
 
 # IFAA manager
 PRODUCT_PACKAGES += \
@@ -223,10 +172,6 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
-
-PRODUCT_PACKAGES += \
-    libui_shim:64 \
-    libshim_sink:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
@@ -248,23 +193,6 @@ PRODUCT_PACKAGES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor:64 \
-    android.hardware.security.keymint-V1-ndk.vendor:64 \
-    android.hardware.security.keymint-V2-ndk.vendor:64 \
-    android.hardware.security.rkp-V3-ndk.vendor:64
-
-PRODUCT_PACKAGES += \
-    lib_android_keymaster_keymint_utils.vendor:64 \
-    libcppbor_external.vendor:64 \
-    libkeymaster4support.vendor:64 \
-    libkeymaster_messages.vendor:64 \
-    libkeymaster_portable.vendor:64 \
-    libkeymint.vendor:64 \
-    libkeymint_support.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64 \
-    libsoft_attestation_cert.vendor:64
-
-PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
 
 PRODUCT_COPY_FILES += \
@@ -273,40 +201,14 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.2.vendor \
-    libavservices_minijail \
     libavservices_minijail_vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_hidl@1.1.vendor \
-    libcodec2_hidl@1.2.vendor \
     libcodec2_hidl_plugin \
-    libcodec2_soft_common.vendor \
-    libcodec2_vndk.vendor \
-    libexpat.vendor \
-    libsfplugin_ccodec_utils.vendor \
     libstagefright_softomx.vendor \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-# Memtrack
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack-V1-ndk.vendor:64
-
-# Neural Networks
-PRODUCT_PACKAGES += \
-    libruy.vendor:64 \
-    libtextclassifier_hash.vendor
-
 # NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc-V1-ndk.vendor:64 \
-    android.hardware.nfc@1.2.vendor:64 \
-    android.hardware.secure_element@1.2.vendor:64
-
-PRODUCT_PACKAGES += \
-    libchrome.vendor:64
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.hce.xml \
@@ -344,9 +246,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
     libmtkperf_client_vendor
 
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor:64
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
@@ -358,19 +257,6 @@ PRODUCT_PACKAGES += \
 include $(LOCAL_PATH)/properties/vendor_logtag.mk
 
 # Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio-V1-ndk.vendor:64 \
-    android.hardware.radio.config-V1-ndk.vendor:64 \
-    android.hardware.radio.data-V1-ndk.vendor:64 \
-    android.hardware.radio.messaging-V1-ndk.vendor:64 \
-    android.hardware.radio.modem-V1-ndk.vendor:64 \
-    android.hardware.radio.network-V1-ndk.vendor:64 \
-    android.hardware.radio.sim-V1-ndk.vendor:64 \
-    android.hardware.radio.voice-V1-ndk.vendor:64 \
-    android.hardware.radio@1.2.vendor:64 \
-    android.hardware.tetheroffload.config@1.0.vendor:64 \
-    android.hardware.tetheroffload.control@1.1.vendor:64
-
 PRODUCT_PACKAGES += \
     mdota_symlink
 
@@ -397,15 +283,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor:64 \
     android.hardware.sensors-service.xiaomi-multihal \
     sensors.xiaomi.v2
-
-PRODUCT_PACKAGES += \
-    libsensorndkbridge:64
-
-PRODUCT_PACKAGES += \
-    libui_shim.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -438,10 +317,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor:64
-
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.faketouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.faketouch.xml \
@@ -472,9 +347,6 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     vibratorfeature-wrapper
-
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk.vendor:64
 
 # Wifi
 PRODUCT_PACKAGES += \
