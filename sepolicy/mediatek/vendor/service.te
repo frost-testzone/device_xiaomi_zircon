@@ -1,6 +1,3 @@
-# Applist
-type mtk_hal_applist_service, protected_service, service_manager_type;
-
 # GPS Batching
 type mtk_hal_aov_service, protected_service, service_manager_type;
 
