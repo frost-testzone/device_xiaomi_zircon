@@ -1012,6 +1012,9 @@ on property:sys.boot_completed=1
     setprop persist.sys.zram_enabled 1
     swapon_all /vendor/etc/fstab.enableswap
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:sys.boot_completed=1
 
     # stop bootprof
