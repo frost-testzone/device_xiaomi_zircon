@@ -1839,13 +1839,6 @@ vendor/lib64/libhfmanager.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
-# Soter
-odm/bin/SoterProvisioningTool_mitee
-odm/bin/soterd
-odm/etc/init/vendor.xiaomi.hardware.soterservice@1.0-service.rc
-odm/lib64/libsoter.so
-odm/lib64/vendor.xiaomi.hardware.soterservice@1.0.so
-
 # USB
 vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0
 vendor/bin/hw/android.hardware.usb.gadget-service.mediatekv1.1
