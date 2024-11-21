@@ -103,6 +103,48 @@
       ]
     },
     {
+      "Name": "ThermalMessage",
+      "Path": "/sys/devices/virtual/thermal/thermal_message/sconfig",
+      "Values": [
+        "0",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "17",
+        "19",
+        "20",
+        "21",
+        "30",
+        "41",
+        "51"
+      ],
+      "ResetOnInit": true,
+      "DefaultIndex": 10,
+      "Comments": [
+        "SS",
+        "HUANJI",
+        "VIDEOCHAT",
+        "DOLBYVISION",
+        "PHONE",
+        "TGAME",
+        "NOLIMITS",
+        "CLASS0",
+        "CAMERA",
+        "4K",
+        "NAVIGATION",
+        "MGAME",
+        "VIDEO",
+        "PER-NORMAL",
+        "PER-CLASS0",
+        "PER-VIDEO"
+      ]
+    },
+    {
       "Name": "CPUEfficiencyClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq",
       "Values": [
