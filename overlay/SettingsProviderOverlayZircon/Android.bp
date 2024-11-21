@@ -6,5 +6,5 @@
 
 runtime_resource_overlay {
     name: "SettingsProviderOverlayZircon",
-    vendor: true
+    vendor: true,
 }

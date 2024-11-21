@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
+         Note: This config is replacing the config_wifi_dual_band_support
+         since more bands may now be supported (such as 6GHz), the naming dual_band
+         is no longer indicative, and a separate config now exists for each band -->
+    <bool name="config_wifi5ghzSupport" translatable="false">true</bool>
+
+    <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
+    <bool name="config_wifi6ghzSupport" translatable="false">true</bool>
+
+    <!-- boolean indicating whether the Easy Connect (DPP) AKM is supported -->
+    <bool name="config_wifiDppAkmSupported" translatable="false">true</bool>
+
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool name="config_wifi_fast_bss_transition_enabled" translatable="false">true</bool>
+
+    <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
+         This mechanism allows the host to remain in suspend state and the dongle to actively
+         scan and wake the host when a configured SSID is detected by the dongle. This chipset
+         capability can provide power savings when wifi needs to be always kept on. -->
+    <bool name="config_wifi_background_scan_support" translatable="false">true</bool>
+
+    <!-- List of allowed channels in 2GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '1-6,11'. -->
+    <string name="config_wifiSoftap2gChannelList" translatable="false">1-13</string>
+
+    <!-- List of allowed channels in 5GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '36-48,149'. -->
+    <string name="config_wifiSoftap5gChannelList" translatable="false">36,38,40,42,44,46,48,149,153,157,161,165</string>
+
+    <!-- List of allowed channels in 6GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '36-48,149'. -->
+    <string name="config_wifiSoftap6gChannelList" translatable="false">5,21,37,53,69,85,101,117,133,149,165,181,197,213,229</string>
+
+    <!-- List of allowed channels in 60GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '1-2,4'. -->
+    <string name="config_wifiSoftap60gChannelList" translatable="false" />
+
+    <!-- Boolean indicating that enable roaming between linked networks -->
+    <bool name="config_wifiEnableLinkedNetworkRoaming" translatable="false">false</bool>
+
+    <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
+    <bool name="config_wifi_softap_acs_supported" translatable="false">true</bool>
+
+    <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
+    <bool name="config_wifi_softap_sae_supported" translatable="false">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AC for softap -->
+    <bool name="config_wifi_softap_ieee80211ac_supported" translatable="false">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool name="config_wifiSoftapIeee80211axSupported" translatable="false">true</bool>
+
+    <!-- Wifi driver supports 6GHz band for softap when chip support 6GHz -->
+    <bool name="config_wifiSoftap6ghzSupported" translatable="false">true</bool>
+
+    <!-- Indicates that the framework should auto append lower bands to band configuration for
+         avoiding coexistence handling. For example: 5g only band will change to 2.4g|5g and
+         6g band will change to 2.4|5g|6g band -->
+    <bool name="config_wifiSoftapAutoAppendLowerBandsToBandConfigurationEnabled" translatable="false">false</bool>
+
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool name="config_wifi_connected_mac_randomization_supported" translatable="false">true</bool>
+
+    <!-- Indicates that p2p MAC randomization is supported on this device -->
+    <bool name="config_wifi_p2p_mac_randomization_supported" translatable="false">true</bool>
+
+    <!-- Indicates that bridged AP mode is supported on this device provided that
+     the device interface combination allows for it -->
+    <bool name="config_wifiBridgedSoftApSupported" translatable="false">false</bool>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,1048576,4525824</string>
+
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Redmi Note 13 Pro+ 5G</string>
+
+    <!-- Array describing scanning schedule in seconds when device is disconnected and screen is on -->
+    <integer-array name="config_wifiDisconnectedScanIntervalScheduleSec" translatable="false">
+        <item>20</item>
+    </integer-array>
+
+    <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
+    <integer name="config_wifiDelayDisconnectOnImsLostMs" translatable="false">1000</integer>
+
+    <!-- Enable Make-Before-Break Wifi network switching.
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled" translatable="false">false</bool>
+
+    <!-- Enable concurrent peer to peer + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool name="config_wifiMultiStaLocalOnlyConcurrencyEnabled" translatable="false">false</bool>
+
+    <!-- Enable concurrent restricted connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool name="config_wifiMultiStaRestrictedConcurrencyEnabled" translatable="false">false</bool>
+
+    <!-- Enable concurrent internet connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool name="config_wifiMultiStaMultiInternetConcurrencyEnabled" translatable="false">false</bool>
+
+    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
+    <bool name="config_wifiSaeH2eSupported" translatable="false">true</bool>
+
+    <!-- 0: verbose logging controlled by user
+         1: verbose logging on by default for userdebug
+         2: verbose logging on by default for all builds -->
+    <integer name="config_wifiVerboseLoggingAlwaysOnLevel" translatable="false">1</integer>
+
+    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE)
+         aka Enhanced Open for Soft-AP -->
+    <bool name="config_wifiSoftapOweSupported" translatable="false">false</bool>
+
+    <!-- Whether to show a confirmation dialog to the user if a third party app targeting below SDK
+         level Q tries to enable Wi-Fi -->
+    <bool name="config_showConfirmationDialogForThirdPartyAppsEnablingWifi" translatable="false">true</bool>
+</resources>
