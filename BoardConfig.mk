@@ -181,6 +181,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/target/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/target/public
 
+# USB
+$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
