@@ -1442,7 +1442,6 @@ vendor/mitee/ta/e97c270e-a5c4-4c58-bcd3384a2fa2539e.ta
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
-vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk-lazy
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/nn/ot/neuron_detection.mdla3_5
 vendor/etc/nn/ot/neuron_tracking.mdla3_5
