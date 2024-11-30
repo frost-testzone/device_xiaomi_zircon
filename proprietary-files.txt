@@ -1038,10 +1038,7 @@ vendor/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
 
 # Charger
 vendor/bin/batterysecret
-vendor/bin/charge_logger
 vendor/etc/init/hw/init.batterysecret.rc
-vendor/etc/init/hw/init.charge_logger.rc
-vendor/etc/init/init.charge_logger.rc
 
 # Chipinfo
 vendor/bin/chipinfo
