@@ -1,4 +1,4 @@
-# Unpinned blobs from miui_ZIRCONGlobal_OS1.0.5.0.UNOMIXM_6c93ae149d_14.0
+# Unpinned blobs from miui_ZIRCONGlobal_OS1.0.7.0.UNOMIXM_31691cdfde_14.0
 
 # AEE
 vendor/bin/aee_aedv64_v2
