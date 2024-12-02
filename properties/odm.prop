@@ -24,3 +24,7 @@ ro.vendor.nfc.debounce_field_on=1
 
 # Radio
 persist.vendor.radio.dynamic_sar=1
+
+# SKU
+ro.product.property_source_order=odm,vendor,product,system_ext,system
+import /odm/etc/${ro.boot.hwc}.prop
