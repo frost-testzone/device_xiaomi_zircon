@@ -220,3 +220,5 @@
 
 # Charger
 /sys/class/power_supply/battery input_suspend 0660 system system
+/sys/class/power_supply/battery sport_mode 0660 system system
+/sys/class/power_supply/battery smart_chg 0660 system system
