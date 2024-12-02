@@ -80,11 +80,12 @@ FastCharge::FastCharge() {
 }
 
 Return<bool> FastCharge::isEnabled() {
-    return get(FASTCHARGE_PATH, 0) < 1;
+    return (get(SMARTCHG_PATH, 0) == 8) && (get(SPORTMODE_PATH, 1) > 0);
 }
 
 Return<bool> FastCharge::setEnabled(bool enable) {
-    set(FASTCHARGE_PATH, enable ? 0 : 1);
+    set(SPORTMODE_PATH, enable ? 1 : 0);
+    set(SMARTCHG_PATH, enable ? 9 : 8);
 
     bool enabled = isEnabled();
     property_set(kFastChargingProp, enabled ? "true" : "false");
