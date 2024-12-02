@@ -15,10 +15,10 @@
 //
 
 cc_binary {
-    name: "vendor.lineage.fastcharge@1.0-service.samsung",
+    name: "vendor.lineage.fastcharge@1.0-service.zircon",
     relative_install_path: "hw",
-    init_rc: ["vendor.lineage.fastcharge@1.0-service.samsung.rc"],
-    vintf_fragments: ["vendor.lineage.fastcharge@1.0-service.samsung.xml"],
+    init_rc: ["vendor.lineage.fastcharge@1.0-service.zircon.rc"],
+    vintf_fragments: ["vendor.lineage.fastcharge@1.0-service.zircon.xml"],
     local_include_dirs: ["include"],
     srcs: [
         "FastCharge.cpp",
