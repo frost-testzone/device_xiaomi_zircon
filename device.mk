@@ -133,6 +133,10 @@ TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Fastcharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.zircon
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
