@@ -256,6 +256,11 @@ PRODUCT_PACKAGES += \
 # Properties
 include $(LOCAL_PATH)/properties/vendor_logtag.mk
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/properties/sku/CN.prop:$(TARGET_COPY_OUT_ODM)/etc/CN.prop \
+    $(LOCAL_PATH)/properties/sku/GL.prop:$(TARGET_COPY_OUT_ODM)/etc/GL.prop \
+    $(LOCAL_PATH)/properties/sku/IN.prop:$(TARGET_COPY_OUT_ODM)/etc/IN.prop
+
 # Radio
 PRODUCT_PACKAGES += \
     mdota_symlink
