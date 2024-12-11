@@ -1583,11 +1583,6 @@ vendor/lib64/libdolbyplugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libmp3dec_mtk.so
 
-# Memtrack
-vendor/bin/hw/android.hardware.memtrack-service.mediatek
-vendor/etc/init/memtrack-mediatek.rc
-vendor/etc/vintf/manifest/memtrack-mediatek.xml
-
 # Mlipay
 odm/bin/mlipayd_mitee@1.1
 odm/etc/init/vendor.xiaomi.hardware.mlipay@1.1-miteeservice.rc
