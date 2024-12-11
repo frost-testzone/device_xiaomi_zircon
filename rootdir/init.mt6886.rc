@@ -1121,6 +1121,13 @@ on boot
 on boot
     insmod /vendor/lib/modules/msync2_frd.ko
 
+# Conninfra
+service conninfra_loader /vendor/bin/conninfra_loader
+    class core
+    user system
+    group system
+    oneshot
+
 # VSIM service (vendor OSI)
 service osi /system/bin/osi
     class main

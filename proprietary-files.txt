@@ -1046,7 +1046,6 @@ vendor/etc/init/chipinfo_init.rc
 
 # Connectivity
 vendor/bin/conninfra_loader
-vendor/etc/init/hw/init_conninfra.rc
 vendor/etc/init/init.conninfra.rc
 vendor/etc/init/init.fmradio_drv.rc
 vendor/firmware/BT_FW.cfg
@@ -1293,7 +1292,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 vendor/lib64/hw/gatekeeper.mitee.so
 
 # GNSS
-vendor/bin/gps_dump
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/hw/vendor.mediatek.hardware.gnss.batching-service
 vendor/bin/mnld
