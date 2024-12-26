@@ -237,7 +237,10 @@ ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
 # Platform
+ro.board.platform=mt6886
 ro.vendor.mediatek.platform=MT6886
+ro.soc.manufacturer=Mediatek
+ro.soc.model=MT6886
 
 # Radio
 persist.radio.multisim.config=dsds
