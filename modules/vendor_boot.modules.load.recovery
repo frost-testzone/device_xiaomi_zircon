@@ -182,6 +182,4 @@ mtk-pm-domain-disable-unused.ko
 cfg80211.ko
 mac80211.ko
 mtk-mmdvfs-v3-start.ko
-uload_ind.ko
-load_track.ko
 hwid.ko
