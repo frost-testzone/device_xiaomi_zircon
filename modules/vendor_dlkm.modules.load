@@ -86,7 +86,6 @@ md_cooling_all.ko
 charger_cooling.ko
 backlight_cooling.ko
 thermal_interface.ko
-thermal_jatm.ko
 wifi_cooling.ko
 mtk_gpu_qos.ko
 mt6368-accdet.ko
