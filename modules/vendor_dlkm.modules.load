@@ -169,7 +169,6 @@ atf_logger.ko
 cpudvfs.ko
 bus-parity.ko
 fhctl.ko
-mtk_fpsgo.ko
 powerhal_cpu_ctrl.ko
 mtk_perf_ioctl.ko
 frs.ko
