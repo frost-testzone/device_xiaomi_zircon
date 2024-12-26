@@ -88,6 +88,7 @@ TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/mgk_64_k515.config \
     vendor/xiaomi_mgk.config \
+    vendor/lineage_mgk.config \
     vendor/zircon.config
 
 TARGET_KERNEL_DTB := \
