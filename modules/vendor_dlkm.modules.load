@@ -173,11 +173,9 @@ mtk_perf_ioctl.ko
 clk-disable-unused.ko
 mtk-pm-domain-disable-unused.ko
 widevine_driver.ko
-mtk_core_ctl.ko
 vdec-fmt.ko
 mtk-vmm-notifier.ko
 task_turbo.ko
-mtk_perf_common.ko
 mtk_disp_sec.ko
 sec.ko
 mtk-mmdvfs-v3-start.ko
