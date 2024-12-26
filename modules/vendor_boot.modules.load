@@ -1,4 +1,3 @@
-bootprof.ko
 monitor_hang.ko
 mkp.ko
 dbgtop-drm.ko
