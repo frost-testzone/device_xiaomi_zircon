@@ -1,7 +1,4 @@
 bootprof.ko
-mrdump.ko
-aee_aed.ko
-aee_hangdet.ko
 monitor_hang.ko
 mkp.ko
 dbgtop-drm.ko
@@ -76,7 +73,6 @@ rt4831a_drv.ko
 mtk_panel_ext.ko
 panel-n16u-42-02-0a-dsc-vdo.ko
 mediatek-drm.ko
-aee_rs.ko
 mmprofile.ko
 mtk-uart-apdma.ko
 uarthub_drv.ko
