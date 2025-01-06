@@ -199,6 +199,10 @@ ro.vendor.pq.mtk_video_transition=0
 # DRM
 drm.service.enabled=1
 
+# Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=610|2437|105
+
 # FM
 ro.vendor.fm.platform=connac2x
 
