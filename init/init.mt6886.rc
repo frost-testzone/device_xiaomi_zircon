@@ -735,6 +735,8 @@ on boot
     chmod 0770 /sys/power/tuxonice
     chmod 0220 /sys/power/tuxonice/do_hibernate
 
+    # Limit discard size to 128MB in order to avoid long IO latency
+    write /sys/block/sda/queue/discard_max_bytes 134217728
 
 # Smartbook Handler Framework
     chown system system /sys/power/sb_state
