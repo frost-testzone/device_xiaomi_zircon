@@ -38,6 +38,7 @@ on init
     # Boot time tuning
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "performance"
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "performance"
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
 
     # fs
     write /dev/sys/fs/by-name/userdata/iostat_enable 0
@@ -71,6 +72,7 @@ on property:sys.boot_completed=1
     # End boot time tuning
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
 
     # Configure clamps for standard task groups.
     # system-background
