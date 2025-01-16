@@ -383,5 +383,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+# MIUI Camera
+$(call inherit-product, device/xiaomi/zircon-miuicamera/device.mk)
+
 # Vendor
 $(call inherit-product, vendor/xiaomi/zircon/zircon-vendor.mk)
