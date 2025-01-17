@@ -1001,6 +1001,16 @@ vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
 
+# CIT Sensor
+odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
+odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
+odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
+odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
+odm/lib64/libssccalapi@2.0.so
+vendor/lib64/libhfmanagerwrapper.so
+vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
+vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
+
 # Charger
 vendor/bin/batterysecret
 vendor/etc/init/hw/init.batterysecret.rc
@@ -1207,8 +1217,6 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V3-ndk.so
-vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
-vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
 
 # Display (Pixelworks)
 odm/lib64/libmiSensorCtrl.so
