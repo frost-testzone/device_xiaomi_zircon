@@ -3,13 +3,6 @@
 
 # Battery
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
-/sys/devices/platform/soc/11e81000.i2c/i2c-7/7-0064/power_supply/cp_master(/.*)? u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/11e81000.i2c/i2c-7/7-0065/power_supply/cp_slave(/.*)? u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/charger/power_supply/usb(/.*)? u:object_r:sysfs_usb_supply:s0
-/sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter(/.*)? u:object_r:sysfs_usbpd_device:s0
-/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:chg/power_supply/11280000.i2c:mt6375@34:chg u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:mtk_gauge/power_supply/battery(/.*)? u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/11e81000.i2c/i2c-7/7-0055/power_supply/bms(/.*)? u:object_r:sysfs_usb_supply:s0
 
 # Camera
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
