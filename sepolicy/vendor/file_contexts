@@ -83,9 +83,6 @@
 /dev/ufs-bsg0 u:object_r:mitee_client_device:s0
 /mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
 
-# Light
-/vendor/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
-
 # Mlipay
 /(odm|vendor/odm|system/vendor)/bin/mlipayd_mitee@1.1 u:object_r:hal_mlipay_default_exec:s0
 
