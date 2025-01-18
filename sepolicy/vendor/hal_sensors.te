@@ -10,6 +10,8 @@ allow hal_sensors_default nvcfg_file:file create_file_perms;
 allow hal_sensors_default nvcfg_file:dir create_dir_perms;
 allow mtk_hal_sensors sysfs_scp:dir search;
 allow mtk_hal_sensors sysfs_scp:file rw_file_perms;
+allow hal_sensors_default sysfs_scp:dir search;
+allow hal_sensors_default sysfs_scp:file rw_file_perms;
 
 hal_client_domain(hal_sensors_default, hal_audio)
 binder_call(hal_sensors_default, hal_audio_default)

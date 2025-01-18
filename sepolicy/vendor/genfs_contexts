@@ -57,3 +57,6 @@ genfscon sysfs /devices/platform/soc/1f000000.mdp/wakeup u:object_r:sysfs_wakeup
 genfscon sysfs /devices/platform/soc/1f000000.mmlsys-config/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/trusty/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/mtk-gauge/wakeup u:object_r:sysfs_wakeup:s0
+
+# Vibrator
+genfscon sysfs /devices/platform/soc/11e00000.i2c/i2c-0/0-005a u:object_r:sysfs_vibrator:s0
