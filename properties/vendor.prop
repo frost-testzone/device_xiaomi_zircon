@@ -249,9 +249,6 @@ ro.vendor.mtk_nn_support=1
 # Platform
 ro.vendor.mediatek.platform=MT6886
 
-# Power
-persist.system.powerhal.applist_enable=1
-
 # Radio
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
