@@ -1012,9 +1012,6 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xm
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
 
 # Media
-vendor/etc/seccomp_policy/mediacodec.policy
-vendor/etc/seccomp_policy/mediaextractor.policy
-vendor/etc/seccomp_policy/mediaswcodec.policy
 vendor/lib64/libmvpu_cic_ci_compiler.so
 vendor/lib64/libmvpu_clc_cl_compiler.so
 vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
