@@ -125,6 +125,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
 # Fastboot
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot-service.example_recovery
+
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
 
 # Fastbootd
