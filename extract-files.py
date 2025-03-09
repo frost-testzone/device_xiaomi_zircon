@@ -39,6 +39,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    ('odm/lib64/nfc_nci.nqx.default.hw.so', 'odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/tms-utils.so', 'vendor/lib64/libnvram.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('ImsService-patches/'),
     'system_ext/lib64/libimsma.so': blob_fixup()
