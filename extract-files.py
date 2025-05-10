@@ -62,6 +62,9 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'%d/on', b'%d/..'),
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()
         .regex_replace('/odm/bin', '/vendor/bin'),
+    'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
+        .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
+        .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00'),
     ('vendor/lib64/hw/hwcomposer.mtk_common.so', 'vendor/lib64/libmialgoengine.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so', 'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     ('vendor/lib64/libalLDC.so', 'vendor/lib64/libalAILDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
