@@ -203,9 +203,20 @@ $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V3-ndk.vendor \
+    lib_android_keymaster_keymint_utils.vendor \
+    libcppbor_external.vendor \
+    libkeymint.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
