@@ -33,7 +33,6 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'vendor.mediatek.hardware.videotelephony@1.0',
         'libarcsoft_beautyshot',
         'libmialgo_utils',
         'libmpbase',
@@ -46,12 +45,8 @@ blob_fixups: blob_fixups_user_type = {
     ('odm/lib64/nfc_nci.nqx.default.hw.so', 'odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/tms-utils.so',
     'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
-    ('system_ext/etc/init/init.vtservice.rc', 'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc'): blob_fixup()
+    'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
         .regex_replace('start', 'enable'),
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
-        .apktool_patch('ImsService-patches/'),
     'vendor/bin/hw/android.hardware.graphics.composer@3.1-service': blob_fixup()
         .replace_needed('android.hardware.graphics.composer@2.1-resources.so', 'android.hardware.graphics.composer@2.1-resources-v34.so'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
