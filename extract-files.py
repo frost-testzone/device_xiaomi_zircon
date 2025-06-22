@@ -31,7 +31,6 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'vendor.mediatek.hardware.videotelephony@1.0',
         'libarcsoft_beautyshot',
         'libmialgo_utils',
         'libmpbase'
@@ -41,14 +40,6 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     ('odm/lib64/nfc_nci.nqx.default.hw.so', 'odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/tms-utils.so', 'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
-    'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
-        .apktool_patch('ImsService-patches/'),
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'system_ext/lib64/libsink-mtk.so': blob_fixup()
-        .add_needed('libaudioclient_shim.so'),
-    'system_ext/lib64/libsource.so': blob_fixup()
-        .add_needed('libui_shim.so'),
     'odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so': blob_fixup()
         .add_needed('libui_shim.so'),
     'vendor/bin/hw/android.hardware.graphics.composer@3.1-service': blob_fixup()
