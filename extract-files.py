@@ -51,7 +51,7 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
-        .apktool_patch('ImsService-patches/'),
+        .apktool_patch('blob-patches/ImsService'),
     'vendor/bin/hw/android.hardware.graphics.composer@3.1-service': blob_fixup()
         .replace_needed('android.hardware.graphics.composer@2.1-resources.so', 'android.hardware.graphics.composer@2.1-resources-v34.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.mitee': blob_fixup()
