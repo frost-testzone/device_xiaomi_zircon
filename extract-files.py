@@ -22,11 +22,13 @@ from extract_utils.main import (
 namespace_imports = [
     'device/xiaomi/zircon',
     'hardware/mediatek',
-    'hardware/xiaomi'
+    'hardware/xiaomi',
 ]
+
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
+
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
@@ -34,7 +36,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.mediatek.hardware.videotelephony@1.0',
         'libarcsoft_beautyshot',
         'libmialgo_utils',
-        'libmpbase'
+        'libmpbase',
     ): lib_fixup_vendor_suffix,
 }
 
@@ -92,8 +94,8 @@ module = ExtractUtilsModule(
     'zircon',
     'xiaomi',
     blob_fixups=blob_fixups,
-    namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,
+    namespace_imports=namespace_imports,
     add_firmware_proprietary_file=True,
 )
 
