@@ -564,7 +564,6 @@ vendor/lib64/camera/plugins/com.xiaomi.plugin.rawsuperlight_front.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.remosaic.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.skinbeautifier.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.swflip.so
-vendor/lib64/hw/mt6886/android.hardware.camera.provider@2.6-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so
 vendor/lib64/hw/mt6886/vendor.mediatek.hardware.camera.atms@1.0-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib64/hw/mt6886/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib64/hw/mt6886/vendor.mediatek.hardware.camera.isphal@1.1-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.1-impl.so
@@ -824,10 +823,6 @@ vendor/lib64/mt6886/libmtkcam_hal_custom.so;SYMLINK=vendor/lib64/libmtkcam_hal_c
 vendor/lib64/mt6886/libmtkcam_hal_custom_provider.so;SYMLINK=vendor/lib64/libmtkcam_hal_custom_provider.so
 vendor/lib64/mt6886/libmtkcam_hal_custom_state.so;SYMLINK=vendor/lib64/libmtkcam_hal_custom_state.so
 vendor/lib64/mt6886/libmtkcam_hal_custom_utils.so;SYMLINK=vendor/lib64/libmtkcam_hal_custom_utils.so
-vendor/lib64/mt6886/libmtkcam_hal_hidl_common.so;SYMLINK=vendor/lib64/libmtkcam_hal_hidl_common.so
-vendor/lib64/mt6886/libmtkcam_hal_hidl_device.so;SYMLINK=vendor/lib64/libmtkcam_hal_hidl_device.so
-vendor/lib64/mt6886/libmtkcam_hal_hidl_provider.so;SYMLINK=vendor/lib64/libmtkcam_hal_hidl_provider.so
-vendor/lib64/mt6886/libmtkcam_hal_hidl_utils.so;SYMLINK=vendor/lib64/libmtkcam_hal_hidl_utils.so
 vendor/lib64/mt6886/libmtkcam_hwnode.so;SYMLINK=vendor/lib64/libmtkcam_hwnode.so
 vendor/lib64/mt6886/libmtkcam_hwutils.so;SYMLINK=vendor/lib64/libmtkcam_hwutils.so
 vendor/lib64/mt6886/libmtkcam_hwutils_android.so;SYMLINK=vendor/lib64/libmtkcam_hwutils_android.so
