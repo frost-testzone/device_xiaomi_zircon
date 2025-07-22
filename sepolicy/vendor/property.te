@@ -10,6 +10,9 @@ vendor_restricted_prop(vendor_fp_info_prop)
 vendor_public_prop(vendor_panel_info_prop)
 vendor_public_prop(vendor_fp_prop)
 
+# NFC
+vendor_internal_prop(vendor_nfc_prop)
+
 # Payment
 vendor_public_prop(vendor_payment_security_prop)
 vendor_public_prop(vendor_cpuid_prop)
