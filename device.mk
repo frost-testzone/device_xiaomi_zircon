@@ -228,9 +228,8 @@ PRODUCT_PACKAGES += \
     ApertureOverlayZircon \
     CarrierConfigOverlayZircon \
     FrameworkOverlayZircon \
-    LineagePowerOffAlarmOverlayZircon \
-    LineageSDKOverlayZircon \
-    LineageSettingsOverlayZircon \
+    VoltagePowerOffAlarmOverlayZircon \
+    VoltageSettingsOverlayZircon \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
     SystemUIOverlayZircon \

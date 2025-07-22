@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_zircon.mk
+    $(LOCAL_DIR)/voltage_zircon.mk

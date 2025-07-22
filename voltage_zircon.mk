@@ -8,13 +8,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common VoltageOS stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Inherit from zircon device
 $(call inherit-product, device/xiaomi/zircon/device.mk)
 
-PRODUCT_NAME := lineage_zircon
+# VoltageOS flags.
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Bootanimation Resolution.
+TARGET_BOOT_ANIMATION_RES := 1920
+
+PRODUCT_NAME := voltage_zircon
 PRODUCT_DEVICE := zircon
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

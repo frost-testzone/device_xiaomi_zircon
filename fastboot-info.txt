@@ -1,4 +1,4 @@
-# fastboot-info for lineage_zircon
+# fastboot-info for voltage_zircon
 version 1
 flash boot
 flash dtbo
