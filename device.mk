@@ -177,6 +177,24 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.enableswap \
+    fstab.mt6886 \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.fingerprint.rc \
+    init.modem.rc \
+    init.mt6886.rc \
+    init.mt6886.usb.rc \
+    init.power.rc \
+    init.project.rc \
+    ueventd.mtk.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.mt6886:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6886 \
+    $(LOCAL_PATH)/init/init.recovery.mt6886.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6886.rc
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -271,24 +289,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    fstab.enableswap \
-    fstab.mt6886 \
-    init.connectivity.common.rc \
-    init.connectivity.rc \
-    init.fingerprint.rc \
-    init.modem.rc \
-    init.mt6886.rc \
-    init.mt6886.usb.rc \
-    init.power.rc \
-    init.project.rc \
-    ueventd.mtk.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.mt6886:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6886 \
-    $(LOCAL_PATH)/rootdir/init.recovery.mt6886.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6886.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
