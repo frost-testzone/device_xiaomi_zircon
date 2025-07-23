@@ -31,6 +31,3 @@ vendor_restricted_prop(vendor_mtk_mitee_prop)
 
 # Thermal
 vendor_public_prop(vendor_thermal_normal_prop)
-
-# WLAN
-vendor_restricted_prop(vendor_mtk_service_wifi_nvram_prop)

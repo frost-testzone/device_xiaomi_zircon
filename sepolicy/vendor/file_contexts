@@ -17,7 +17,6 @@
 /vendor/lib(64)?/com.xiaomi.plugin.rawsuperlight\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/com.xiaomi.plugin.skinbeautifier\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/com.xiaomi.plugin.swflip\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libaedv\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libalCFR\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libalhLDC\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libapu_mdw\.so u:object_r:same_process_hal_file:s0
