@@ -17,10 +17,6 @@ vendor.camera.sensor.logsystem u:object_r:vendor_camera_skynet_prop:s0
 # Connectivity
 ro.vendor.bt.connac3 u:object_r:vendor_mtk_bt_connac3_prop:s0
 
-# Display
-ro.vendor.arm. u:object_r:vendor_mtk_gpu_prop:s0
-persist.vendor.debug.gpud. u:object_r:vendor_mtk_gpu_prop:s0
-
 # Fastcharge
 persist.vendor.sec.fastchg_enabled  u:object_r:vendor_fastcharge_prop:s0
 
@@ -94,6 +90,3 @@ ro.vendor.usb. u:object_r:vendor_mtk_usb_prop:s0
 vendor.audio.ultrasound. u:object_r:vendor_mtk_audio_prop:s0
 vendor.debug.sf.fbthint u:object_r:vendor_mtk_debug_sf_cpupolicy_prop:s0
 vendor.mtk.c2.scenario.transcoding u:object_r:vendor_mtk_video_prop:s0
-
-# WLAN
-vendor.service.wifi_nvram u:object_r:vendor_mtk_service_wifi_nvram_prop:s0
