@@ -1528,6 +1528,7 @@ system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telec
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar;BOOT_JAR
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar;BOOT_JAR
 system_ext/priv-app/ImsService/ImsService.apk
+system_ext/priv-app/MtkGbaService/MtkGbaService.apk
 
 # Radio (IMS - VT - System) - from rothko
 system_ext/bin/vtservice|4a8759f67cc4f238983c57193d88d1cc13956e06
