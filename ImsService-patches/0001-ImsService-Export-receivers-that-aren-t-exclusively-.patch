@@ -1,4 +1,4 @@
-From bd6ef2e6c94655f118b5a85e3269cddbb127792a Mon Sep 17 00:00:00 2001
+From bdafd3df4008a4659adbe1c05c5ac791aaa2b3a3 Mon Sep 17 00:00:00 2001
 From: bengris32 <bengris32@protonmail.ch>
 Date: Fri, 15 Dec 2023 22:05:40 +0000
 Subject: [PATCH] ImsService: Export receivers that aren't exclusively
@@ -129,10 +129,10 @@ index d4863a7..d3b7311 100644
      .line 859
      .end local v0    # "filter":Landroid/content/IntentFilter;
 diff --git a/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali b/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
-index fe3c056..981c3a9 100644
+index d1a2fd1..7bb0e43 100644
 --- a/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
 +++ b/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
-@@ -5307,7 +5307,7 @@
+@@ -5240,7 +5240,7 @@
  .end method
  
  .method private registerForBroadcast()V
@@ -141,7 +141,7 @@ index fe3c056..981c3a9 100644
  
      .line 1481
      new-instance v0, Landroid/content/IntentFilter;
-@@ -5345,7 +5345,9 @@
+@@ -5278,7 +5278,9 @@
  
      iget-object v2, p0, Lcom/mediatek/wfo/impl/ImsLocationHandler;->mReceiver:Landroid/content/BroadcastReceiver;
  
@@ -228,5 +228,5 @@ index d0f17b0..5ec5c3f 100644
      .line 772
      return-void
 -- 
-2.47.1
+2.49.0.windows.1
 
