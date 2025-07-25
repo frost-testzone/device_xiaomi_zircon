@@ -1,6 +1,3 @@
-# Batterysecret
-persist.vendor.accelerate.charge=true
-
 # Graphics
 debug.sf.high_fps.early.app.duration=10000000
 debug.sf.high_fps.early.sf.duration=13800000

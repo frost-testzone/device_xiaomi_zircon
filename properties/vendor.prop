@@ -33,6 +33,9 @@ vendor.audio.usb.iems.period_us=5000
 vendor.audio.usb.super_hifi=true
 vendor.audiohal.telephonytx.type=2
 
+# Batterysecret
+persist.vendor.accelerate.charge=true
+
 # Bluetooth
 bluetooth.device.default_name=Redmi Note 13 Pro+ 5G
 bluetooth.profile.a2dp.source.enabled=true
