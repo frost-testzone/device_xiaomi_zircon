@@ -1,3 +1,6 @@
+# Battery
+persist.vendor.accelerate.charge u:object_r:vendor_batterysecret_prop:s0
+
 # Bluetooth
 persist.vendor.bluetooth.broadcaster.tx_pwr u:object_r:vendor_mtk_default_prop:s0
 persist.vendor.bluetooth.connection_improve u:object_r:vendor_mtk_default_prop:s0

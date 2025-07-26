@@ -1,3 +1,6 @@
+# Battery
+vendor_restricted_prop(vendor_batterysecret_prop)
+
 # Camera
 vendor_restricted_prop(vendor_camera_skynet_prop)
 vendor_restricted_prop(vendor_mtkcam_prop)
