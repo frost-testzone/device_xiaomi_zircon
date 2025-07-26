@@ -20,7 +20,6 @@ persist.vendor.audio.auto.scenario=true
 persist.vendor.audio.misound.disable=true
 persist.vendor.audio.misoundasc=true
 ro.audio.monitorRotation=true
-ro.vendor.audio.dolby.dax.support=false
 ro.vendor.audio.gain.support=true
 ro.vendor.audio.ktv.support=true
 ro.vendor.audio.scenario.support=true
@@ -32,6 +31,13 @@ vendor.audio.spkcal.copy.inhal=true
 vendor.audio.usb.iems.period_us=5000
 vendor.audio.usb.super_hifi=true
 vendor.audiohal.telephonytx.type=2
+
+# Audio (Dolby)
+ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
+ro.vendor.audio.dolby.dax3_3point8=true
+ro.vendor.audio.dolby.dax.support=true
+vendor.audio.dolby.control.support=false
+vendor.audio.dolby.control.tunning.by.volume.support=true
 
 # Batterysecret
 persist.vendor.accelerate.charge=true

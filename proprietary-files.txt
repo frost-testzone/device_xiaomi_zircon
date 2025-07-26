@@ -63,11 +63,23 @@ vendor/lib64/libxlog.so
 vendor/lib64/mt6886/libeffecthal.base.so;SYMLINK=vendor/lib64/libeffecthal.base.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libmisoundfx.so
-vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
+
+# Audio (Dolby)
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Audio (firmware)
 vendor/firmware/aw882xx_acf.bin
@@ -1551,6 +1563,12 @@ vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyplugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libmp3dec_mtk.so
+
+# Media (Dolby Vision)
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/etc/dolby_vision.cfg
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 
 # Mlipay
 odm/bin/mlipayd_mitee@1.1
