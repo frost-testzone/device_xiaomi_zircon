@@ -84,6 +84,12 @@
           <Limit name="performance-point-3840x2160" value="30" />
             <Feature name="adaptive-playback"/>
           </Type>
+          <Type name="video/dolby-vision" >
+          <Limit name="size" min="16x16" max="4096x2176" />
+          <Limit name="concurrent-instances" max="15" />
+          <Limit name="performance-point-3840x2160" value="30" />
+            <Feature name="adaptive-playback"/>
+          </Type>
         </MediaCodec>
         <MediaCodec name="c2.mtk.hevc.decoder.secure" >
           <Alias name="OMX.MTK.VIDEO.DECODER.HEVC.secure" />
@@ -91,6 +97,13 @@
             <Limit name="size" min="16x16" max="1920x1088" />
             <Limit name="concurrent-instances" max="1" />
             <Limit name="performance-point-1920x1088" value="30" />
+            <Feature name="secure-playback" required="true" />
+            <Feature name="adaptive-playback"/>
+          </Type>
+          <Type name="video/dolby-vision" >
+            <Limit name="concurrent-instances" max="1" />
+            <Limit name="performance-point-1920x1088" value="30" />
+	    <Limit name="size" min="16x16" max="1920x1088" />
             <Feature name="secure-playback" required="true" />
             <Feature name="adaptive-playback"/>
           </Type>
