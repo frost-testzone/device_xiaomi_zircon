@@ -1,4 +1,4 @@
-From bdafd3df4008a4659adbe1c05c5ac791aaa2b3a3 Mon Sep 17 00:00:00 2001
+From 082d9af6fda7892e55cfc240c881bba957638b4c Mon Sep 17 00:00:00 2001
 From: bengris32 <bengris32@protonmail.ch>
 Date: Fri, 15 Dec 2023 22:05:40 +0000
 Subject: [PATCH] ImsService: Export receivers that aren't exclusively
@@ -129,19 +129,19 @@ index d4863a7..d3b7311 100644
      .line 859
      .end local v0    # "filter":Landroid/content/IntentFilter;
 diff --git a/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali b/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
-index d1a2fd1..7bb0e43 100644
+index 8b77194..3bf19cf 100644
 --- a/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
 +++ b/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
-@@ -5240,7 +5240,7 @@
+@@ -5327,7 +5327,7 @@
  .end method
  
  .method private registerForBroadcast()V
 -    .locals 3
 +    .locals 4
  
-     .line 1481
+     .line 1507
      new-instance v0, Landroid/content/IntentFilter;
-@@ -5278,7 +5278,9 @@
+@@ -5365,7 +5365,9 @@
  
      iget-object v2, p0, Lcom/mediatek/wfo/impl/ImsLocationHandler;->mReceiver:Landroid/content/BroadcastReceiver;
  
@@ -150,7 +150,7 @@ index d1a2fd1..7bb0e43 100644
 +
 +    invoke-virtual {v1, v2, v0, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
  
-     .line 1491
+     .line 1517
      return-void
 diff --git a/smali/com/mediatek/wfo/impl/MwiService.smali b/smali/com/mediatek/wfo/impl/MwiService.smali
 index 6d89329..394c9f4 100644
