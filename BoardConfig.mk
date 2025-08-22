@@ -86,6 +86,7 @@ TARGET_KERNEL_DTB := \
     mediatek/mt6886.dtb
 
 BOARD_KERNEL_CMDLINE := \
+    androidboot.serialconsole=0 \
     bootopt=64S3,32N2,64N2 \
     cgroup_disable=memory \
     log_buf_len=1024K \
