@@ -13,6 +13,10 @@
             <name>IChargingControl</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IFastCharge</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.mediatek.hardware.pq_aidl</name>
