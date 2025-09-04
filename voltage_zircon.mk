@@ -17,6 +17,7 @@ $(call inherit-product, device/xiaomi/zircon/device.mk)
 
 # VoltageOS flags.
 TARGET_FACE_UNLOCK_SUPPORTED := true
+PERF_ANIM_OVERRIDE := true
 
 # Bootanimation Resolution.
 TARGET_BOOT_ANIMATION_RES := 1920
