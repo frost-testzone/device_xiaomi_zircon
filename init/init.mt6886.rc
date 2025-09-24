@@ -88,8 +88,6 @@ on charger
     start vendor.light-default
 
 on fs
-    start vendor.boot-hal-1-2
-
     # mount fstab
     mount_all --early
 
