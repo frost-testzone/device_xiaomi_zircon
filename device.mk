@@ -185,7 +185,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6886 \
     init.connectivity.common.rc \
     init.fingerprint.rc \
-    init.modem.rc \
     init.mt6886.rc \
     init.mt6886.usb.rc \
     init.power.rc \
