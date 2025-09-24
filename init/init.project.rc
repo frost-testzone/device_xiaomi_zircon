@@ -1,7 +1,3 @@
-import /vendor/etc/init/hw/init.mtkgki.rc
-import /vendor/etc/init/hw/init.batterysecret.rc
-import /vendor/etc/init/hw/init.check_factory_err_zircon.rc
-
 # MTK project .rc configure
 
 #mi thermald init
