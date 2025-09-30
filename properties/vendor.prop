@@ -41,6 +41,9 @@ vendor.usbsph.dl.pcm.dump=0
 vendor.usbsph.srcaws.pcm.dump=0
 vendor.usbsph.ul.pcm.dump=0
 
+# Batterysecret
+persist.vendor.accelerate.charge=true
+
 # Bluetooth
 bluetooth.device.default_name=Redmi Note 13 Pro+ 5G
 persist.bluetooth.a2dp_offload.cap=sbc-aac
