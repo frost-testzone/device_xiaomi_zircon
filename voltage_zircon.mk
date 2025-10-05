@@ -16,6 +16,7 @@ $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/zircon/device.mk)
 
 # VoltageOS flags.
+EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TORCH_STR_SUPPORTED := true
 PERF_ANIM_OVERRIDE := true
