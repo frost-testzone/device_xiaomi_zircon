@@ -879,13 +879,6 @@ on property:ro.boot.slot_suffix=_b
     # Set SELinux security contexts on upgrade or policy update.
     mount ext4 /dev/block/by-name/mcf_ota_b /mnt/vendor/mdota ro wait noatime
 
-# add loghidl client
-service loghidlsysservice /system/bin/loghidlsysservice
-    class main
-    user root
-    group system
-    disabled
-
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
