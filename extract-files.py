@@ -64,6 +64,8 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'%d/on', b'%d/..'),
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()
         .regex_replace('/odm/bin', '/vendor/bin'),
+    'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
+        .regex_replace('1.1', '1.2'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
         .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00'),
