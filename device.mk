@@ -246,12 +246,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayZircon \
     FrameworkOverlayZircon \
-    VoltagePowerOffAlarmOverlayZircon \
-    VoltageSettingsOverlayZircon \
+    NcmTetheringOverlay \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
     SystemUIOverlayZircon \
-    TetheringOverlayZircon \
+    VoltagePowerOffAlarmOverlayZircon \
+    VoltageSettingsOverlayZircon \
     WifiOverlayZircon
 
 # Partitions
