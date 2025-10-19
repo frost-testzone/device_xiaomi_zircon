@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml
+    android.hardware.hardware_keystore_V3.xml
 
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V3-ndk.vendor \
