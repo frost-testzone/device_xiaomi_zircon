@@ -428,6 +428,18 @@
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUSuperClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUEfficiencyClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
       "Type": "EndHint",
       "Value": "INTERACTION"
     },
