@@ -276,6 +276,7 @@
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
         "0",
+        "30",
         "100"
       ],
       "DefaultIndex": 0,
@@ -295,7 +296,8 @@
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
-        "15"
+        "15",
+        "30"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -419,6 +421,18 @@
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "UclampFGMin",
+      "Duration": 0,
+      "Value": "30"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "30"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
