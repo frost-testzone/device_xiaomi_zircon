@@ -340,6 +340,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "GpuPwrLevel",
+      "Duration": 0,
+      "Value": "5"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "MemFreq",
       "Duration": 1500,
       "Value": "9999999999"
