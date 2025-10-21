@@ -1020,7 +1020,6 @@ vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.x
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
-vendor/lib64/libhevce_sb.ca7.android.so
 vendor/lib64/libmvpu_cic_ci_compiler.so
 vendor/lib64/libmvpu_clc_cl_compiler.so
 vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
@@ -1038,8 +1037,6 @@ vendor/lib64/libmvpu_runtime_builtin.so
 vendor/lib64/libmvpu_runtime_pub.so
 vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
-vendor/lib64/libvcodec_oal.so
-vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
 
