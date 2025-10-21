@@ -1,4 +1,5 @@
-# Unpinned fw from OS2.0.204.0.VNOMIXM
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from OS2.0.206.0.VNOMIXM (zircon_global)
 
 dtbo.img;AB
 
