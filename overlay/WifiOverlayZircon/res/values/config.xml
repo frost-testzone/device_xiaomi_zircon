@@ -52,7 +52,7 @@
     <bool name="config_wifi_softap_acs_supported" translatable="false">true</bool>
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
-    <bool name="config_wifi_softap_sae_supported" translatable="false">true</bool>
+    <bool name="config_wifi_softap_sae_supported" translatable="false">false</bool>
 
     <!-- Wifi driver supports IEEE80211AC for softap -->
     <bool name="config_wifi_softap_ieee80211ac_supported" translatable="false">true</bool>
@@ -110,7 +110,10 @@
     <bool name="config_wifiMultiStaMultiInternetConcurrencyEnabled" translatable="false">false</bool>
 
     <!-- Indicates that SAE Hash-to-Element is supported on this device -->
-    <bool name="config_wifiSaeH2eSupported" translatable="false">true</bool>
+    <bool name="config_wifiSaeH2eSupported" translatable="false">false</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade -->
+    <bool name="config_wifiSaeUpgradeEnabled" translatable="false">false</bool>
 
     <!-- 0: verbose logging controlled by user
          1: verbose logging on by default for userdebug
