@@ -37,14 +37,6 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 480
 
-# HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml
-
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_BASE := 0x3fff8000
@@ -211,6 +203,14 @@ BOARD_AVB_SYSTEM_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_SYSTEM_EXT_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+
+# VINTF
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
 
 # Wifi
 BOARD_HOSTAPD_DRIVER := NL80211
