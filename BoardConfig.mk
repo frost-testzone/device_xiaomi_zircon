@@ -49,7 +49,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml
 
 # Kernel
 BOARD_KERNEL_BASE := 0x3fff8000
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_IMAGE_NAME := Image.lz4
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -77,14 +77,7 @@ TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/linux-x86/clang-$(
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6886
 
 TARGET_KERNEL_CONFIG := \
-    gki_defconfig \
-    vendor/mgk_64_k515.config \
-    vendor/xiaomi_mgk.config \
-    vendor/lineage_mgk.config \
-    vendor/zircon.config
-
-TARGET_KERNEL_DTB := \
-    mediatek/mt6886.dtb
+    gki_defconfig
 
 BOARD_KERNEL_CMDLINE := \
     bootopt=64S3,32N2,64N2 \
@@ -93,32 +86,23 @@ BOARD_KERNEL_CMDLINE := \
     rcu_nocbs=all \
     rcutree.enable_rcu_lazy=1
 
-# Kernel Modules
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/xiaomi/mt6886-modules
-
-TARGET_KERNEL_EXT_MODULES := \
-    connectivity/bt/mt66xx/btif \
-    connectivity/common \
-    connectivity/connfem \
-    connectivity/conninfra \
-    connectivity/fmradio \
-    connectivity/gps/data_link/plat/v051 \
-    connectivity/gps/gps_pwr \
-    connectivity/gps/gps_scp \
-    connectivity/wlan/adaptor \
-    connectivity/wlan/core/gen4m \
-    gpu
-
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_boot.modules.load.recovery))
-BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
-
-BOARD_VENDOR_KERNEL_MODULES_EXTRA := $(strip $(shell cat $(DEVICE_PATH)/modules/vendor_dlkm.modules.extra))
-BOOT_KERNEL_MODULES += $(BOARD_VENDOR_KERNEL_MODULES_EXTRA)
-
 # Kernel (prebuilt)
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/images/Image.lz4
+
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/images/dtbs/
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/images/dtbo.img
+
+# Kernel modules
+DLKM_MODULES_PATH := $(DEVICE_PATH)-kernel/modules/vendor_dlkm
+RAMDISK_MODULES_PATH := $(DEVICE_PATH)-kernel/modules/vendor_boot
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
