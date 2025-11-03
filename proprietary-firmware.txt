@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OS2.0.206.0.VNOMIXM (zircon_global)
+## are from OS2.0.207.0.VNOMIXM (zircon_global)
 
 dtbo.img;AB
 
