@@ -1,8 +1,6 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from OS2.0.207.0.VNOMIXM (zircon_global)
 
-dtbo.img;AB
-
 # miui_ZIRCONGlobal_OS1.0.2.0.UNOMIXM_042c23442e_14.0
 apusys.img;AB|f9c49314b0f5abd07bf38764d5f3d05b9b76a760
 audio_dsp.img;AB|3423934e381c31926c0df5873a0c5f4dccf7d274
