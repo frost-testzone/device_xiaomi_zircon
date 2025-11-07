@@ -1584,19 +1584,7 @@ odm/etc/thermal-phone.conf
 odm/etc/thermal-tgame.conf
 odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
-vendor/etc/thermal/disable_skin_control.conf
-vendor/etc/thermal/disable_thermal.conf
-vendor/etc/thermal/disable_thermal_temp.conf
-vendor/etc/thermal/disable_throttling.conf
-vendor/etc/thermal/thermal.conf
-vendor/etc/thermal/thermal_mtbf.conf
-vendor/etc/thermal/thermal_policy_00.conf
-vendor/etc/thermal/thermal_policy_01.conf
-vendor/etc/thermal/thermal_policy_02.conf
-vendor/etc/thermal/thermal_policy_03.conf
-vendor/etc/thermal/thermal_policy_08.conf
 vendor/etc/thermal-map.conf
-vendor/etc/thermalbreakboostconfig.xml
 vendor/etc/thermald-devices.conf
 
 # Touchscreen (firmware)
