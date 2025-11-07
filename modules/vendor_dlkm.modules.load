@@ -37,7 +37,6 @@ c2k_usb_f_via_ets.ko
 c2k_usb_f_via_modem.ko
 mtk_u_ether.ko
 mtk_usb_f_rndis.ko
-rps_perf.ko
 mtk-pwm.ko
 mtk_irtx_pwm.ko
 sspm_v3.ko
@@ -95,8 +94,6 @@ mtk_jpeg.ko
 mtk-vcodec-common.ko
 mtk-vcodec-dec-v1.ko
 mtk-vcodec-enc-v1.ko
-cpufreq_sugov_ext.ko
-scheduler.ko
 cpuqos_v3.ko
 mtk-dvfsrc-start.ko
 mtk_qos.ko
