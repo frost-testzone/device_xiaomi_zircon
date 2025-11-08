@@ -316,8 +316,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces \
     hardware/lineage/interfaces/power-libperfmgr \
-    hardware/mediatek/libmtkperf_client \
     hardware/mediatek \
+    hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/wlan/wifi_hal \
     hardware/xiaomi
 
 # Telephony
@@ -367,8 +368,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libwifi-hal-wrapper \
     wpa_supplicant
+
+$(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
