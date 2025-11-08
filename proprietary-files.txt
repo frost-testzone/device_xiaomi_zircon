@@ -36,7 +36,6 @@ vendor/lib64/libawinicsmartpaparse.so
 vendor/lib64/libbessound_hd_mtk_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libcvsd_mtk.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libmiaudio.so
 vendor/lib64/libmisound.so
 vendor/lib64/libmisoundcrossfade.so;FIX_SONAME
@@ -65,20 +64,6 @@ vendor/lib64/libxlog.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
-
-# Audio (Dolby)
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/etc/dolby/dax-default.xml
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/libdlbpreg.so
-vendor/lib64/soundfx/libdlbvol.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Audio (firmware)
 vendor/firmware/aw882xx_acf.bin
@@ -1284,9 +1269,6 @@ vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml:vendor/etc/vintf/ma
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
-vendor/lib64/libcodec2_soft_ac4dec.so
-vendor/lib64/libcodec2_soft_ddpdec.so
-vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so
 vendor/lib64/libcodec2_vpp_AISR_plugin.so
 vendor/lib64/libcodec2_vpp_dolby_plugin.so
@@ -1294,17 +1276,10 @@ vendor/lib64/libcodec2_vpp_gc_plugin.so
 vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libdeccfg.so
 vendor/lib64/libdolbyeglplugin.so
 vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyplugin.so
 vendor/lib64/libformatter.so
-
-# Media (Dolby Vision)
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service
-vendor/etc/dolby_vision.cfg
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 
 # Mlipay
 odm/bin/mlipayd_mitee@1.1
@@ -1569,7 +1544,6 @@ odm/etc/thermal-cclassvideo.conf
 odm/etc/thermal-cgame.conf
 odm/etc/thermal-chg-only.conf
 odm/etc/thermal-class0.conf
-odm/etc/thermal-dolbyvision.conf
 odm/etc/thermal-hp-mgame.conf
 odm/etc/thermal-hp-normal.conf
 odm/etc/thermal-huanji.conf
