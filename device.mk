@@ -247,6 +247,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayZircon \
     FrameworkOverlayZircon \
     NcmTetheringOverlay \
+    NetworkStackOverlayZircon \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
     SystemUIOverlayZircon \
