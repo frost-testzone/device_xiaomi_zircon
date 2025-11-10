@@ -996,10 +996,6 @@ vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
 vendor/bin/batterysecret
 vendor/etc/init/hw/init.batterysecret.rc
 
-# Chipinfo
-vendor/bin/chipinfo
-vendor/etc/init/chipinfo_init.rc
-
 # Connectivity
 vendor/bin/conninfra_loader
 vendor/etc/init/init.conninfra.rc
