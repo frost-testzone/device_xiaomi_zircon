@@ -56,9 +56,6 @@ PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libaudiopreprocessing
 
-PRODUCT_PACKAGES += \
-    MtkInCallService
-
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
 
 PRODUCT_COPY_FILES += \
