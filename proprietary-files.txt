@@ -999,24 +999,8 @@ vendor/etc/init/hw/init.batterysecret.rc
 # Connectivity
 vendor/bin/conninfra_loader
 vendor/etc/init/init.conninfra.rc
-vendor/etc/init/init.fmradio_drv.rc
 vendor/firmware/BT_FW.cfg
 vendor/firmware/conninfra.cfg
-vendor/firmware/fm_cust.cfg
-vendor/firmware/mt6627_fm_v1_coeff.bin
-vendor/firmware/mt6627_fm_v1_patch.bin
-vendor/firmware/mt6630_fm_v1_coeff.bin
-vendor/firmware/mt6630_fm_v1_patch.bin
-vendor/firmware/mt6630_fm_v2_coeff.bin
-vendor/firmware/mt6630_fm_v2_coeff_tx.bin
-vendor/firmware/mt6630_fm_v2_patch.bin
-vendor/firmware/mt6630_fm_v2_patch_tx.bin
-vendor/firmware/mt6631_fm_v1_coeff.bin
-vendor/firmware/mt6631_fm_v1_patch.bin
-vendor/firmware/mt6632_fm_v1_coeff.bin
-vendor/firmware/mt6632_fm_v1_patch.bin
-vendor/firmware/mt6635_fm_v1_coeff.bin
-vendor/firmware/mt6635_fm_v1_patch.bin
 vendor/firmware/remoteproc_scp
 vendor/firmware/soc_fm_v1_coeff.bin
 vendor/firmware/soc_fm_v1_patch.bin
@@ -1145,6 +1129,12 @@ vendor/lib64/libwvaidl.so
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
+
+# FMRadio
+vendor/etc/init/init.fmradio_drv.rc
+vendor/firmware/fm_cust.cfg
+vendor/firmware/mt6635_fm_v1_coeff.bin
+vendor/firmware/mt6635_fm_v1_patch.bin
 
 # Fuelgauge
 vendor/bin/fuelgauged
