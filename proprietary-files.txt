@@ -191,18 +191,10 @@ vendor/etc/audio_param/nlc.bin
 
 # Bluetooth
 vendor/etc/init/init.bt_drv.rc
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libbluetooth_audio_session_aidl_mediatek.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/libbluetooth_hw_test.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
-vendor/lib64/libbluetooth_relayer.so
-vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-impl.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
