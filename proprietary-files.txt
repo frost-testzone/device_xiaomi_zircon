@@ -244,8 +244,6 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/zircons5khp3sunny_mipi_r
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6886/ISP_info.db;MAKE_COPY_RULE_ONLY;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/ISP_info.db
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db;MAKE_COPY_RULE_ONLY
 vendor/bin/hw/mt6886/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
-vendor/bin/mt6886/camsys_dump_tool;SYMLINK=vendor/bin/camsys_dump_tool
-vendor/bin/cameratest
 vendor/etc/camera/VideoNight4K/ellv.bin
 vendor/etc/camera/VideoNight4K/ellv_params.xml
 vendor/etc/camera/ldc/M12_CN_AI_Seg.bin
