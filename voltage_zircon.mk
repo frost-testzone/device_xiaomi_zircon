@@ -18,7 +18,6 @@ $(call inherit-product, device/xiaomi/zircon/device.mk)
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TORCH_STR_SUPPORTED := true
-PERF_ANIM_OVERRIDE := true
 
 # VoltageOS CPUsets configuration.
 VOLTAGE_CPU_SMALL_CORES := 0,1,2,3,4,5
