@@ -42,11 +42,11 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
-
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml
 
 # Kernel
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_BASE := 0x3fff8000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 4096
@@ -66,14 +66,19 @@ BOARD_MKBOOTIMG_ARGS :=	\
 
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
+BOARD_KERNEL_CMDLINE := \
+    androidboot.serialconsole=0 \
+    bootopt=64S3,32N2,64N2 \
+    cgroup_disable=memory \
+    log_buf_len=1024K \
+    rcu_nocbs=all \
+    rcutree.enable_rcu_lazy=1
+
 TARGET_KERNEL_CLANG_VERSION := r530567
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
-
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6886
 
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
@@ -85,13 +90,7 @@ TARGET_KERNEL_CONFIG := \
 TARGET_KERNEL_DTB := \
     mediatek/mt6886.dtb
 
-BOARD_KERNEL_CMDLINE := \
-    androidboot.serialconsole=0 \
-    bootopt=64S3,32N2,64N2 \
-    cgroup_disable=memory \
-    log_buf_len=1024K \
-    rcu_nocbs=all \
-    rcutree.enable_rcu_lazy=1
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6886
 
 # Kernel Modules
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/xiaomi/mt6886-modules
@@ -118,6 +117,8 @@ BOARD_VENDOR_KERNEL_MODULES_EXTRA := $(strip $(shell cat $(DEVICE_PATH)/modules/
 BOOT_KERNEL_MODULES += $(BOARD_VENDOR_KERNEL_MODULES_EXTRA)
 
 # Partitions
+-include vendor/voltage/config/BoardConfigReservedSize.mk
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
@@ -125,6 +126,7 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_USES_METADATA_PARTITION := true
 
 BOARD_MTK_DYNAMIC_PARTITIONS_PARTITION_LIST := odm odm_dlkm product system system_dlkm system_ext vendor vendor_dlkm
 BOARD_MTK_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 4 MiB)
@@ -148,10 +150,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
-BOARD_USES_METADATA_PARTITION := true
-
--include vendor/voltage/config/BoardConfigReservedSize.mk
-
 # Platform
 TARGET_BOARD_PLATFORM := mt6886
 
@@ -162,7 +160,6 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # Recovery
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6886
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
@@ -238,5 +235,5 @@ WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{NAN}, 1}}
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-# Vendor
+# Inherit from proprietary targets
 include vendor/xiaomi/zircon/BoardConfigVendor.mk

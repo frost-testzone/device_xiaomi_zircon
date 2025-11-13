@@ -4,19 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Dalvik vm configs
+# Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 
-# Generic ramdisk allow list
+# Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
-# Project ID Quota
+# Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Virtual A/B
+# A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-# A/B
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
     android.hardware.boot-service.default_recovery
@@ -59,17 +58,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
-    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/audio/audio_em.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_em.xml \
-    $(LOCAL_PATH)/configs/audio/aurisys_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config.xml \
-    $(LOCAL_PATH)/configs/audio/aurisys_config_hifi3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config_hifi3.xml \
-    $(LOCAL_PATH)/configs/audio/aurisys_config_rv.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config_rv.xml \
-    $(LOCAL_PATH)/configs/audio/usbv2_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usbv2_audio_policy_configuration.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -185,19 +174,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.mt6886:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6886 \
     $(LOCAL_PATH)/init/init.recovery.mt6886.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6886.rc
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
-$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
-$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
-
 # Keymaster
 PRODUCT_PACKAGES += \
     libkeymaster_messages.vendor \
@@ -217,14 +193,22 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Memtrack
 PRODUCT_PACKAGES += \
@@ -242,17 +226,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.nxp.mifare.xml
 
-# Overlay
+# Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayZircon \
+    VoltagePowerOffAlarmOverlayZircon \
+    VoltageSettingsOverlayZircon
+
+PRODUCT_PACKAGES += \
     FrameworkOverlayZircon \
     NcmTetheringOverlay \
     NetworkStackOverlayZircon \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
     SystemUIOverlayZircon \
-    VoltagePowerOffAlarmOverlayZircon \
-    VoltageSettingsOverlayZircon \
     WifiOverlayZircon
 
 # Pagesize
@@ -269,22 +255,20 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
     libmtkperf_client_vendor
 
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-zircon)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-zircon)
 
 # Power-off Alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
 # Properties
-include $(LOCAL_PATH)/properties/vendor_logtag.mk
+$(call inherit-product, $(LOCAL_PATH)/properties/vendor_logtag.mk)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/properties/sku/CN.prop:$(TARGET_COPY_OUT_ODM)/etc/CN.prop \
-    $(LOCAL_PATH)/properties/sku/GL.prop:$(TARGET_COPY_OUT_ODM)/etc/GL.prop \
-    $(LOCAL_PATH)/properties/sku/IN.prop:$(TARGET_COPY_OUT_ODM)/etc/IN.prop
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/properties/sku,$(TARGET_COPY_OUT_ODM)/etc)
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -378,14 +362,12 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
-# Vendor
+# Inherit from proprietary targets
 $(call inherit-product, vendor/xiaomi/zircon/zircon-vendor.mk)
