@@ -1,2 +1,10 @@
 # Graphics
 debug.hwui.skia_atrace_enabled=false
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# WLAN
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
