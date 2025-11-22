@@ -1236,9 +1236,7 @@ vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 # Secure Element
 odm/etc/init/init.thn31.se.rc
 odm/etc/SEC_THN31_FW_VTP.txt.bin
-vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service
-vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 vendor/etc/init/vendor.xiaomi.hardware.secure_element@1.2-service.rc
 vendor/lib64/jcos_nq_client.so
 vendor/lib64/libmigpese@1.0.so
