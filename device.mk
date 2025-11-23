@@ -55,7 +55,7 @@ PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libaudiopreprocessing
 
-$(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 PRODUCT_COPY_FILES += \
@@ -361,7 +361,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
 
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
@@ -386,7 +386,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant
 
-$(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
+$(call soong_config_set_bool,wpa_supplicant_8,board_wlan_mediatek_stability,true)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
