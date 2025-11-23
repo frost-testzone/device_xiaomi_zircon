@@ -880,13 +880,6 @@ on property:vendor.mtk.md1.status=reset
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
 
-# Conninfra
-service conninfra_loader /vendor/bin/conninfra_loader
-    class core
-    user system
-    group system
-    oneshot
-
 service charger /system/bin/charger
     class charger
     critical

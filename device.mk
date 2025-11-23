@@ -165,6 +165,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6886 \
+    init_conninfra.rc \
     init.connectivity.common.rc \
     init.fingerprint.rc \
     init.mt6886.rc \
