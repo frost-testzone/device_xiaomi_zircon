@@ -860,12 +860,6 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.enableswap
     write /proc/sys/vm/swappiness 60
 
-# mount debugfs on user-root
-on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.debuggable="1"
-   mount debugfs debugfs /sys/kernel/debug
-   chmod 0755 /sys/kernel/debug
-   setprop persist.dbg.keep_debugfs_mounted true
-
 #
 #  External Modme control related services
 #
