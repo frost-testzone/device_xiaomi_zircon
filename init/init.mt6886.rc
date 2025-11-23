@@ -6,9 +6,6 @@ import /vendor/etc/init/hw/init.connectivity.common.rc
 import /vendor/etc/init/hw/init.mt6886.usb.rc
 import /vendor/etc/init/hw/init.mtkgki.rc
 import /vendor/etc/init/hw/init.project.rc
-import /FWUpgradeInit.rc
-import /vendor/etc/init/hw/init.volte.rc
-import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_2_0.rc
 import /vendor/etc/init/hw/init.power.rc
 import /vendor/etc/init/hw/init.fingerprint.rc
