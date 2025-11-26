@@ -15,9 +15,6 @@ persist.vendor.sys.pq.disp.mi.soft.brightness=1
 ro.surface_flinger.set_touch_timer_ms=1100
 ro.vendor.mtk.pq.odm=true
 
-# NFC
-ro.vendor.nfc.debounce_field_on=1
-
 # Radio
 persist.vendor.radio.dynamic_sar=1
 

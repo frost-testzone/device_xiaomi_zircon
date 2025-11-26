@@ -1080,46 +1080,22 @@ vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 
 # NFC
 odm/bin/hw/android.hardware.nfc@1.2-service-tms
-odm/bin/hw/vendor.nxp.hardware.nfc@2.0-service
 odm/etc/init/android.hardware.nfc@1.2-service-tms.rc
 odm/etc/init/init.thn31.nfc.rc
-odm/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 odm/etc/vintf/manifest/vendor.tms.hardware.nfc.xml
 odm/etc/libese-tms.conf
 odm/etc/libnfc-nci.conf
 odm/etc/libnfc-nxp.conf
-odm/etc/libnfc-nxp_RF.conf
+odm/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 odm/etc/libnfc-tms.conf
 odm/etc/libnfc-tms_RF_EC2.conf
 odm/lib64/7816-3-T1.so
-odm/lib64/nfc_nci.nqx.default.hw.so
 odm/lib64/nfc_nci.thn31nfc.tms.so
 odm/lib64/tms-cos-dl-common.so
 odm/lib64/tms-cos-dl-ree.so
 odm/lib64/tms-utils.so
-vendor/etc/libnfc-nxp-pnscr.conf
-vendor/etc/sn100u_bootup.pnscr
-vendor/etc/sn100u_ese_disableIso.pnscr
-vendor/etc/sn100u_ese_disableIsoRead.pnscr
-vendor/etc/sn100u_nfcon.pnscr
-vendor/etc/sn100u_pnx_chr.pnscr
-vendor/etc/sn100u_pnx_cui.pnscr
-vendor/etc/sn100u_pnx_ese_3.pnscr
-vendor/etc/sn100u_pnx_ese_aclog.pnscr
-vendor/etc/sn100u_pnx_ese_cplc.pnscr
-vendor/etc/sn100u_pnx_ese_fabkey.pnscr
-vendor/etc/sn100u_pnx_ese_free.pnscr
-vendor/etc/sn100u_pnx_ese_keyset.pnscr
-vendor/etc/sn100u_pnx_ese_sei2c_disable.pnscr
-vendor/etc/sn100u_pnx_ese_sei2c_enable.pnscr
-vendor/etc/sn100u_pnx_ese_sei2c_read.pnscr
-vendor/etc/sn100u_pnx_ese_sn.pnscr
-vendor/etc/sn100u_pnx_ndi.pnscr
-vendor/etc/sn100u_pnx_pcv.pnscr
-vendor/etc/sn100u_pnx_sst.pnscr
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libsn100u_fw.so
-vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 vendor/lib64/vendor.tms.nfc-V1-ndk.so
 vendor/lib64/vendor.tms.tmsnfc@1.0.so
 

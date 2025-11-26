@@ -42,8 +42,7 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so': blob_fixup()
         .add_needed('libui_shim.so'),
-    ('odm/lib64/nfc_nci.nqx.default.hw.so', 'odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/tms-utils.so',
-    'vendor/lib64/libnvram.so'): blob_fixup()
+    ('odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/tms-utils.so', 'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
         .regex_replace('start', 'enable'),
