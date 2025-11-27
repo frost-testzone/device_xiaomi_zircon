@@ -128,4 +128,4 @@ on boot
     chmod 0664 /dev/xiaomi-touch
 
     # Set thermal mode to mgame
-    write /sys/devices/virtual/thermal/thermal_message/sconfig 20
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 0
