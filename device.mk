@@ -381,4 +381,5 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
 # Inherit from proprietary targets
+$(call inherit-product, vendor/xiaomi/miuicamera-zircon/device.mk)
 $(call inherit-product, vendor/xiaomi/zircon/zircon-vendor.mk)
