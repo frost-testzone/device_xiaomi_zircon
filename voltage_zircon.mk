@@ -17,18 +17,6 @@ $(call inherit-product, device/xiaomi/zircon/device.mk)
 # VoltageOS flags.
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TORCH_STR_SUPPORTED := true
-
-# VoltageOS CPUsets configuration.
-VOLTAGE_CPU_SMALL_CORES := 0,1,2,3,4,5
-VOLTAGE_CPU_BIG_CORES := 6,7
-VOLTAGE_ALL_CORES := 0-7
-VOLTAGE_CPU_SYS_BG := 0-3
-VOLTAGE_CPU_BG := 0-2
-VOLTAGE_CPU_FG := 0-7
-VOLTAGE_CPU_LIMIT_BG := 0-2
-VOLTAGE_CPU_LIMIT_UI := 0-5
-VOLTAGE_CPU_DISPLAY := 6-7
 
 # Bootanimation Resolution.
 TARGET_BOOT_ANIMATION_RES := 1920
