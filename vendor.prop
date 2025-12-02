@@ -23,7 +23,6 @@ persist.vendor.audiohal.aurisys.pcm_dump_on=0
 persist.vendor.audiohal.p2w_dump_on=0
 persist.vendor.audiohal.pcm_mixer_dump_on=0
 ro.audio.monitorRotation=true
-ro.vendor.audio.dolby.dax.support=false
 ro.vendor.audio.gain.support=true
 ro.vendor.audio.ktv.support=true
 ro.vendor.audio.scenario.support=true
@@ -40,6 +39,13 @@ vendor.streamout.pcm.dump=0
 vendor.usbsph.dl.pcm.dump=0
 vendor.usbsph.srcaws.pcm.dump=0
 vendor.usbsph.ul.pcm.dump=0
+
+# Audio (Dolby)
+ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
+ro.vendor.audio.dolby.dax3_3point8=true
+ro.vendor.audio.dolby.dax.support=true
+vendor.audio.dolby.control.support=false
+vendor.audio.dolby.control.tunning.by.volume.support=true
 
 # Batterysecret
 persist.vendor.accelerate.charge=true
