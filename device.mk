@@ -94,6 +94,11 @@ PRODUCT_COPY_FILES += \
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiDolby \
+    XiaomiParts
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml
