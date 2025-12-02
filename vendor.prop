@@ -1,16 +1,7 @@
-# Aee
-ro.vendor.aee.convert64=1
-ro.vendor.mediatek.version.branch=alps-mp-t0.mp1.tc8sp2
-ro.vendor.mediatek.version.release=alps-mp-t0.mp1.tc8sp2-V1.14_P437
-ro.vendor.mgvi_name=mgvi_64_armv82
-
 # Apex
 apexd.config.dm_create.timeout=10000
 
 # Audio
-AUDIO_CAMERA_GAIN=true
-AUDIO_FEATURE_REVERSE_MIC_DIRECTION_SUPPORT=true
-AUDIO_MI_SPEECH=true
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 audio.deep_buffer.media=true
@@ -250,9 +241,10 @@ ro.vendor.mtk_nn_support=1
 
 # Platform
 ro.board.platform=mt6886
-ro.vendor.mediatek.platform=MT6886
 ro.soc.manufacturer=Mediatek
 ro.soc.model=MT6886
+ro.vendor.mediatek.platform=MT6886
+ro.vendor.mediatek.version.release=alps-mp-t0.mp1.tc8sp2-V1.14_P437
 
 # Radio
 persist.radio.multisim.config=dsds
