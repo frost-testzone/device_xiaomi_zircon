@@ -69,9 +69,6 @@ BOARD_KERNEL_CMDLINE := \
     rcu_nocbs=all \
     rcutree.enable_rcu_lazy=1
 
-TARGET_KERNEL_CLANG_VERSION := r530567
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
-
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/mgk_64_k515.config \
