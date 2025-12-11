@@ -41,7 +41,8 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     'odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so': blob_fixup()
-        .add_needed('libui_shim.so'),
+        .add_needed('libui_shim.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/tms-utils.so', 'vendor/lib64/libnvram.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
@@ -67,10 +68,14 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libstagefright_foundation-v33.so')
         .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
         .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00')
-        .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
+        .replace_needed('libalsautils.so', 'libalsautils-v33.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/hw/hwcomposer.mtk_common.so', 'vendor/lib64/libmialgoengine.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so',
     'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
+    ('vendor/lib64/hw/mt6886/vendor.mediatek.hardware.pq_aidl-impl.so', 'vendor/lib64/libaudiocloudctrl.so', 'vendor/lib64/libpqxmlparser.so',
+    'vendor/lib64/librt_extamp_intf.so', 'vendor/lib64/mt6886/libmmlpqImpl.so'): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/libalAILDC.so', 'vendor/lib64/libalLDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
