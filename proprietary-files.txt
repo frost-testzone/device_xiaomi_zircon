@@ -10,7 +10,6 @@ vendor/etc/misound_res.bin
 vendor/etc/misound_res_headphone.bin
 vendor/etc/misound_res_spk.bin
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6886.so
-vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6886.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/mt6886/libeffecthal.base.so;SYMLINK=vendor/lib64/libeffecthal.base.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
