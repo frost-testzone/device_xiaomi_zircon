@@ -17,6 +17,14 @@ on init
     write /dev/blkio/blkio.prio.class none-to-rt
     write /dev/blkio/blkio.prio.class promote-to-rt
 
+    # F2FS
+    write /dev/sys/fs/by-name/userdata/data_io_flag 56
+    write /dev/sys/fs/by-name/userdata/node_io_flag 56
+
+    # Block
+    write /dev/sys/block/by-name/rootdisk/queue/iostats 0
+    write /dev/sys/block/by-name/rootdisk/queue/nr_requests 256
+
     # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
 
@@ -60,6 +68,17 @@ on charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu7/online 0
 
+    # F2FS
+    write /dev/sys/fs/by-name/userdata/data_io_flag 8
+    write /dev/sys/fs/by-name/userdata/node_io_flag 8
+    write /dev/sys/fs/by-name/userdata/max_io_bytes 524288
+    write /dev/sys/fs/by-name/userdata/min_hot_blocks 0
+
+    # Block
+    write /dev/sys/block/by-name/rootdisk/queue/iostats 1
+    write /dev/sys/block/by-name/rootdisk/queue/nr_requests 128
+    write /dev/sys/block/by-name/rootdisk/queue/rq_affinity 2
+
 on boot
     # boot perf. tune
     write /dev/cpuctl/system-background/cpu.uclamp.min 0
@@ -92,6 +111,17 @@ on property:sys.boot_completed=1
 
     # End boot time tuning
     write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
+
+    # F2FS
+    write /dev/sys/fs/by-name/userdata/data_io_flag 8
+    write /dev/sys/fs/by-name/userdata/node_io_flag 8
+    write /dev/sys/fs/by-name/userdata/max_io_bytes 524288
+    write /dev/sys/fs/by-name/userdata/min_hot_blocks 0
+
+    # Block
+    write /dev/sys/block/by-name/rootdisk/queue/iostats 1
+    write /dev/sys/block/by-name/rootdisk/queue/nr_requests 128
+    write /dev/sys/block/by-name/rootdisk/queue/rq_affinity 2
 
     # Utilization Clamping
     # Tuning
