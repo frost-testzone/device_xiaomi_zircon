@@ -386,8 +386,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant
 
-$(call soong_config_set_bool,wpa_supplicant_8,board_wlan_mediatek_stability,true)
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
