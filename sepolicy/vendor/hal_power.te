@@ -1,3 +1,5 @@
+allow hal_power_default cpu_dma_latency_device:chr_file rw_file_perms;
+
 allow hal_power_default touchfeature_device:chr_file rw_file_perms;
 allow hal_power_default touchfeature_device:file { getattr map read };
 
