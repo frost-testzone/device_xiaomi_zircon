@@ -1168,8 +1168,10 @@ vendor/lib64/libcapctrl.so
 vendor/lib64/libcares_naptr.so
 vendor/lib64/libcarrierconfig.so
 vendor/lib64/libccci_util.so
+vendor/lib64/libforkexecwrap.so
 vendor/lib64/libgwsdv2-ril.so
 vendor/lib64/libgwsdv3-ril.so
+vendor/lib64/libifcutils_mtk.so
 vendor/lib64/libmipc.so
 vendor/lib64/libmnetlink_v104.so
 vendor/lib64/libmtk-fusion-ril-prop-vsim.so
@@ -1215,6 +1217,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.voice-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so
 
 # Radio (IMS - VT - Vendor)
@@ -1249,12 +1252,7 @@ vendor/lib64/libksensor.so
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
-vendor/bin/netdagent
-vendor/etc/init/netdagent.rc
 vendor/etc/init/tetheroffloadservice.rc
-vendor/lib64/libforkexecwrap.so
-vendor/lib64/libifcutils_mtk.so
-vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
 vendor/bin/mi_thermald
