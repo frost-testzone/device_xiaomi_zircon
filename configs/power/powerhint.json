@@ -305,22 +305,6 @@
       "Path": "vendor.powerhal.rendering",
       "Values": ["EXPENSIVE_RENDERING", ""],
       "Type": "Property"
-    },
-    {
-      "Name": "Dex2oatThreads",
-      "Path": "vendor.powerhal.dalvik.vm.dex2oat-threads",
-      "Values": [
-        "6"
-      ],
-      "Type": "Property"
-    },
-    {
-      "Name": "Dex2oatCPUSet",
-      "Path": "vendor.powerhal.dalvik.vm.dex2oat-cpu-set",
-      "Values": [
-        "0,1,2,3,4,5,6"
-      ],
-      "Type": "Property"
     }
   ],
   "Actions": [
