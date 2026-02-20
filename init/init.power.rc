@@ -40,9 +40,6 @@ on init
     write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-7
 
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 6
-
     # Disable printk logging
     write /proc/sys/kernel/printk_devkmsg off
 
@@ -111,6 +108,10 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
+
+    # dex2oat settings
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
 
     # UFS
     write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
