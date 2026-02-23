@@ -855,7 +855,6 @@ on property:sys.boot_completed=1
     # zram writeback
     setprop persist.sys.zram_enabled 1
     swapon_all /vendor/etc/fstab.enableswap
-    write /proc/sys/vm/swappiness 60
 
 #
 #  External Modme control related services
