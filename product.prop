@@ -19,3 +19,6 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=false
 bluetooth.profile.vcp.controller.enabled=true
+
+# zRAM
+ro.zram_backing_device_min_free_mb=1536
