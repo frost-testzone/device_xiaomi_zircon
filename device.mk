@@ -295,6 +295,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sku,$(TARGET_COPY_OUT_ODM)/etc)
 
 # Radio
+$(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
+
 PRODUCT_PACKAGES += \
     mdota_symlink
 
