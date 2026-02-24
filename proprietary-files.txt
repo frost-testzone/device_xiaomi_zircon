@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OS2.0.207.0.VNOMIXM (zircon_global)
+# All unpinned blobs below are extracted from OS2.0.211.0.VNOMIXM (zircon_global)
 
 # AEE
 vendor/lib64/libaedv.so
