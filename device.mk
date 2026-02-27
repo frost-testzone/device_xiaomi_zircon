@@ -251,6 +251,8 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_PACKAGES += \
     VoltagePowerOffAlarmOverlayZircon \
     VoltageSettingsOverlayZircon
@@ -258,11 +260,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworkOverlayZircon \
     NcmTetheringOverlay \
-    NetworkStackOverlayZircon \
     SettingsOverlayZircon \
     SettingsProviderOverlayZircon \
-    SystemUIOverlayZircon \
-    WifiOverlayZircon
+    SystemUIOverlayZircon
 
 # Pagesize
 PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
@@ -300,6 +300,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sensors
 PRODUCT_PACKAGES += \
