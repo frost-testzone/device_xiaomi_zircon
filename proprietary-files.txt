@@ -1137,14 +1137,12 @@ vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/rcs_volte_stack64
-vendor/bin/volte_clientapi_ua
 vendor/bin/volte_rcs_ua64
 vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/init.connfem.rc
 vendor/etc/init/mtkrild.rc
-vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/rsc/CN/ro.prop
 vendor/etc/rsc/GL/ro.prop
 vendor/etc/rsc/IN/ro.prop
@@ -1193,7 +1191,6 @@ vendor/lib64/libtrm.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
 vendor/lib64/libwpfa.so
-vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.atci-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.cap-V1-ndk.so
