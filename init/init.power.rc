@@ -50,8 +50,8 @@ on init
 
 on post-fs
     # dex2oat settings
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 6
+    setprop dalvik.vm.dex2oat-cpu-set 2,3,4,5
+    setprop dalvik.vm.dex2oat-threads 4
 
 on charger
     # UFS
