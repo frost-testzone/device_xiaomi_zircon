@@ -36,9 +36,6 @@ on init
     write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-7
 
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 6
-
     # Disable printk logging
     write /proc/sys/kernel/printk_devkmsg off
 
@@ -53,8 +50,8 @@ on init
 
 on post-fs
     # dex2oat settings
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 6
+    setprop dalvik.vm.dex2oat-cpu-set 2,3,4,5
+    setprop dalvik.vm.dex2oat-threads 4
 
 on charger
     # UFS
