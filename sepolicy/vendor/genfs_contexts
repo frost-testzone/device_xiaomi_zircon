@@ -60,7 +60,6 @@ genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-06/wakeup u:object_r
 genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-09/mt6685-rtc/rtc/rtc0/alarmtimer.0.auto/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-09/mt6685-rtc/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1e000000.adspsys/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1f000000.mdp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1f000000.mmlsys-config/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/trusty/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/mtk-gauge/wakeup u:object_r:sysfs_wakeup:s0
