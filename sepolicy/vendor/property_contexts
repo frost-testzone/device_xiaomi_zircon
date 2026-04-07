@@ -13,7 +13,6 @@ ro.vendor.mtkcam. u:object_r:vendor_mtkcam_prop:s0
 vendor.camera. u:object_r:vendor_mtkcam_prop:s0
 vendor.debug. u:object_r:vendor_mtkcam_prop:s0
 vendor.mtkcam. u:object_r:vendor_mtkcam_prop:s0
-ro.vendor.afbc.enable u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.videoainr.enable u:object_r:vendor_mtk_camera_prop:s0
 vendor.camera.sensor.logsystem u:object_r:vendor_camera_skynet_prop:s0
 
@@ -58,8 +57,6 @@ ro.boot.cpuid u:object_r:vendor_cpuid_prop:s0
 ro.vendor.oem.psno u:object_r:vendor_sno_prop:s0
 ro.vendor.oem.sno u:object_r:vendor_sno_prop:s0
 persist.vendor.mtk.5gvowifi.force.enable u:object_r:vendor_mtk_vonr_force_prop:s0
-persist.vendor.mtk.vodata.enable u:object_r:vendor_mtk_wfc_prop:s0
-persist.vendor.mtk_sim_switch_policy u:object_r:vendor_mtk_default_prop:s0
 persist.vendor.skip.data.stall.alarm u:object_r:vendor_mtk_default_prop:s0
 ro.vendor.mtk_femto_cell_support u:object_r:vendor_mtk_default_prop:s0
 ro.vendor.mtk_mdmi_support u:object_r:vendor_mtk_dmc_prop:s0
@@ -75,16 +72,10 @@ persist.vendor.sensors.used.framebuffer u:object_r:vendor_usedframebuffer_prop:s
 ro.vendor.sensors.xiaomi. u:object_r:vendor_sensors_prop:s0
 persist.vendor.goodix.cct_support u:object_r:vendor_goodix_cct_prop:s0
 
-# Tee
-ro.boot.tee_type u:object_r:vendor_mtk_mitee_prop:s0
-ro.vendor.mtk_mitee_support u:object_r:vendor_mtk_mitee_prop:s0
-vendor.teefs_state u:object_r:vendor_mtk_mitee_prop:s0
-
 # Thermal
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0
 
 # USB
 ro.vendor.usb. u:object_r:vendor_mtk_usb_prop:s0
 vendor.audio.ultrasound. u:object_r:vendor_mtk_audio_prop:s0
-vendor.debug.sf.fbthint u:object_r:vendor_mtk_debug_sf_cpupolicy_prop:s0
 vendor.mtk.c2.scenario.transcoding u:object_r:vendor_mtk_video_prop:s0

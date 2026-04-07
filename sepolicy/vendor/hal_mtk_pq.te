@@ -1,2 +1,0 @@
-allow mtk_hal_pq sysfs_leds:dir r_dir_perms;
-allow mtk_hal_pq sysfs_leds:file r_file_perms;

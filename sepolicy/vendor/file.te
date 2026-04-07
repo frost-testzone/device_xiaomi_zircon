@@ -15,10 +15,5 @@ type vendor_fingerprint_data_file, data_file_type, file_type;
 type nfc_vendor_data_file, data_file_type, file_type;
 type sysfs_chip_name, fs_type, sysfs_type;
 
-# TEE
-type mitee_data_file, data_file_type, file_type;
-type mitee_sfs_file, file_type;
-type proc_mitee_log, fs_type, proc_type;
-
 # Thermal
 type sys_thermal_market_download_limit, fs_type, sysfs_type;
