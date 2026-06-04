@@ -288,7 +288,7 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm
 
 # Properties
-$(call inherit-product, $(LOCAL_PATH)/vendor_logtag.mk)
+$(call inherit-product, hardware/mediatek/configs/properties/vendor_logtag.mk)
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sku,$(TARGET_COPY_OUT_ODM)/etc)
