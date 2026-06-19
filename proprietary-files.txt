@@ -645,6 +645,7 @@ vendor/lib64/mt6886/mtk000_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/mtk000_mipi_r
 vendor/lib64/mt6886/ov48b_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/ov48b_mipi_raw_IdxMgr.so
 vendor/lib64/mt6886/s5k3m5sx_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/s5k3m5sx_mipi_raw_IdxMgr.so
 vendor/lib64/mt6886/s5k3m5sxo_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/s5k3m5sxo_mipi_raw_IdxMgr.so
+vendor/lib64/android.frameworks.displayservice@1.0.so
 vendor/lib64/lib3a.ae.pipe.so
 vendor/lib64/libAF.so
 vendor/lib64/libBasicModule.so
