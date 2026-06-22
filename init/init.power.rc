@@ -25,6 +25,9 @@ on init
     write /dev/sys/block/by-name/rootdisk/queue/iostats 0
     write /dev/sys/block/by-name/rootdisk/queue/nr_requests 256
 
+    # UFS
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
+
     # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
 
@@ -43,9 +46,6 @@ on init
     # Disable printk logging
     write /proc/sys/kernel/printk_devkmsg off
 
-    # Boot time tuning
-    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
-
     # fs
     write /dev/sys/fs/by-name/userdata/iostat_enable 0
     write /dev/sys/fs/by-name/userdata/cp_interval 6000
@@ -56,6 +56,9 @@ on init
     write /proc/sys/vm/dirty_background_ratio 10
 
 on charger
+    # UFS
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
+
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
@@ -109,8 +112,8 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
 
-    # End boot time tuning
-    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
+    # UFS
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
 
     # F2FS
     write /dev/sys/fs/by-name/userdata/data_io_flag 8
