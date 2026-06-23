@@ -250,8 +250,12 @@ ro.vendor.mediatek.platform=MT6886
 ro.vendor.mediatek.version.release=alps-mp-t0.mp1.tc8sp2-V1.14_P437
 
 # Radio
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 persist.radio.multisim.config=dsds
 persist.vendor.anr.enhancement=0
+persist.vendor.ims_support=1
 persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mims_support=2
 persist.vendor.mtk.volte.enable=1
@@ -268,7 +272,9 @@ persist.vendor.radio.mtk_dsbp_support=3
 persist.vendor.radio.mtk_ps2_rat=N/L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
 persist.vendor.radio.smart.data.switch=1
+persist.vendor.vilte_support=1
 persist.vendor.viwifi_support=1
+persist.vendor.volte_support=1
 ro.telephony.iwlan_operation_mode=AP-assisted
 ro.telephony.sim.count=2
 ro.vendor.md_auto_setup_ims=1
