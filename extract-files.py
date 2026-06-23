@@ -75,12 +75,10 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/hw/hwcomposer.mtk_common.so', 'vendor/lib64/libmialgoengine.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so',
     'vendor/lib64/mt6886/libcam.hal3a.so', 'vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
-    ('vendor/lib64/hw/sensors.mediatek.V2.0.so', 'vendor/lib64/soundfx/libswdap.so', 'vendor/lib64/soundfx/libdlbvol.so',
-    'vendor/lib64/libcodec2_mtk_c2store.so', 'vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so',
-    'vendor/lib64/libcodec2_soft_common_prebuilt.so', 'vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so', 'vendor/lib64/libcodec2_vpp_AISR_plugin.so',
+    ('vendor/lib64/hw/sensors.mediatek.V2.0.so', 'vendor/lib64/libcodec2_mtk_c2store.so', 'vendor/lib64/libcodec2_mtk_vdec.so',
+    'vendor/lib64/libcodec2_mtk_venc.so', 'vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so', 'vendor/lib64/libcodec2_vpp_AISR_plugin.so',
     'vendor/lib64/libcodec2_vpp_dolby_plugin.so', 'vendor/lib64/libcodec2_vpp_gc_plugin.so', 'vendor/lib64/libcodec2_vpp_mi_plugin.so',
-    'vendor/lib64/libcodec2_vpp_qt_plugin.so', 'vendor/lib64/libcodec2_vpp_rs_plugin.so', 'vendor/lib64/libdlbdsservice.so',
-    'vendor/lib64/libdlbpreg.so'): blob_fixup()
+    'vendor/lib64/libcodec2_vpp_qt_plugin.so', 'vendor/lib64/libcodec2_vpp_rs_plugin.so'): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     ('vendor/lib64/hw/mt6886/vendor.mediatek.hardware.pq_aidl-impl.so', 'vendor/lib64/libaudiocloudctrl.so', 'vendor/lib64/libpqxmlparser.so',
     'vendor/lib64/librt_extamp_intf.so', 'vendor/lib64/mt6886/libmmlpqImpl.so'): blob_fixup()
@@ -91,9 +89,6 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
-    ('vendor/lib64/libcodec2_soft_ac4dec.so', 'vendor/lib64/libcodec2_soft_ddpdec.so'): blob_fixup()
-        .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common_prebuilt.so')
-        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     ('vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so', 'vendor/lib64/libcodec2_vpp_AISR_plugin.so'): blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
