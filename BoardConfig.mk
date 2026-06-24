@@ -71,6 +71,9 @@ BOARD_KERNEL_CMDLINE := \
     rcutree.enable_rcu_lazy \
     sysctl.kernel.sched_pelt_multiplier=4
 
+TARGET_KERNEL_CLANG_VERSION := r563880c
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
+
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/mgk_64_k515.config \
