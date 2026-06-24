@@ -63,6 +63,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.keymint-V2-ndk.so', 'android.hardware.security.keymint-V3-ndk.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v33.so'),
+    'vendor/bin/mnld': blob_fixup()
+        .replace_needed('libmnl.so', 'libmnl-v33.so'),
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()
         .regex_replace('/odm/bin', '/vendor/bin'),
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
